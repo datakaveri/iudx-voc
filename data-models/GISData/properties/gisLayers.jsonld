@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The GIS data layers observation in the GIS Server corresponding to this observation.",
+            "rdfs:comment": "The GIS data layers stored in the GIS Server corresponding to this observation.",
             "rdfs:label": "gisLayers",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
