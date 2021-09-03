@@ -83,6 +83,9 @@
                 },
                 {
                     "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
                 }
             ],
             "iudx:rangeIncludes": [

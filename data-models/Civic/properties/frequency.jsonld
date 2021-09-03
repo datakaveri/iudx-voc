@@ -11,19 +11,16 @@
     },
     "@graph": [
         {
-            "@id": "iudx:voltage",
+            "@id": "iudx:frequency",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Voltage value of the streetlight corresponding to this observation.",
-            "rdfs:label": "voltage",
+            "rdfs:comment": "Frequency observed from the resource corresponding to this observation.",
+            "rdfs:label": "frequency",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Streetlight"
-                },
                 {
                     "@id": "iudx:SolarEnergy"
                 }
@@ -35,7 +32,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:frequency"
+            }
         }
     ]
 }

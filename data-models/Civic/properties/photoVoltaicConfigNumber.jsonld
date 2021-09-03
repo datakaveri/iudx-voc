@@ -11,19 +11,16 @@
     },
     "@graph": [
         {
-            "@id": "iudx:voltage",
+            "@id": "iudx:photoVoltaicConfigNumber",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Voltage value of the streetlight corresponding to this observation.",
-            "rdfs:label": "voltage",
+            "rdfs:comment": "Total number of PhotoVoltaic(PV) configurations installed in the panel of the solar energy resource corresponding to this observation.",
+            "rdfs:label": "photoVoltaicConfigNumber",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Streetlight"
-                },
                 {
                     "@id": "iudx:SolarEnergy"
                 }

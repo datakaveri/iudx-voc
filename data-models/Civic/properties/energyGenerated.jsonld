@@ -11,19 +11,16 @@
     },
     "@graph": [
         {
-            "@id": "iudx:voltage",
+            "@id": "iudx:energyGenerated",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Voltage value of the streetlight corresponding to this observation.",
-            "rdfs:label": "voltage",
+            "rdfs:comment": "Energy generated over a specific time range from the energy resource corresponding to this observation.",
+            "rdfs:label": "energyGenerated",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Streetlight"
-                },
                 {
                     "@id": "iudx:SolarEnergy"
                 }

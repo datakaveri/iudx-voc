@@ -11,26 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:voltage",
+            "@id": "iudx:photoVoltaicPower",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Voltage value of the streetlight corresponding to this observation.",
-            "rdfs:label": "voltage",
+            "rdfs:comment": "Array of power values produced by each photoVoltaic system/panel present in the solar panel corresponding to this observation. The length of array sholud be same as the number observed in photoVoltaicConfigNumber.",
+            "rdfs:label": "photoVoltaicPower",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Streetlight"
-                },
                 {
                     "@id": "iudx:SolarEnergy"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:NumericArray"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
