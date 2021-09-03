@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A Data Model Solar Energy generation.",
+            "rdfs:comment": "A Data Model for Solar Energy generation.",
             "rdfs:label": "SolarEnergy",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
