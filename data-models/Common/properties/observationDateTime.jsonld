@@ -71,6 +71,10 @@
 			},
 			{
                 "@id": "iudx:GISData"
+            },
+            ,
+			{
+                "@id": "iudx:SolarEnergy"
             }
 		],
 		"iudx:rangeIncludes": [{
