@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Voltage value of the streetlight corresponding to this observation.",
+            "rdfs:comment": "The value of Voltage in the entity corresponding to this observation.",
             "rdfs:label": "voltage",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Total active power consumed by all phases",
+            "rdfs:comment": "Total active power consumed by all phases.",
             "rdfs:label": "totalActivePower",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
                 }
             ],
             "iudx:rangeIncludes": [

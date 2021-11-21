@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Current value of the streetlight corresponding to this observation.",
+            "rdfs:comment": "The value of Current in the entity corresponding to this observation.",
             "rdfs:label": "current",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

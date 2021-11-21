@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Frequency observed from the resource corresponding to this observation.",
+            "rdfs:comment": "Frequency observed from the entity corresponding to this observation.",
             "rdfs:label": "frequency",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
