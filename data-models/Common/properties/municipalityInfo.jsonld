@@ -38,6 +38,18 @@
                 },
                 {
                     "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
                 }
             ],
             "iudx:rangeIncludes": [
