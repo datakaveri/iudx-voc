@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:photoVoltaicCurrent",
+            "@id": "iudx:maxSolarPowerMeasure",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Array of current values produced by each photoVoltaic system/panel present in the solar panel corresponding to this observation. The length of array sholud be same as the number observed in photoVoltaicConfigNumber.",
-            "rdfs:label": "photoVoltaicCurrent",
+            "rdfs:comment": "A measure of maximum solar energy that can be generated.",
+            "rdfs:label": "maxSolarPowerMeasure",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:NumericArray"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
