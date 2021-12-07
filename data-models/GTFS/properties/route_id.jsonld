@@ -29,6 +29,9 @@
                 },
                 {
                     "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
                 }
             ],
             "iudx:rangeIncludes": [

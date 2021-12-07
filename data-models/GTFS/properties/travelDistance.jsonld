@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "The distance between the orgin bus stop and the destination bus stop corresponding to this observation.",
+            "rdfs:comment": "The distance between the orgin bus stop and the destination bus stop or the total distance travelled corresponding to this observation.",
             "rdfs:label": "travelDistance",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -26,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
                 }
             ],
             "iudx:rangeIncludes": [
