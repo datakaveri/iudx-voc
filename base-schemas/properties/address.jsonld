@@ -38,6 +38,9 @@
                 },
                 {
                     "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
                 }
             ],
             "iudx:rangeIncludes": [
