@@ -13,7 +13,7 @@
         {
             "@id": "iudx:repositoryURL",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:Relationship"
             ],
             "rdfs:comment": "A URL pointing to a repository containing additional resources or code pertaining to this entity.",
             "rdfs:label": "repositoryURL",
@@ -25,7 +25,11 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
                 }
             ]
         }
