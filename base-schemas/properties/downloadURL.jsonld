@@ -13,7 +13,7 @@
         {
             "@id": "iudx:downloadURL",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:Relationship"
             ],
             "rdfs:comment": "A download URL specifying the protocol, for e.g s3:// or https://, etc.",
             "rdfs:label": "downloadURL",
@@ -25,7 +25,11 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
                 }
             ]
         }
