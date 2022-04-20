@@ -25,6 +25,9 @@
                     "@id": "iudx:Organization"
                 },
                 {
+                    "@id": "iudx:RelationshipValue"
+                },
+                {
                     "@id": "iudx:IUDXEntity",
                     "iudx:requiredProperty": true
                 },
