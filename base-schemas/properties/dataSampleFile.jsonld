@@ -27,6 +27,9 @@
                 {
                     "@container": "@list",
                     "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
                 }
             ],
             "rdfs:isDefinedBy": {
