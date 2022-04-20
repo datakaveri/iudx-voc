@@ -11,7 +11,7 @@
         {
             "@id": "iudx:dataSampleFile",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:Relationship"
             ],
             "rdfs:comment": "Sample file download link for the resource",
             "rdfs:label": "dataSampleFile",
@@ -25,6 +25,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
+                    "@container": "@list",
                     "@id": "iudx:Text"
                 }
             ],
