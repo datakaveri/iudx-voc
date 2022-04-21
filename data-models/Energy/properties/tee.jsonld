@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:TEI",
+            "@id": "iudx:tee",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Denotes Total Energy Imported. It is the total energy received by the device corresponding to this observation.",
-            "rdfs:label": "TEI",
+            "rdfs:comment": "Total Energy Exported, it is the total energy consumed by the load connected to the device corresponding to this observation.",
+            "rdfs:label": "tee",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
