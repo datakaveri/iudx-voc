@@ -29,6 +29,7 @@
                     "@id": "iudx:Text"
                 },
                 {
+                    "@container": "@list",
                     "@id": "iudx:RelationshipValue"
                 }
             ],
