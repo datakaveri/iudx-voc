@@ -28,6 +28,9 @@
                     "@id": "iudx:Text",
                     "@type": "@id",
                     "@container": "@set"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
             ]
         }
