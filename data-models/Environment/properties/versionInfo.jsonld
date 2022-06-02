@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
                 }
             ],
             "iudx:rangeIncludes": [

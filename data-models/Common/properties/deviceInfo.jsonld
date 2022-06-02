@@ -38,6 +38,9 @@
                 },
                 {
                     "@id": "iudx:WaterDistributionNetwork"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
                 }
             ],
             "iudx:rangeIncludes": [
