@@ -11,33 +11,30 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedWidth",
+            "@id": "iudx:roadIntersection",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Maximum allowed width for vehicles using the parking site corresponding to this observation.",
-            "rdfs:label": "maximumAllowedWidth",
+            "rdfs:comment": "Brief description of the road corresponding to this observation.   1: Crossroad; 2: Roundabout; 3: Reported intersection; 4: Intersection with traffic light; 5: Intersection not reported; 6: Rail crossing; 7: Straight; 8: Curve; 9: Bump, bottleneck; 10: Slope; 11: Illuminated gallery; 12: Unlit gallery;\" ENUM [ \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\", \"12\" ]",
+            "rdfs:label": "roadIntersection",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:SmartParking"
-                },
                 {
                     "@id": "iudx:RoadSegment"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
             "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedWidth"
+                "@id": "Fiware: roadIntersection"
             }
         }
     ]

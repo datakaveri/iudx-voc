@@ -11,34 +11,28 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedWidth",
+            "@id": "iudx:pedestrianPathMaterial",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Maximum allowed width for vehicles using the parking site corresponding to this observation.",
-            "rdfs:label": "maximumAllowedWidth",
+            "rdfs:comment": "Construction material used for laying the walkway / footpath on the sides of the carriageway corresponding to this observation.",
+            "rdfs:label": "pedestrianPathMaterial",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:SmartParking"
-                },
                 {
                     "@id": "iudx:RoadSegment"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedWidth"
-            }
+            ]
         }
     ]
 }

@@ -11,34 +11,25 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedWidth",
+            "@id": "iudx:laneInfo",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Maximum allowed width for vehicles using the parking site corresponding to this observation.",
-            "rdfs:label": "maximumAllowedWidth",
+            "rdfs:comment": "Describes the aspects of lanes of the road corresponding to this observation",
+            "rdfs:label": "laneInfo",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:SmartParking"
-                },
                 {
                     "@id": "iudx:RoadSegment"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:LaneData"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedWidth"
-            }
+            ]
         }
     ]
 }

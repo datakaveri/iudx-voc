@@ -11,33 +11,30 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedWidth",
+            "@id": "iudx:laneDirection",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Maximum allowed width for vehicles using the parking site corresponding to this observation.",
-            "rdfs:label": "maximumAllowedWidth",
+            "rdfs:comment": "Describes the direction in which vehicles are plying on the lane corresponding to this observation. ENUM [\"forward\",\"backward\",\"inbound\",\"outbound\",\"right\",\"left\"]",
+            "rdfs:label": "laneDirection",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SmartParking"
-                },
-                {
-                    "@id": "iudx:RoadSegment"
+                    "@id": "iudx:LaneData"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
             "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedWidth"
+                "@id": "Fiware:laneDirection"
             }
         }
     ]

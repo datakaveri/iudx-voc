@@ -11,19 +11,16 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedWidth",
+            "@id": "iudx:cyclePathLeftWidth",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Maximum allowed width for vehicles using the parking site corresponding to this observation.",
-            "rdfs:label": "maximumAllowedWidth",
+            "rdfs:comment": "Width of the cycle track on the left edge of the road corresponding to this observation.",
+            "rdfs:label": "cyclePathLeftWidth",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:SmartParking"
-                },
                 {
                     "@id": "iudx:RoadSegment"
                 }
@@ -35,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedWidth"
-            }
+            ]
         }
     ]
 }

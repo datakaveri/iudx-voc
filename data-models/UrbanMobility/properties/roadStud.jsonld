@@ -11,34 +11,28 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedWidth",
+            "@id": "iudx:roadStud",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Maximum allowed width for vehicles using the parking site corresponding to this observation.",
-            "rdfs:label": "maximumAllowedWidth",
+            "rdfs:comment": "Describes the type of retro-reflective studs on the road corresponding to this observation. Permissible values are [1, 2, 3, 4, 5].\n1 - \"WHITE\", 2 - \"RED\", 3 - \"YELLOW\", 4 - \"GREEN\"",
+            "rdfs:label": "roadStud",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:SmartParking"
-                },
                 {
                     "@id": "iudx:RoadSegment"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:NumericArray"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedWidth"
-            }
+            ]
         }
     ]
 }

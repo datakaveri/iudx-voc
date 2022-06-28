@@ -23,7 +23,10 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:SmartParking"
-                }
+                },
+                {
+                    "@id": "iudx:RoadSegment"
+                }               
             ],
             "iudx:rangeIncludes": [
                 {

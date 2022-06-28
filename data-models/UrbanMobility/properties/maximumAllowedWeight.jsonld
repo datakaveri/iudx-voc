@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedWidth",
+            "@id": "iudx:maximumAllowedWeight",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Maximum allowed width for vehicles using the parking site corresponding to this observation.",
-            "rdfs:label": "maximumAllowedWidth",
+            "rdfs:comment": "Maximum allowed weight for vehicles using the parking site corresponding to this observation.",
+            "rdfs:label": "maximumAllowedWeight",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -26,7 +26,7 @@
                 },
                 {
                     "@id": "iudx:RoadSegment"
-                }
+                }               
             ],
             "iudx:rangeIncludes": [
                 {
@@ -37,7 +37,7 @@
                 }
             ],
             "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedWidth"
+                "@id": "Fiware: OffStreetParking.maximumAllowedWeight"
             }
         }
     ]

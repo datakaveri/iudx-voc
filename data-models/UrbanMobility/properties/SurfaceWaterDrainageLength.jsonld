@@ -11,19 +11,16 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedWidth",
+            "@id": "iudx:SurfaceWaterDrainageLength",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Maximum allowed width for vehicles using the parking site corresponding to this observation.",
-            "rdfs:label": "maximumAllowedWidth",
+            "rdfs:comment": "The length of Surface Water Drainage along the road segment.",
+            "rdfs:label": "SurfaceWaterDrainageLength",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:SmartParking"
-                },
                 {
                     "@id": "iudx:RoadSegment"
                 }
@@ -33,12 +30,9 @@
                     "@id": "iudx:Number"
                 },
                 {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:Value Descriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedWidth"
-            }
+            ]
         }
     ]
 }
