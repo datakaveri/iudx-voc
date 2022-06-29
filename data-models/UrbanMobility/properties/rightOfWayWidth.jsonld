@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Total width of the road segment corresponding to this observation.",
+            "rdfs:comment": "Right of Way (RoW) is the total land area available for the roadway.  Its width accomodates for carriages way + other necessities + future extension, along the road's alignment.",
             "rdfs:label": "rightOfWayWidth",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -32,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: width"
-            }
+            ]
         }
     ]
 }
