@@ -11,22 +11,19 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedHeight",
+            "@id": "iudx:minimumAllowedSpeed",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Maximum allowed height for vehicles using the entity corresponding to this observation.",
-            "rdfs:label": "maximumAllowedHeight",
+            "rdfs:comment": "The minimum speed allowed for vehicles plying the road segment corresponding to this observation.",
+            "rdfs:label": "minimumAllowedSpeed",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SmartParking"
-                },
-                {
                     "@id": "iudx:RoadSegment"
-                }               
+                }
             ],
             "iudx:rangeIncludes": [
                 {
@@ -37,7 +34,7 @@
                 }
             ],
             "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedHeight"
+                "@id": "Fiware: minimumAllowedSpeed"
             }
         }
     ]

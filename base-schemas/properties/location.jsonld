@@ -86,6 +86,9 @@
                 },
                 {
                     "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:LaneDesc"
                 }
             ],
             "iudx:rangeIncludes": [

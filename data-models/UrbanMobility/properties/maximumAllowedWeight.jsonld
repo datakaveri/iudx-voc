@@ -11,33 +11,33 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedHeight",
+            "@id": "iudx:maximumAllowedWeight",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Maximum allowed height for vehicles using the entity corresponding to this observation.",
-            "rdfs:label": "maximumAllowedHeight",
+            "rdfs:comment": "Maximum allowed weight for vehicles using the entity corresponding to this observation.",
+            "rdfs:label": "maximumAllowedWeight",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SmartParking"
+                    "@id": "iudx:RoadSegment"
                 },
                 {
-                    "@id": "iudx:RoadSegment"
-                }               
+                    "@id": "iudx:SmartParking"
+                }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Number"
                 },
                 {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:Value Descriptor"
                 }
             ],
             "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedHeight"
+                "@id": "Fiware:maximumAllowedWeight"
             }
         }
     ]

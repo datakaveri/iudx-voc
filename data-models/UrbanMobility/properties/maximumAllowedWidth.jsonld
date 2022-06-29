@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Maximum allowed width for vehicles using the parking site corresponding to this observation.",
+            "rdfs:comment": "Maximum allowed width for vehicles using the entity corresponding to this observation.",
             "rdfs:label": "maximumAllowedWidth",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:SmartParking"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
                 }
             ],
             "iudx:rangeIncludes": [

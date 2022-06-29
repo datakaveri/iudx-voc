@@ -50,7 +50,11 @@
                 },
                 {
                     "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
                 }
+                
             ],
             "iudx:rangeIncludes": [
                 {

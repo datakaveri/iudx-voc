@@ -11,34 +11,28 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedHeight",
+            "@id": "iudx:junctionLocation",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:GeoProperty"
             ],
-            "rdfs:comment": "Maximum allowed height for vehicles using the entity corresponding to this observation.",
-            "rdfs:label": "maximumAllowedHeight",
+            "rdfs:comment": "The physical coordinates of the location of junction corresponding to this observation.",
+            "rdfs:label": "junctionLocation",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SmartParking"
-                },
-                {
                     "@id": "iudx:RoadSegment"
-                }               
+                }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Place"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedHeight"
-            }
+            ]
         }
     ]
 }

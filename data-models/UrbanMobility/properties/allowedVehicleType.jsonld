@@ -11,33 +11,30 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedHeight",
+            "@id": "iudx:allowedVehicleType",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Maximum allowed height for vehicles using the entity corresponding to this observation.",
-            "rdfs:label": "maximumAllowedHeight",
+            "rdfs:comment": "Represents the vehicle type(s) allowed to ply on the road segment corresponding to this observation. ENUM ['AGRICULTURALVEHICLE','BICYCLE','BUS','CAR','CARAVAN','CARWITHCARAVAN','CARWITHTRAILER','CONSTRUCTIONORMAINTENANCEVEHICLE','LORRY','MOPED','MOTORCYCLE','MOTORCYCLEWITHSIDECAR','MOTORSCOOTER','TANKER','TRAILER','VAN','ANYVEHICLE']",
+            "rdfs:label": "allowedVehicleType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SmartParking"
-                },
-                {
                     "@id": "iudx:RoadSegment"
-                }               
+                }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
             "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedHeight"
+                "@id": "Fiware: allowedVehicleType"
             }
         }
     ]

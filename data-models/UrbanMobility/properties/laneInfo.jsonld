@@ -11,34 +11,25 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedHeight",
+            "@id": "iudx:laneInfo",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Maximum allowed height for vehicles using the entity corresponding to this observation.",
-            "rdfs:label": "maximumAllowedHeight",
+            "rdfs:comment": "Describes the aspects of lanes of the road corresponding to this observation",
+            "rdfs:label": "laneInfo",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SmartParking"
-                },
-                {
                     "@id": "iudx:RoadSegment"
-                }               
+                }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:LaneDesc"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedHeight"
-            }
+            ]
         }
     ]
 }

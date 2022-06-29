@@ -11,33 +11,30 @@
     },
     "@graph": [
         {
-            "@id": "iudx:maximumAllowedHeight",
+            "@id": "iudx:laneDirection",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Maximum allowed height for vehicles using the entity corresponding to this observation.",
-            "rdfs:label": "maximumAllowedHeight",
+            "rdfs:comment": "Describes the direction in which vehicles are plying on the lane corresponding to this observation. ENUM [\"FORWARD\",\"BACKWARD\",\"INBOUND\",\"OUTBOUND\",\"RIGHT\",\"LEFT\"]",
+            "rdfs:label": "laneDirection",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SmartParking"
-                },
-                {
-                    "@id": "iudx:RoadSegment"
-                }               
+                    "@id": "iudx:LaneDesc"
+                }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
             "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.maximumAllowedHeight"
+                "@id": "Fiware:laneDirection"
             }
         }
     ]
