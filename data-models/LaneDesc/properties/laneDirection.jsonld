@@ -11,25 +11,31 @@
     },
     "@graph": [
         {
-            "@id": "iudx:schemeInfo",
+            "@id": "iudx:laneDirection",
             "@type": [
-                "iudx:StructuredProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Information about the scheme under which the road segment has been constructed.",
-            "rdfs:label": "schemeInfo",
+            "rdfs:comment": "Describes the direction in which vehicles are plying on the lane corresponding to this observation. ENUM [\"FORWARD\",\"BACKWARD\",\"INBOUND\",\"OUTBOUND\",\"RIGHT\",\"LEFT\"]",
+            "rdfs:label": "laneDirection",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:RoadSegment"
+                    "@id": "iudx:LaneDesc"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Scheme"
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:laneDirection"
+            }
         }
     ]
 }

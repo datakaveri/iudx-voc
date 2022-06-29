@@ -88,9 +88,6 @@
                     "@id": "iudx:SolarEnergy"
                 },
                 {
-                    "@id": "iudx:"
-                },
-                {
                     "@id": "iudx:LaneDesc"
                 }
             ],
