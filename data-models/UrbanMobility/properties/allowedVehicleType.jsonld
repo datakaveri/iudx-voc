@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Represents the vehicle type(s) allowed to ply on the road segment corresponding to this observation. ENUM ['AGRICULTURALVEHICLE','BICYCLE','BUS','CAR','CARAVAN','CARWITHCARAVAN','CARWITHTRAILER','CONSTRUCTIONORMAINTENANCEVEHICLE','LORRY','MOPED','MOTORCYCLE','MOTORCYCLEWITHSIDECAR','MOTORSCOOTER','TANKER','TRAILER','VAN','ANYVEHICLE']",
+            "rdfs:comment": "Represents the vehicle type(s) allowed to ply on the road segment corresponding to this observation.",
             "rdfs:label": "allowedVehicleType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
