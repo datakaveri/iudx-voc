@@ -16,9 +16,6 @@
             "rdfs:label": "LaneDesc",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "rdfs:subClassOf": {
-                "@id": "iudx:UrbanMobility"
             }
         }
     ]
