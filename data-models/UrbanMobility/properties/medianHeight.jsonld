@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:roadEndLocation",
+            "@id": "iudx:medianHeight",
             "@type": [
-                "iudx:GeoProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Describes the point where the road segment corresponding to this observation ends.",
-            "rdfs:label": "roadEndLocation",
+            "rdfs:comment": "Height of the median or central reservation in the road corresponding to this observation.",
+            "rdfs:label": "medianHeight",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Place"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

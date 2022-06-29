@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:roadSurface",
+            "@id": "iudx:cyclePathMaterial",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Describes the condition of the road corresponding to this observation. ENUM [ \"1\", \"2\", \"3\", \"4\", \"5\" ] 1: Dry; 2: Wet; 3: Slippery; 4: frozen; 5: Snowcapped;",
-            "rdfs:label": "roadSurface",
+            "rdfs:comment": "Construction material used for laying the cycle path on the sides of the road corresponding to this observation.",
+            "rdfs:label": "cyclePathMaterial",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -32,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: roadSurface"
-            }
+            ]
         }
     ]
 }

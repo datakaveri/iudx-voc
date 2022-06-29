@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:accidentSeverity",
+            "@id": "iudx:roadEndPoint",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:GeoProperty"
             ],
-            "rdfs:comment": "Value indicating the severity of accidents which may take place/ based on the severity of accidents that have taken place.\nIt describes how much accident-prone the road is.",
-            "rdfs:label": "accidentSeverity",
+            "rdfs:comment": "Describes the point where the road segment corresponding to this observation ends.",
+            "rdfs:label": "roadEndPoint",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,12 +27,15 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Place"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: endPoint"
+            }
         }
     ]
 }

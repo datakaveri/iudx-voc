@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:SurfaceWaterDrainageLength",
+            "@id": "iudx:bridgeCount",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "The length of Surface Water Drainage along the road segment.",
-            "rdfs:label": "SurfaceWaterDrainageLength",
+            "rdfs:comment": "Number of bridges in the road segment corresponding to this observation. Takes 0 (zero) as the value when the road segment has no bridges.",
+            "rdfs:label": "bridgeCount",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -30,7 +30,7 @@
                     "@id": "iudx:Number"
                 },
                 {
-                    "@id": "iudx:Value Descriptor"
+                    "@id": "iudx:ValueDescriptor"
                 }
             ]
         }

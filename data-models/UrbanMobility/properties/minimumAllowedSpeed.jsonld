@@ -11,28 +11,31 @@
     },
     "@graph": [
         {
-            "@id": "iudx:dateOfSanction",
+            "@id": "iudx:minimumAllowedSpeed",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Represents the date of sanction for the project or work",
-            "rdfs:label": "dateOfSanction",
+            "rdfs:comment": "The minimum speed allowed for vehicles plying the road segment corresponding to this observation.",
+            "rdfs:label": "minimumAllowedSpeed",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Scheme"
+                    "@id": "iudx:RoadSegment"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: minimumAllowedSpeed"
+            }
         }
     ]
 }

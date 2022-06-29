@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:roadCategory",
+            "@id": "iudx:maximumAllowedSpeed",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Describes the category of the road feature under consideration. ENUM[ Warning, Mandatory, Asset, Information, Control]",
-            "rdfs:label": "roadCategory",
+            "rdfs:comment": "The maximum speed allowed for vehicles plying the road segment corresponding to this observation.",
+            "rdfs:label": "maximumAllowedSpeed",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,12 +27,15 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: maximumAllowedSpeed"
+            }
         }
     ]
 }

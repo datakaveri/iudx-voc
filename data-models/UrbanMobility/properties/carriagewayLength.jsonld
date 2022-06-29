@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:crashBarrier",
+            "@id": "iudx:carriagewayLength",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Indicates whether the road corresponding to this observation has crash barrier or not",
-            "rdfs:label": "crashBarrier",
+            "rdfs:comment": "Total length of the carriage way of the road segment corresponding to this observation.",
+            "rdfs:label": "carriagewayLength",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Boolean"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

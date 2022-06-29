@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A Data Model for road networks in the cities.",
+            "rdfs:comment": "A Data Model for road segments in the cities.",
             "rdfs:label": "RoadSegment",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

@@ -7,13 +7,13 @@
     },
     "@graph": [
         {
-            "@id": "iudx:LaneData",
+            "@id": "iudx:LaneDesc",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A Data Model for road lane specifications.",
-            "rdfs:label": "LaneData",
+            "rdfs:comment": "A Data Model for road lane descriptions.",
+            "rdfs:label": "LaneDesc",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

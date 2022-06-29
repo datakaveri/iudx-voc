@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:roadTrunk",
+            "@id": "iudx:junctionLocation",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:GeoProperty"
             ],
-            "rdfs:comment": "Brief description of type of trunk of the road corresponding to this observation. 1: Road branch; 2: Secondary branch; 3: Minor branch; 4: Junction branch; 5: Road junction; 6: Motorway left lane; 7: Highway carriageway right; 8: Motorway junction entrance; 9: Highway exit junction; 10: Highway junction trunk; 11: Highway station; 12: Other cases; 15: Extra urban road. ENUM: [ \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\", \"12\", \"15\" ]",
-            "rdfs:label": "roadTrunk",
+            "rdfs:comment": "The physical coordinates of the location of junction corresponding to this observation.",
+            "rdfs:label": "junctionLocation",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,15 +27,12 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Place"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: roadTrunk"
-            }
+            ]
         }
     ]
 }

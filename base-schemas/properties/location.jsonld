@@ -91,7 +91,7 @@
                     "@id": "iudx:"
                 },
                 {
-                    "@id": "iudx:LaneData"
+                    "@id": "iudx:LaneDesc"
                 }
             ],
             "iudx:rangeIncludes": [

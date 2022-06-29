@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:LaneData"
+                    "@id": "iudx:LaneDesc"
                 }
             ]
         }

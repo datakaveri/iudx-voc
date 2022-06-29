@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Construction material used for laying the walkway / footpath on the sides of the carriageway corresponding to this observation.",
+            "rdfs:comment": "Construction material used for laying the walkway / footpath on the sides of the road corresponding to this observation.",
             "rdfs:label": "pedestrianPathMaterial",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

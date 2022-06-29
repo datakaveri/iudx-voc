@@ -11,30 +11,30 @@
     },
     "@graph": [
         {
-            "@id": "iudx:reversedLane",
+            "@id": "iudx:roadStartPoint",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:GeoProperty"
             ],
-            "rdfs:comment": "Flags whether traffic in the lane was reversed during the observation period.",
-            "rdfs:label": "reversedLane",
+            "rdfs:comment": "Describes the point where the road segment corresponding to this observation starts.",
+            "rdfs:label": "roadStartPoint",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:LaneData"
+                    "@id": "iudx:RoadSegment"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Boolean"
+                    "@id": "iudx:Place"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
             "skos:exactMatch": {
-                "@id": "Fiware:reversedLane"
+                "@id": "Fiware: startPoint"
             }
         }
     ]

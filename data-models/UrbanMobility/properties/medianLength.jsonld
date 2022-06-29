@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:roadFeatures",
+            "@id": "iudx:medianLength",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Provides additional information based on road category, describing the cautions, restrictions and properties that characterize the road corresponding to this observation.\n\nWarning - road_hump_warning, pedestrian_crossing_warning, uneven_road_warning, uturn_warning\nMandatory - no_stopping_mandatory, horn_prohibited_mandatory, _40_speed_limit_mandatory, stop_mandatory, no_parking_mandatory, keep_left_mandatory, no_left_turn_mandatory\nAsset - junction_street_light, double_street_light, single_street_light\nControls - toll_booth, police_booth",
-            "rdfs:label": "roadFeatures",
+            "rdfs:comment": "Length of the median or central reservation in the road corresponding to this observation.",
+            "rdfs:label": "medianLength",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

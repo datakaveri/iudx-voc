@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:greenCovers",
+            "@id": "iudx:rightOfWayWidth",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "The density of green covers along the road corresponding to this observation",
-            "rdfs:label": "greenCovers",
+            "rdfs:comment": "Total width of the road segment corresponding to this observation.",
+            "rdfs:label": "rightOfWayWidth",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -32,7 +32,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: width"
+            }
         }
     ]
 }

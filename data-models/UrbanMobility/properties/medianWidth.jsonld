@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:longitudinalMarking",
+            "@id": "iudx:medianWidth",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Describes the road rules based on road markings on the carriageway. Permissible values are [1, 2, 3, 4, 5].\n1) Broken White Line -  Permits overtakes and U-turns. Lane change is allowed but with caution.\n2) Continuous White Line - Accident prone zone, no overtaking allowed, except to avoid accidents. No U-turns or lane changes allowed.\n3) Continuous Yellow Line - Areas with low visibility, no lane change allowed. Overtaking allowed on same lane.\n4) Double Continuous Yellow Line - Areas prone to disasters. Strictly no overtaking,  U-turns or lane changes allowed.\n5) Broken Yellow Line - Permits lane change, overtakes and U-turns.",
-            "rdfs:label": "longitudinalMarking",
+            "rdfs:comment": "Width of the median or central reservation in the road corresponding to this observation.",
+            "rdfs:label": "medianWidth",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:NumericArray"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
