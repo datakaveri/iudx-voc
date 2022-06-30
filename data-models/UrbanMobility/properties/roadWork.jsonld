@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Reasons for the road work in case of urgent intervention. A combination of these values. ENUM ['COLLAPSE','DERAILMENT','FIRE','FLOOD','GASLEAK','LANDSLIDE','OTHER','POWERCUT','ROCKFALL','SAGGING','WATERLEAK']",
+            "rdfs:comment": "Reasons for the road work in case of urgent intervention. A combination of these values. ENUM [COLLAPSE, DERAILMENT, FIRE, FLOOD, GASLEAK, LANDSLIDE, OTHER, POWERCUT, ROCKFALL, SAGGING, WATERLEAK]",
             "rdfs:label": "roadWork",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

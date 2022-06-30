@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Represents the direction the road is heading to. ENUM[ \"N\",\"S\",\"E\",\"W\"]. The values N,S,E,W represent North,South,East,West respectively.",
+            "rdfs:comment": "Represents the direction the road is heading to. ENUM[N, S, E, W]. The values N,S,E,W represent North,South,East,West respectively.",
             "rdfs:label": "roadDirection",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
