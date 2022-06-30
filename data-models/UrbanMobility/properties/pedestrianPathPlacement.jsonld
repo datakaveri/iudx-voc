@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Describes the presence and placement of pedestrian along the road segment corresponding to this observation. ENUM[RIGHT, LEFT, BOTH, NOT AVAILABLE]",
+            "rdfs:comment": "Describes the presence and placement of pedestrian along the road segment corresponding to this observation. ENUM[RIGHT, LEFT, BOTH, NOT_AVAILABLE]",
             "rdfs:label": "pedestrianPathPlacement",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
