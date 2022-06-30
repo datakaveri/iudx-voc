@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The type of road corresponding to this observation. ENUM [OTHER PUBLIC ROAD, PRIVATE ROAD, MINOR CITY ROAD, MAJOR DISTRICT ROAD, MAJOR CITY ROAD, NATIONAL HIGHWAY, SERVICE ROAD, STATE HIGHWAY, OTHER DISTRICT ROAD, PORT ROAD].",
+            "rdfs:comment": "The type of road corresponding to this observation. ENUM: [OTHER PUBLIC ROAD, PRIVATE ROAD, MINOR CITY ROAD, MAJOR DISTRICT ROAD, MAJOR CITY ROAD, NATIONAL HIGHWAY, SERVICE ROAD, STATE HIGHWAY, OTHER DISTRICT ROAD, PORT ROAD].",
             "rdfs:label": "roadClass",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
