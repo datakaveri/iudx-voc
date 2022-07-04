@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The type of the road based on the construction material used. ENUM: [BITUMINOUS, CONCRETE_CEMENT, PB, WATER_BOUND_MACADAM, EARTHEN]",
+            "rdfs:comment": "The type of the road based on the construction material used. ENUM: [BITUMINOUS_TREATMENT, CEMENT_CONCRETE, PAVER_BLOCK, WATER_BOUND_MACADAM, EARTHEN]",
             "rdfs:label": "roadType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
