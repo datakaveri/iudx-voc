@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Construction material used for laying the carriageway corresponding to this observation.",
+            "rdfs:comment": "The construction material used for laying the carriageway corresponding to this observation. For eg. concrete, earthen, tar etc.",
             "rdfs:label": "roadMaterial",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
