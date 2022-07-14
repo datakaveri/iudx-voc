@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A Data Model for Energy Meter readings.",
+            "rdfs:comment": "A Data Model for Energy Meter measures.",
             "rdfs:label": "EnergyMeter",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
