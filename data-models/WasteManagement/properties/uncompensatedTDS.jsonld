@@ -11,23 +11,26 @@
     },
     "@graph": [
         {
-            "@id": "iudx:roadType",
+            "@id": "iudx:uncompensatedTDS",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "The type of the road based on the construction material used. ENUM: [BITUMINOUS_TREATMENT, CEMENT_CONCRETE, PAVER_BLOCK, WATER_BOUND_MACADAM, EARTHEN]",
-            "rdfs:label": "roadType",
+            "rdfs:comment": "The value of TDS (Total Dissolved Solids) level in the water without temperature compensation.",
+            "rdfs:label": "uncompensatedTDS",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:RoadSegment"
+                    "@id": "iudx:WasteWaterMgmt"
+                },
+                 {
+                    "@id": "iudx:WaterDistributionNetwork"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
