@@ -41,6 +41,9 @@
                 },
                 {
                     "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
                 }
             ],
             "iudx:rangeIncludes": [

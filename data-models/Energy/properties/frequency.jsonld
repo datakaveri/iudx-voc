@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
                 }
             ],
             "iudx:rangeIncludes": [

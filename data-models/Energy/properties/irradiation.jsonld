@@ -11,24 +11,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:powerFactor",
+            "@id": "iudx:irradiation",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Power factor or the ratio of working power of the entity corresponding to this observation.",
-            "rdfs:label": "powerFactor",
+            "rdfs:comment": "The measure of radiation falling per unit area of a surface exposed to it.",
+            "rdfs:label": "irradiation",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Streetlight"
-                },
-                {
                     "@id": "iudx:SolarEnergy"
-                },
-                {
-                    "@id": "iudx:EnergyMeter"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -38,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware:powerFactor"
-            }
+            ]
         }
     ]
 }

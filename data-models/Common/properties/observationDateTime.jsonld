@@ -19,7 +19,8 @@
 		"rdfs:isDefinedBy": {
 			"@id": "iudx:"
 		},
-		"iudx:domainIncludes": [{
+		"iudx:domainIncludes": [
+			{
 				"@id": "iudx:EnvAQM"
 			},
 			{
@@ -30,7 +31,8 @@
 			},
 			{
 				"@id": "iudx:TransitManagement"
-			}, {
+			}, 
+			{
 				"@id": "iudx:StreetLightFeeder"
 			},
 			{
@@ -70,12 +72,15 @@
 				"@id": "iudx:EmergencyVehicle"
 			},
 			{
-                "@id": "iudx:GISData"
-            },
+                		"@id": "iudx:GISData"
+           	        },
 			{
-                "@id": "iudx:SolarEnergy"
-            }
-		],
+                  	        "@id": "iudx:SolarEnergy"
+                       },
+                       {
+                  	        "@id": "iudx:EnergyMeter"
+                       }
+	 	],
 		"iudx:rangeIncludes": [{
 				"@id": "iudx:DateTime"
 			},
