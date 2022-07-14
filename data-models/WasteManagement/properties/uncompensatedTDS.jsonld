@@ -11,31 +11,31 @@
     },
     "@graph": [
         {
-            "@id": "iudx:parkingMode",
+            "@id": "iudx:uncompensatedTDS",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Parking mode followed in the parking site corresponding to this observation.  ENUM [PARALLEL_PARKING, PERPENDICULAR_PARKING, ANGLE_PARKING].",
-            "rdfs:label": "parkingMode",
+            "rdfs:comment": "The value of TDS (Total Dissolved Solids) level in the water without temperature compensation.",
+            "rdfs:label": "uncompensatedTDS",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SmartParking"
+                    "@id": "iudx:WasteWaterMgmt"
+                },
+                 {
+                    "@id": "iudx:WaterDistributionNetwork"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: OffStreetParking.parkingMode"
-            }
+            ]
         }
     ]
 }

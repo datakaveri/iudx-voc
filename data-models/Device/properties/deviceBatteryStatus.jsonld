@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Gives the Battery charging status of the reporting device(Connected, Disconnected).",
+            "rdfs:comment": "Gives the Battery charging status of the reporting device. ENUM: [Connected, Disconnected].",
             "rdfs:label": "deviceBatteryStatus",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

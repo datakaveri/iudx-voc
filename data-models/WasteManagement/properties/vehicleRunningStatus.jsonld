@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Moving status of the vehicle, one of running, waiting, stopped.",
+            "rdfs:comment": "Moving status of the vehicle. For eg., running, idle, etc.",
             "rdfs:label": "vehicleRunningStatus",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
