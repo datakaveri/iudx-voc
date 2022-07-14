@@ -11,24 +11,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:powerFactor",
+            "@id": "iudx:energyConsumed",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Power factor or the ratio of working power of the entity corresponding to this observation.",
-            "rdfs:label": "powerFactor",
+            "rdfs:comment": "Energy consumed over a specific time corresponding to this observation.",
+            "rdfs:label": "energyConsumed",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Streetlight"
-                },
-                {
-                    "@id": "iudx:SolarEnergy"
-                },
-                {
-                    "@id": "iudx:EnergyMeter"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -40,7 +34,7 @@
                 }
             ],
             "skos:exactMatch": {
-                "@id": "Fiware:powerFactor"
+                "@id": "Fiware:energyConsumed"
             }
         }
     ]

@@ -11,24 +11,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:powerFactor",
+            "@id": "iudx:panelTemperature",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Power factor or the ratio of working power of the entity corresponding to this observation.",
-            "rdfs:label": "powerFactor",
+            "rdfs:comment": "The temperature of the solar panel corresponding to this observation.",
+            "rdfs:label": "panelTemperature",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Streetlight"
-                },
-                {
                     "@id": "iudx:SolarEnergy"
-                },
-                {
-                    "@id": "iudx:EnergyMeter"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -38,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware:powerFactor"
-            }
+            ]
         }
     ]
 }
