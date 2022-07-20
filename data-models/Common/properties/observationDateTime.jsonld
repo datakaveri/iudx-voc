@@ -79,7 +79,10 @@
                        },
                        {
                   	        "@id": "iudx:EnergyMeter"
-                       }
+                       },
+		        {
+		            "@id": "iudx:EVChargingStation"
+		        }
 	 	],
 		"iudx:rangeIncludes": [{
 				"@id": "iudx:DateTime"

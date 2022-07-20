@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Power consumed by the LED or the streetlight bulb corresponding to this observation.",
+            "rdfs:comment": "Power consumed by the entity corresponding to this observation.",
             "rdfs:label": "powerConsumption",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -26,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:EnergyMeter"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
                 }
             ],
             "iudx:rangeIncludes": [

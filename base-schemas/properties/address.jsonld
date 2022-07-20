@@ -41,6 +41,9 @@
                 },
                 {
                     "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
                 }
             ],
             "iudx:rangeIncludes": [

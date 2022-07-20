@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:transactionType",
+            "@id": "iudx:transactionID",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Type of the transaction based on the mode of payment (For eg. mobile/UPI, card, etc) or mode of service (For eg. Issue, ReIssue, Entry, Exit etc.) corresponding to this observation.",
-            "rdfs:label": "transactionType",
+            "rdfs:comment": "Unique transaction ID of the entity corresponding to this observation.",
+            "rdfs:label": "transactionID",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

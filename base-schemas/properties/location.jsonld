@@ -89,6 +89,9 @@
                 },
                 {
                     "@id": "iudx:LaneDesc"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
                 }
             ],
             "iudx:rangeIncludes": [
