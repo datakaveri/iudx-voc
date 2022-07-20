@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The name of the bike hire docking station corresponding to this observation.",
+            "rdfs:comment": "The name station corresponding to this observation. It can be the name of bike docking station, charging station, etc.",
             "rdfs:label": "stationName",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
                 }
             ],
             "iudx:rangeIncludes": [
