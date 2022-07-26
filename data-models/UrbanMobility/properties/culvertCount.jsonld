@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Number of culverts prevelant in the trace of the road corresponding to this observation.",
+            "rdfs:comment": "Number of culverts prevalent in the trace of the road corresponding to this observation.",
             "rdfs:label": "culvertCount",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

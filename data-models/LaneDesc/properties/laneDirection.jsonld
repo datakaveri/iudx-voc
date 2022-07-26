@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Describes the direction in which vehicles are plying on the lane corresponding to this observation. ENUM [\"FORWARD\",\"BACKWARD\",\"INBOUND\",\"OUTBOUND\",\"RIGHT\",\"LEFT\"]",
+            "rdfs:comment": "Describes the direction in which vehicles are plying on the lane corresponding to this observation. ENUM [FORWARD, BACKWARD, INBOUND, OUTBOUND, RIGHT, LEFT]",
             "rdfs:label": "laneDirection",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

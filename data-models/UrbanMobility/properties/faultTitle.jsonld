@@ -11,37 +11,31 @@
     },
     "@graph": [
         {
-            "@id": "iudx:endDateTime",
+            "@id": "iudx:faultTitle",
             "@type": [
-                "iudx:TimeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Reported end time corresponding to this observation.",
-            "rdfs:label": "endDateTime",
+            "rdfs:comment": "The brief discription of the fault or issues of the product based on the experience of user.",
+            "rdfs:label": "faultTitle",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Version"
-                },
-                {
-                    "@id": "iudx:Camera"
-                },
-                {
-                    "@id": "iudx:EVChargingStation"
-                },
                 {
                     "@id": "iudx:BikeDockingStation"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:DateTime"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:faultLog"
+            }
         }
     ]
 }
