@@ -11,23 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:connectorID",
+            "@id": "iudx:originLocation",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:GeoProperty"
             ],
-            "rdfs:comment": "The ID of the connector used for charging the vehicle in the EV charging station corresponding to this observation.",
-            "rdfs:label": "connectorID",
+            "rdfs:comment": "The source location of the ride corresponding to the observation.",
+            "rdfs:label": "originLocation",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EVChargingStation"
+                    "@id": "iudx:BikeDockingStation"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Place"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

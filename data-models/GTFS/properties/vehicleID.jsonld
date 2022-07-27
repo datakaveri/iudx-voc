@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:vehicle_id",
+            "@id": "iudx:vehicleID",
             "@type": [
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "Unique ID assigned to the vehicle corresponding to this observation, used in internal system identification. SameAs: 'id' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)",
-            "rdfs:label": "vehicle_id",
+            "rdfs:label": "vehicleID",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -26,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:VehicleDescriptor"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
                 }
             ],
             "iudx:rangeIncludes": [

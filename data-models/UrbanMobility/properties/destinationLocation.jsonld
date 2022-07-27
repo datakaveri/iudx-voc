@@ -11,32 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:endDateTime",
+            "@id": "iudx:destinationLocation",
             "@type": [
-                "iudx:TimeProperty"
+                "iudx:GeoProperty"
             ],
-            "rdfs:comment": "Reported end time corresponding to this observation.",
-            "rdfs:label": "endDateTime",
+            "rdfs:comment": "The destination location of the ride corresponding to the observation.",
+            "rdfs:label": "destinationLocation",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Version"
-                },
-                {
-                    "@id": "iudx:Camera"
-                },
-                {
-                    "@id": "iudx:EVChargingStation"
-                },
                 {
                     "@id": "iudx:BikeDockingStation"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:DateTime"
+                    "@id": "iudx:Place"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

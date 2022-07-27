@@ -1,35 +1,26 @@
 {
     "@context": {
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://voc.iudx.org.in/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "iudx:travelDistance",
+            "@id": "iudx:userScore",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "The distance between the origin location and the destination location or the total distance travelled corresponding to this observation.",
-            "rdfs:label": "travelDistance",
+            "rdfs:comment": "The feedback rating given by the user based on his personal experience with the products or things or services.",
+            "rdfs:label": "userScore",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:TransitManagement"
-                },
-                {
-                    "@id": "iudx:FareCollectionSystem"
-                },
-                {
-                    "@id": "iudx:WmgmtVehicle"
-                },
                 {
                     "@id": "iudx:BikeDockingStation"
                 }

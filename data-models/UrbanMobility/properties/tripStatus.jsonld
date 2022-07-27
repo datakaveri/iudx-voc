@@ -11,32 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:endDateTime",
+            "@id": "iudx:tripStatus",
             "@type": [
-                "iudx:TimeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Reported end time corresponding to this observation.",
-            "rdfs:label": "endDateTime",
+            "rdfs:comment": "Current status of the ride corresponding to this observation. ENUM: [ACCEPTED, ONGOING, COMPLETED, CANCELLED]",
+            "rdfs:label": "tripStatus",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Version"
-                },
-                {
-                    "@id": "iudx:Camera"
-                },
-                {
-                    "@id": "iudx:EVChargingStation"
-                },
                 {
                     "@id": "iudx:BikeDockingStation"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:DateTime"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
