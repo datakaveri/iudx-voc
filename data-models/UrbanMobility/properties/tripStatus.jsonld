@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Current status of the ride corresponding to this observation. ENUM: [ACCEPTED, ONGOING, COMPLETED, CANCELLED]",
+            "rdfs:comment": "Current status of the ride corresponding to this observation. ENUM: [ACCEPTED, ONGOING, COMPLETED, CANCELLED, TERMINATED]",
             "rdfs:label": "tripStatus",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
