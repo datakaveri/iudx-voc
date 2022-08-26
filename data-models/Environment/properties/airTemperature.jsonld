@@ -26,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
                 }
             ],
             "iudx:rangeIncludes": [
