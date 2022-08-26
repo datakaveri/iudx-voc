@@ -44,6 +44,9 @@
                 },
                 {
                     "@id": "iudx:EnergyMeter"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
                 }
             ],
             "iudx:rangeIncludes": [
