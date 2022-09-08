@@ -1,0 +1,41 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:shape_pt_sequence",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Sequence in which the shape points connect to form the shape. Values must increase along the trip but do not need to be consecutive.\n\nExample: If the shape \"A_shp\" has three points in its definition, the shapes.txt file might contain these records to define the shape:\nshape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence\nA_shp,37.61956,-122.48161,0\nA_shp,37.64430,-122.41070,6\nA_shp,37.65863,-122.30839,11",
+            "rdfs:label": "shape_pt_sequence",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ShapesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: shape_pt_sequence"
+            }
+        }
+    ]
+}

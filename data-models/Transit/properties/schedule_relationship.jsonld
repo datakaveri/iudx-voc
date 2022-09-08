@@ -1,0 +1,41 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:schedule_relationship",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Describes if the Route/Trip has been scheduled. SameAs: 'schedule_relationship' field from GTFS Realtime message-TripDescriptor ENUM[SCHEDULED, ADDED, UNSCHEDULED, CANCELED] (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)",
+            "rdfs:label": "schedule_relationship",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TripDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: schedule_relationship"
+            }
+        }
+    ]
+}
