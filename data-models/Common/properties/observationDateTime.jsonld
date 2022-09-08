@@ -85,7 +85,10 @@
 		        },
 		        {
 		               "@id": "iudx:MosquitoDensity"
-		        }
+		        },
+		        {
+				"@id": "iudx:Transit"
+			}
 	 	],
 		"iudx:rangeIncludes": [{
 				"@id": "iudx:DateTime"
