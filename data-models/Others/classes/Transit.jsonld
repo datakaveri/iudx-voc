@@ -7,18 +7,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:Position",
+            "@id": "iudx:Transit",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A Data Model for realtime aspects of vehicle like speed, bearing etc.",
-            "rdfs:label": "Position",
+            "rdfs:comment": "A public transit system Data Model.",
+            "rdfs:label": "Transit",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "rdfs:subClassOf": {
-                "@id": "iudx:Transit"
+                "@id": "iudx:Others"
             }
         }
     ]

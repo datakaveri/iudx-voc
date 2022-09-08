@@ -7,18 +7,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:VehiclePosition",
+            "@id": "iudx:StopTimeUpdate",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A Data Model for vehicle's realtime positioning.",
-            "rdfs:label": "VehiclePosition",
+            "rdfs:comment": "A Data Model for realtime update of events for a given stop on a trip.",
+            "rdfs:label": "StopTimeUpdate",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "rdfs:subClassOf": {
-                "@id": "iudx:Transit"
+                "@id": "iudx:Others"
             }
         }
     ]

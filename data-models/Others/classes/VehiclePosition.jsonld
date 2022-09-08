@@ -7,18 +7,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:ShapesDesc",
+            "@id": "iudx:VehiclePosition",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A Data Model describing the path that a vehicle travels along a route alignment.",
-            "rdfs:label": "ShapesDesc",
+            "rdfs:comment": "A Data Model for vehicle's realtime positioning.",
+            "rdfs:label": "VehiclePosition",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "rdfs:subClassOf": {
-                "@id": "iudx:Transit"
+                "@id": "iudx:Others"
             }
         }
     ]

@@ -7,18 +7,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:StopsDesc",
+            "@id": "iudx:ShapesDesc",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A Data Model for a vehicle route's stop information.",
-            "rdfs:label": "StopsDesc",
+            "rdfs:comment": "A Data Model describing the path that a vehicle travels along a route alignment.",
+            "rdfs:label": "ShapesDesc",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "rdfs:subClassOf": {
-                "@id": "iudx:Transit"
+                "@id": "iudx:Others"
             }
         }
     ]

@@ -7,18 +7,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:RoutesDesc",
+            "@id": "iudx:Position",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A Data Model for vehicle's route information.",
-            "rdfs:label": "RoutesDesc",
+            "rdfs:comment": "A Data Model for realtime aspects of vehicle like speed, bearing etc.",
+            "rdfs:label": "Position",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "rdfs:subClassOf": {
-                "@id": "iudx:Transit"
+                "@id": "iudx:Others"
             }
         }
     ]

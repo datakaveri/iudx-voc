@@ -7,18 +7,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:Transit",
+            "@id": "iudx:StopsDesc",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A public transit system Data Model.",
-            "rdfs:label": "Transit",
+            "rdfs:comment": "A Data Model for a vehicle route's stop information.",
+            "rdfs:label": "StopsDesc",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "rdfs:subClassOf": {
-                "@id": "iudx:Transit"
+                "@id": "iudx:Others"
             }
         }
     ]
