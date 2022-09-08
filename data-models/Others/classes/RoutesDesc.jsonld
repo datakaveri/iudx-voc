@@ -16,9 +16,6 @@
             "rdfs:label": "RoutesDesc",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "rdfs:subClassOf": {
-                "@id": "iudx:Others"
             }
         }
     ]
