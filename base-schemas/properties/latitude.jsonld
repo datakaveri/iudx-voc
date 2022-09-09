@@ -25,9 +25,6 @@
                     "@id": "iudx:Place"
                 },
                 {
-                    "@id": "iudx:TransitManagement"
-                },
-                {
                     "@id": "iudx:WmgmtVehicle"
                 }
             ],

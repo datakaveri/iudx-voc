@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "Realtime positioning information for a given vehicle.",
+            "rdfs:comment": "A Data Model for vehicle's realtime positioning.",
             "rdfs:label": "VehiclePosition",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

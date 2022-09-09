@@ -1,12 +1,12 @@
 {
     "@context": {
-        "iudx": "https://voc.iudx.org.in/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
         "geojson": "https://purl.org/geojson/vocab#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "schema": "http://schema.org/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -15,14 +15,14 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Gives the Speed  of the vehicle.SameAs 'speed' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)",
+            "rdfs:comment": "Momentary speed measured by the vehicle, in meters per second.",
             "rdfs:label": "speed",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:TransitManagement"
+                    "@id": "iudx:Position"
                 },
                 {
                     "@id": "iudx:WmgmtVehicle"
@@ -40,7 +40,7 @@
                 }
             ],
             "skos:exactMatch": {
-                "@id": "GTFS:speed"
+                "@id": "GTFS: speed"
             }
         }
     ]

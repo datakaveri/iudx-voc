@@ -20,9 +20,6 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Place"
-                },
-                {
-                    "@id": "iudx:TransitManagement"
                 }
             ],
             "iudx:rangeIncludes": [
