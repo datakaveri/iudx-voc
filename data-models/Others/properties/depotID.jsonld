@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:depotId",
+            "@id": "iudx:depotID",
             "@type": [
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "Describes the unique id of the bus depot corresponding to this observation.",
-            "rdfs:label": "depotId",
+            "rdfs:label": "depotID",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

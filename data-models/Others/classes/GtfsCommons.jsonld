@@ -16,9 +16,6 @@
             "rdfs:label": "GtfsCommons",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "rdfs:subClassOf": {
-                "@id": "iudx:Others"
             }
         }
     ]
