@@ -29,6 +29,9 @@
                 },
                 {
                     "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
                 }
             ],
             "iudx:rangeIncludes": [

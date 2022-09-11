@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "Identification information for the vehicle performing the trip.",
+            "rdfs:comment": "A Data Model for identification information for the vehicle performing the trip.",
             "rdfs:label": "VehicleDescriptor",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "A descriptor of realtime update for arrival and/or departure events for a given stop on a trip.",
+            "rdfs:comment": "A Data Model for realtime update of events for a given stop on a trip.",
             "rdfs:label": "StopTimeUpdate",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

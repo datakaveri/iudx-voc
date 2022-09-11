@@ -1,11 +1,11 @@
 {
     "@context": {
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://voc.iudx.org.in/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TimeProperty"
             ],
-            "rdfs:comment": "The time taken to travel between the origin location and the destination location corresponding to this observation in HH:MM:SS format(HH:MM:SS is also accepted, if the hour begins with 0).",
+            "rdfs:comment": "The time taken to travel between the orgin location and the destination location corresponding to this observation in HH:MM:SS format(HH:MM:SS is also accepted, if the hour begins with 0).",
             "rdfs:label": "travelTime",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -23,9 +23,6 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:TransitManagement"
-                },
-                {
-                    "@id": "iudx:BikeDockingStation"
                 }
             ],
             "iudx:rangeIncludes": [

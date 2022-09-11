@@ -11,31 +11,25 @@
     },
     "@graph": [
         {
-            "@id": "iudx:agency_lang",
+            "@id": "iudx:positionInfo",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Contains a two-letter ISO 639-1 code for the primary language used by this transit agency. The language code is case-insensitive (both en and EN are accepted). SameAs: 'agency_lang' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)",
-            "rdfs:label": "agency_lang",
+            "rdfs:comment": "Describes the current position of the vehicle corresponding to this observation. SameAs:'position' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)",
+            "rdfs:label": "positionInfo",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:AgencyDesc"
+                    "@id": "iudx:TransitManagement"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:Position"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "GTFS: agency_lang"
-            }
+            ]
         }
     ]
 }

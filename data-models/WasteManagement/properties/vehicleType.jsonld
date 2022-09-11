@@ -35,9 +35,6 @@
                 },
                 {
                     "@id": "iudx:EVChargingStation"
-                },
-                {
-                    "@id": "iudx:Transit"
                 }
             ],
             "iudx:rangeIncludes": [

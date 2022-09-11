@@ -11,18 +11,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:agency_lang",
+            "@id": "iudx:acAvailable",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Contains a two-letter ISO 639-1 code for the primary language used by this transit agency. The language code is case-insensitive (both en and EN are accepted). SameAs: 'agency_lang' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)",
-            "rdfs:label": "agency_lang",
+            "rdfs:comment": "Describes the presence of air conditioning option in the vehicle corresponding to this observation.",
+            "rdfs:label": "acAvailable",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:AgencyDesc"
+                    "@id": "iudx:TransitManagement"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -32,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "GTFS: agency_lang"
-            }
+            ]
         }
     ]
 }
