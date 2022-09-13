@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:trip",
+            "@id": "iudx:vehicleInfo",
             "@type": [
                 "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Describes the trip the vehicle corresponding to this observation is making. SameAs:'trip' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)",
-            "rdfs:label": "trip",
+            "rdfs:comment": "Describes the additional information of the vehicle corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)",
+            "rdfs:label": "vehicleInfo",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:TripDescriptor"
+                    "@id": "iudx:VehicleDescriptor"
                 }
             ]
         }

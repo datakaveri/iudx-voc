@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:VehicleDescriptor"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
                 }
             ],
             "iudx:rangeIncludes": [

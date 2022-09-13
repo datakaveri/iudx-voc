@@ -1,0 +1,41 @@
+{
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:dataQualityFile",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": " Data Quality file download link for the resource",
+            "rdfs:label": "dataQualityFile",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@container": "@list",
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@container": "@list",
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ]
+}
