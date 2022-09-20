@@ -17,9 +17,6 @@
             ],
             "rdfs:comment": "Route ID assigned to the route on which the bus/vehicle corresponding to the bus in this observation is currently plying on.",
             "rdfs:label": "route_id",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:GtfsCommons"
@@ -32,7 +29,13 @@
                 },
                 {
                     "@id": "iudx:RoutesDesc"
-                }   
+                },
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
             ],
             "iudx:rangeIncludes": [
                 {
@@ -42,6 +45,9 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "GTFS: route_id"
             }
