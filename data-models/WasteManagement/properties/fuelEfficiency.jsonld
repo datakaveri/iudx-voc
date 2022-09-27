@@ -17,9 +17,6 @@
             ],
             "rdfs:comment": "The distance traveled per unit of fuel used.",
             "rdfs:label": "fuelEfficiency",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:WmgmtVehicle"
@@ -36,6 +33,9 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "schema:fuelEfficiency"
             }
