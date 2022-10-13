@@ -8,29 +8,31 @@
     },
     "@graph": [
         {
-            "@id": "iudx:relationType",
+            "@id": "iudx:isRelatedTo",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Type of relation. ENUM: [REL_MESSAGESTREAM, REL_FILE, REL_DATASET, REL_LINK].",
-            "rdfs:label": "relationType",
+            "rdfs:comment": "Value associated with RelationshipValue class. Contains IRI(s) that specify the relationship object(s).",
+            "rdfs:label": "isRelatedTo",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:RelationshipValue",
-                    "iudx:requiredProperty": true
+                    "@id": "iudx:RelationshipValue"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id",
+                    "@container": "@set"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            }
+            ]
         }
     ]
 }

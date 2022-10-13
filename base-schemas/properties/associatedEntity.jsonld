@@ -1,23 +1,25 @@
 {
     "@context": {
         "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "geojson": "https://purl.org/geojson/vocab#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://voc.iudx.org.in/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/"
     },
     "@graph": [
         {
-            "@id": "iudx:relationType",
+            "@id": "iudx:associatedEntity",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:Relationship"
             ],
-            "rdfs:comment": "Type of relation. ENUM: [REL_MESSAGESTREAM, REL_FILE, REL_DATASET, REL_LINK].",
-            "rdfs:label": "relationType",
+            "rdfs:comment": "ID of the associated entity.",
+            "rdfs:label": "associatedEntity",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:RelationshipValue",
-                    "iudx:requiredProperty": true
+                    "@id": "iudx:IUDXEntity"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -25,7 +27,7 @@
                     "@id": "iudx:Text"
                 },
                 {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:RelationshipValue"
                 }
             ],
             "rdfs:isDefinedBy": {
