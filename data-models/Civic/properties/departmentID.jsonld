@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:EmployeeDetails"
                 }
             ],
             "iudx:rangeIncludes": [
