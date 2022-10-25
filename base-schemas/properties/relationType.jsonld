@@ -12,7 +12,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Type of relation. ENUM: [REL_MESSAGESTREAM, REL_FILE, REL_DATASET].",
+            "rdfs:comment": "Type of relation. ENUM: [REL_MESSAGESTREAM, REL_FILE, REL_DATASET, REL_THING].",
             "rdfs:label": "relationType",
             "iudx:domainIncludes": [
                 {

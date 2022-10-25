@@ -1,83 +1,277 @@
-#!/usr/local/bin/python3
 import json
-import os
+import os, fnmatch
 import glob
 import copy
 import subprocess
+from plantuml import PlantUML
+import os.path as path
+from tkinter import Tk
+from tkinter import filedialog
+import pytesseract
 
-""" Path to expanded classes."""
-folder_path = "generated/"
+""" Path to iudx-voc."""
+
+Tk().withdraw() 
+voc_dir = filedialog.askdirectory(title="Select iudx-voc directory")
 """ Path to generate the UML diagram."""
-if not os.path.exists("diagrams/"):
-    os.makedirs("diagrams/")
-diagram_path = "diagrams/"
-""" List of classnames to avoid duplication."""
-dup_classes = []
 
+Tk().withdraw() 
+diagram_path = filedialog.askdirectory(title="Select directory for png")
+
+dup_classes = []
+dup_property = []
+ct = 1
+dict = {}
+bg_color = "#F6EEE0"
+def find_name(pattern, path):
+    result = []
+    for root, dirs, files in os.walk(path):
+        for name in dirs:
+            if fnmatch.fnmatch(name, pattern):
+                result.append(os.path.join(root, name))
+    return result
+
+def find_file(pattern, path):
+    result = []
+    for root, dirs, files in os.walk(path):
+        for name in files:
+            if fnmatch.fnmatch(name, pattern):
+                result.append(os.path.join(root, name))
+    return result
+
+def get_id(graph_obj):
+    for j in graph_obj:
+        for prop in j["@type"]:
+            if "Property" in prop:
+                print("\t" + j["@id"], file=text_file)
+            elif "Relationship" in prop:
+                print("\t" + j["@id"], file=text_file)
+    print("}", file=text_file)
 
 def graph(obj):
     """ Generate PlantUML text.
-
-    This function generates a text file from the generated expanded classes,
+    This function generates a text file from the classes,
     which is used by plantuml to generate the UML Ontology diagram for IUDX.
-
     """
-    if "@graph" in obj.keys():
-        graph_obj = copy.deepcopy(obj["@graph"])
-        for i in obj["@graph"]:
-            if i["@type"][0].split(":")[1] == "Class":
-                class_name = i["@id"]
-                cname = i["@id"].split(":")
-                cname = "".join(cname)
-                if class_name not in dup_classes:
-                    dup_classes.append(class_name)
-                    print("class " + "\"" + class_name + "\"" + " as " + cname + "{", file=text_file) 
-                    for j in graph_obj:
-                        for prop in j["@type"]:
-                            if "Property" in prop:
-                                print("\t" + j["@id"], file=text_file)
-                            elif "Relationship" in prop:
-                                print("\t" + j["@id"], file=text_file)
-                    print("}", file=text_file)
-                    try:
+    global ct
+    global dict
+    
+    try:
+        if "@graph" in obj.keys():
+            graph_obj = copy.deepcopy(obj["@graph"])
+            for i in obj["@graph"]:
+                if i["@type"][0].split(":")[1] == "Class":
+                    class_name = i["@id"]
+                    cname = i["@id"].split(":")
+                    cname = "".join(cname)
+                    if class_name not in dup_classes:
+                        dup_classes.append(class_name)
+                        if 'rdfs:subClassOf' not in  i and 'rdfs:isDefinedBy' in i:
+                            
+                            if i['rdfs:label'] != "Thing":
+                                print("class " + "\"" + class_name +  f"<sup>{ct}</sup>" + "\"" + " as " + class_name + f" {bg_color}" +"{", file=text_file) 
+                                get_id(graph_obj)
+                                dict.update({class_name:ct})
+                                ct = ct + 1
+                            else:
+                                print("class " + "\"" + class_name + "\"" + " as " + class_name + f" {bg_color}" +"{", file=text_file) 
+                                get_id(graph_obj) 
+                                
+                        
+                        if 'rdfs:subClassOf' not in  i and 'rdfs:isDefinedBy' not in i:
+                            print("class " + "\"" + class_name + "\"" + " as " + class_name + f" {bg_color}" +"{", file=text_file)   
+                            get_id(graph_obj)
+                            
+                        if 'rdfs:subClassOf' in  i and 'rdfs:isDefinedBy' not in i:
+                            print("class " + "\"" + class_name + "\"" + " as " + class_name + "{", file=text_file) 
+                            get_id(graph_obj)
+                            
                         if "rdf:" in i["rdfs:subClassOf"]["@id"]:
-                            spclass_name = i["rdfs:subClassOf"]["@id"].split(":")
+                            spclass_name = i["rdfs:subClassOf"]["@id"]
                             superclass_name = "".join(spclass_name)
                             super_class = i["rdfs:subClassOf"]["@id"]
                             print("class " + "\"" + i["rdfs:subClassOf"]["@id"] + "\" "+ "as " + superclass_name, file=text_file)
                             if "rdf:" not in super_class:
                                 super_class = super_class.split(":")
-                                with open(folder_path + super_class[1] + ".jsonld", "r+") as super_file:
+                                file_path = find_file(super_class[1]+ '.jsonld',voc_dir)
+                                with open(file_path[0], "r+") as super_file:
                                     super_obj = json.load(super_file)
                                     graph(super_obj)
-                            print(superclass_name + " --|> " + cname + " : SubClass", file=text_file)
+                            print(f'"{spclass_name}"' + " --|> " + f'"{class_name}"' + " : SubClass", file=text_file)
                         elif "rdf:" not in i["rdfs:subClassOf"]["@id"]:
-                            spclass_name = i["rdfs:subClassOf"]["@id"].split(":")
+                            spclass_name = i["rdfs:subClassOf"]["@id"]
                             superclass_name = "".join(spclass_name)
                             super_class = i["rdfs:subClassOf"]["@id"]
                             super_class = super_class.split(":")
-                            with open(folder_path + super_class[1] + ".jsonld", "r+") as super_file:
+                            file_path = find_file(super_class[1]+ '.jsonld',voc_dir)
+                            with open(file_path[0], "r+") as super_file:
                                 super_obj = json.load(super_file)
                                 graph(super_obj)
-                            print(superclass_name + " --|> " + cname + " : SubClass", file=text_file)
-                    except KeyError:
-                        pass
-    else:
-        print("@graph missing in " + filename)
+                            print(f'"{spclass_name}"' + " --|> " + f'"{class_name}"' + " : SubClass", file=text_file)
+                                    
+        else:
+            print("@graph missing in " + filename)
+    except:
+          pass
 
 
-with open(diagram_path + "IUDX-Vocab-Ontology.txt", "w+") as text_file:
+def prop_cond1(domain_includes,class_name,bg_color,text_color):
+    domain_name = domain_includes['@id']
+    dn1 = domain_includes['@id'].replace('iudx:', '')
+    jsonld_prop = find_file(dn1+".jsonld", voc_dir)
+    global ct
+    if not jsonld_prop:
+        if domain_includes['@id'] in dict.keys():
+            num = dict[domain_includes['@id']]
+            print("class " + f'"{domain_name}<sup>{num}</sup>"'+ f" {bg_color}" +" {"  + "\n"  + f"<color:{text_color}>" + class_name  + "\n" + " }", file=text_file)
+        if domain_includes['@id'] not in dict.keys():
+            print("class " + f'"{domain_name}<sup>{ct}</sup>"'+ f" {bg_color}" + " {"  + "\n"  + f"<color:{text_color}>" + class_name  + "\n" + " }", file=text_file)
+            dict.update({domain_includes['@id']:ct})
+            ct = ct+1
+    if jsonld_prop:
+        with open(jsonld_prop[0], "r+") as obj_file:
+            obj1 = json.load(obj_file)
+        if "rdfs:subClassOf" not in obj1['@graph'][0] and obj1['@graph'][0]['rdfs:label'] != "Thing":
+            print("class " + f'"{domain_name}"' + f" {bg_color}" +" {"  + "\n"  + f"<color:{text_color}>" + class_name  + "\n" + " }", file=text_file)
+        else:
+            print("class " + f'"{domain_name}"'  +" {"  + "\n"  + f"<color:{text_color}>" + class_name  + "\n" + " }", file=text_file)
+
+
+def prop(obj):
+    """ Generate PlantUML text.
+    This function generates a text file from the properties,
+    which is used by plantuml to generate the UML Ontology diagram for IUDX.
+    """
+    global ct
+    try:
+
+        if "@graph" in obj.keys():
+            graph_obj = copy.deepcopy(obj["@graph"])
+            for i in obj["@graph"]:
+                property_name = i['rdfs:label']
+                if property_name not in dup_property:
+                    if i["iudx:domainIncludes"]:
+                        rng_incl = []
+                        for range_includes in  i["iudx:rangeIncludes"]:
+                            if range_includes['@id']:
+                                range_includes =  {'@id':range_includes['@id']}
+                        for domain_includes in  i["iudx:domainIncludes"]:
+                            if domain_includes['@id']:
+                                domain_includes =  {'@id':domain_includes['@id']}
+                                if range_includes['@id'] in dict.keys():
+                                    class_name = i["@id"]
+                                    num = dict[range_includes['@id']]
+                                    dn = domain_includes['@id']
+                                    if i["@type"] == ['iudx:TimeProperty']:
+                                        print("class " + f'"{dn}"' + " {"  + "\n"  + "<color:#red>" + class_name  + f"<sup>{num}</sup>"+ "\n" + " }", file=text_file)
+                                    if i["@type"] == ['iudx:TextProperty']:
+                                        print("class " + f'"{dn}"' + " {"  + "\n"  + "<color:#blue>" + class_name  +f"<sup>{num}</sup>"+ "\n" + " }", file=text_file)
+                                    if i["@type"] == ['iudx:QuantitativeProperty']:
+                                        print("class " + f'"{dn}"' + " {"  + "\n"  + "<color:#brown>" + class_name +f"<sup>{num}</sup>" + "\n" + " }", file=text_file)
+                                    if i["@type"] == ['iudx:StructuredProperty']:
+                                        print("class " + f'"{dn}"' + " {"  + "\n"  + "<color:#black>" + class_name + f"<sup>{num}</sup>" + "\n" + " }", file=text_file)
+                                    if i["@type"] == ['iudx:GeoProperty']:
+                                        print("class " + f'"{dn}"' + " {"  + "\n"  + "<color:#grey>" + class_name + f"<sup>{num}</sup>" + "\n" + " }", file=text_file)
+                                    if i["@type"] == ['iudx:Relationship']:
+                                        print("class " + f'"{dn}"' + " {"  + "\n"  + "<color:#green>" + class_name +f"<sup>{num}</sup>"+ "\n" + " }", file=text_file)
+                                    rng_incl.append(domain_includes['@id'])
+
+                                if domain_includes['@id'] not in rng_incl and domain_includes['@id'] in dict.keys() :
+                                    class_name = i["@id"]
+                                    if i["@type"] == ['iudx:TimeProperty']:
+                                        text_color = "#red"
+                                        prop_cond1(domain_includes,class_name,bg_color,text_color)
+                                    if i["@type"] == ['iudx:TextProperty']:
+                                        text_color = "#blue"
+                                        prop_cond1(domain_includes,class_name,bg_color,text_color)
+                                    if i["@type"] == ['iudx:QuantitativeProperty']:
+                                        text_color = "#brown"
+                                        prop_cond1(domain_includes,class_name,bg_color,text_color)
+                                    if i["@type"] == ['iudx:StructuredProperty']:
+                                        text_color = "#black"
+                                        prop_cond1(domain_includes,class_name,bg_color,text_color)
+                                    if i["@type"] == ['iudx:GeoProperty']:
+                                        text_color = "#grey"
+                                        prop_cond1(domain_includes,class_name,bg_color,text_color)
+                                    if i["@type"] == ['iudx:Relationship']:
+                                        text_color = "#green"
+                                        prop_cond1(domain_includes,class_name,bg_color,text_color)
+
+                                if domain_includes['@id'] not in rng_incl and domain_includes['@id'] not in dict.keys():
+                                    class_name = i["@id"]
+                                    if i["@type"] == ['iudx:TimeProperty']:
+                                        text_color = "#red"
+                                        prop_cond1(domain_includes,class_name,bg_color,text_color)
+                                    if i["@type"] == ['iudx:TextProperty']:
+                                        text_color = "#blue"
+                                        prop_cond1(domain_includes,class_name,bg_color,text_color)
+                                    if i["@type"] == ['iudx:QuantitativeProperty']:
+                                        text_color = "#brown"
+                                        prop_cond1(domain_includes,class_name,bg_color,text_color)
+                                    if i["@type"] == ['iudx:StructuredProperty']:
+                                        text_color = "#black"
+                                        prop_cond1(domain_includes,class_name,bg_color,text_color)
+                                    if i["@type"] == ['iudx:GeoProperty']:
+                                        text_color = "#grey"
+                                        prop_cond1(domain_includes,class_name,bg_color,text_color)
+                                    if i["@type"] == ['iudx:Relationship']:
+                                        text_color = "#green"
+                                        prop_cond1(domain_includes,class_name,bg_color,text_color)
+                                    
+                        dup_property.append(property_name)                          
+        else:
+            print("@graph missing in " + filename)
+    except:
+        print("Error in file")
+
+
+with open(os.path.join(diagram_path, 'IUDX-Vocab-Ontology.txt'), "w+") as text_file:
     print("@startuml", file=text_file)
     print("title IUDX-VOC Ontology Diagram", file=text_file)
     print("skinparam titleFontSize 30", file=text_file)
     print("skinparam titleFontColor DarkGoldenRod" + "\n", file=text_file)
     print("left to right direction" + "\n" + "skinparam classFontColor DarkCyan" + "\n" + "skinparam roundcorner 27" + "\n", file=text_file)
-    # Uncomment to generate UML for a given class
-    #filename = "generated/Resource.jsonld"
-    for filename in glob.glob(os.path.join(folder_path, '*.jsonld')):
-        with open(filename, "r+") as obj_file:
-             obj = json.load(obj_file)
-             graph(obj)
-    print("\n" + "@enduml", file=text_file)
-which_plantuml = ((subprocess.check_output("which plantuml", shell=True)).decode("utf-8")).rstrip()
-subprocess.call([which_plantuml, diagram_path + "IUDX-Vocab-Ontology.txt"])
+    print("skinparam legendBackgroundColor #FFFFFF"+ "\n", file=text_file)
+    #Accessing all Classes in voc
+    dirs = glob.glob(os.path.join(voc_dir, '*'))
+    class_dirs = find_name('classes',voc_dir)
+    try:    
+        for dir in class_dirs:
+            sub_dirs = glob.glob(os.path.join(dir, '*.jsonld'))
+            for filename in sub_dirs:
+                with open(filename, "r+") as obj_file:
+                    obj = json.load(obj_file)
+                    graph(obj)
+    except:
+        print("Json file is empty") 
+    #Accessing all Properties in voc
+    try:
+        property_dirs = find_name('properties',voc_dir)
+        for dir in property_dirs:
+            sub_dirs = glob.glob(os.path.join(dir, '*.jsonld'))
+            for filename in sub_dirs:
+                with open(filename, "r+") as obj_file:
+                    obj = json.load(obj_file)
+                    prop(obj)
+        print(""" 
+        legend
+        <back:red>     </back> TimeProperty         <back:blue>     </back> TextProperty         <back:violet>     </back> QuantitativeProperty         <back:black>     </back> StructuredProperty         <back:grey>     </back> GeoProperty         <back:green>     </back> Relationship 
+        endlegend""", file=text_file)            
+        print("\n" + "@enduml", file=text_file)
+    except:
+        print("Json file is empty")   
+
+
+#Install Java "sudo apt install default-jre"
+plantuml_path = os.path.join(voc_dir,'utils/misc/plantuml.jar')
+out_path = os.path.join(diagram_path, 'IUDX-Vocab-Ontology.txt')
+subprocess.check_output(f'java -jar -DPLANTUML_LIMIT_SIZE=20000 {plantuml_path} {out_path}', shell=True, text=True)
+
+
+#Install packages for png to pdf "sudo apt-get install python3-pil tesseract-ocr libtesseract-dev tesseract-ocr-eng tesseract-ocr-script-latn"
+png_path = os.path.join(diagram_path,"IUDX-Vocab-Ontology.png")
+pdf_path = os.path.join(diagram_path,"IUDX-Vocab-Ontology.pdf")
+PDF = pytesseract.image_to_pdf_or_hocr(png_path, extension='pdf')
+# export to searchable.pdf
+with open(pdf_path, "w+b") as f:
+    f.write(bytearray(PDF))
