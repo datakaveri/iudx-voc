@@ -22,7 +22,7 @@
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:StreetLight"
+                    "@id": "iudx:Streetlight"
                 }
             ],
             "iudx:rangeIncludes": [
