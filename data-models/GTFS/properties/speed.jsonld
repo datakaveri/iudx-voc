@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Momentary speed measured by the vehicle, in meters per second.",
+            "rdfs:comment": "Momentary speed measured by the vehicle.",
             "rdfs:label": "speed",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

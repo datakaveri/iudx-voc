@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:arrivalUncertainity",
+            "@id": "iudx:departureUncertainty",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate. SameAs: 'arrival' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)",
-            "rdfs:label": "arrivalUncertainity",
+            "rdfs:comment": "If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate. SameAs: 'departure' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)",
+            "rdfs:label": "departureUncertainty",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

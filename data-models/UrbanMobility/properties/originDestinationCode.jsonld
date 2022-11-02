@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The code for the orgin and destination stops corresponding to this observation.",
+            "rdfs:comment": "The code for the origin and destination stops corresponding to this observation.",
             "rdfs:label": "originDestinationCode",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

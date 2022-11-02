@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Odometer value, in meters.",
+            "rdfs:comment": "Odometer value.",
             "rdfs:label": "odometer",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
