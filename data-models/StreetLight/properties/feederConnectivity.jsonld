@@ -13,7 +13,7 @@
         {
             "@id": "iudx:feederConnectivity",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
             "rdfs:comment": "Describes the connectivity status of the streetlight feeder panel associated with the streetlight corresponding to this observation. ENUM: [connected, disconnected]",
             "rdfs:label": "feederConnectivity",
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
