@@ -11,24 +11,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:totalActivePower",
+            "@id": "iudx:feederConnectivity",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Total active power consumed by all phases.",
-            "rdfs:label": "totalActivePower",
+            "rdfs:comment": "Describes the connectivity status of the streetlight feeder panel associated with the streetlight corresponding to this observation. ENUM: [connected, disconnected]",
+            "rdfs:label": "feederConnectivity",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:StreetLightFeeder"
-                },
-                {
-                    "@id": "iudx:SolarEnergy"
-                },
-                {
-                    "@id": "iudx:EnergyMeter"
+                    "@id": "iudx:StreetLight"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -38,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware:totalActivePower"
-            }
+            ]
         }
     ]
 }

@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Indicates the current status of the streetlight feeder panel.",
+            "rdfs:comment": "Indicates the current power status of the entity corresponding to this observation.",
             "rdfs:label": "powerState",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
