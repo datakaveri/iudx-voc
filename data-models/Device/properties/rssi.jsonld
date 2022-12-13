@@ -32,7 +32,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: Device.rssi"
+            }
         }
     ]
 }

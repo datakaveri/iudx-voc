@@ -16,7 +16,7 @@
                 "iudx:QuantitativeProperty"
             ],
             "rdfs:comment": "Depth of the water storage tank corresponding to this observation.",
-            "rdfs:label": "tankdepth",
+            "rdfs:label": "tankDepth",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
