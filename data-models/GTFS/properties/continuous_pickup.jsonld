@@ -13,7 +13,7 @@
         {
             "@id": "iudx:continuous_pickup",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
             "rdfs:comment": "Indicates whether a rider can board the transit vehicle at any point along the vehicle\u2019s travel path.SameAs: 'continuous_pickup' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)",
             "rdfs:label": "continuous_pickup",
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
