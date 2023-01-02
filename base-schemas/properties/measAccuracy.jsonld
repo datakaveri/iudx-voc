@@ -13,7 +13,7 @@
         {
             "@id": "iudx:measAccuracy",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
             "rdfs:comment": "Accuracy of a measurement. Maximum difference that can exist between the actual value and the measured value. It can be specified in relative as well as absolute terms.",
             "rdfs:label": "measAccuracy",
