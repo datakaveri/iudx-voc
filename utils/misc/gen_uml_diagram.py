@@ -255,7 +255,7 @@ with open(os.path.join(diagram_path, 'IUDX-Vocab-Ontology.txt'), "w+") as text_f
                     prop(obj)
         print(""" 
         legend
-        <back:red>     </back> TimeProperty         <back:blue>     </back> TextProperty         <back:violet>     </back> QuantitativeProperty         <back:black>     </back> StructuredProperty         <back:grey>     </back> GeoProperty         <back:green>     </back> Relationship 
+        <back:red>     </back> TimeProperty         <back:blue>     </back> TextProperty         <back:brown>     </back> QuantitativeProperty         <back:black>     </back> StructuredProperty         <back:grey>     </back> GeoProperty         <back:green>     </back> Relationship 
         endlegend""", file=text_file)            
         print("\n" + "@enduml", file=text_file)
     except:
