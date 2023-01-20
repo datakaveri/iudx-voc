@@ -4,11 +4,13 @@
         "iudx:ResourceServer"
     ],
     "id": "rbccps.org/102aeifjas4934589070adjkshf/rs.iudx.org.in",
+    "provider": "rbccps.org/102aeifjas4934589070adjkshf",
     "name": "iudxResourceServer",
     "description": "Generic IUDX resource server",
-    "tags": "IUDX, Resource, Server, Platform",
+    "tags": ["IUDX","Resource","Server","Platform"],
     "itemStatus": "ACTIVE",
     "itemCreatedAt": "2020-07-01T10:03:26+0000",
+    "resourceServerStreamingAccessURL": "databroker.iudx.org.in",
     "resourceServerHTTPAccessURL": "https://rs.iudx.org.in/",
     "resourceServerOrg": {
         "name": "iudx",

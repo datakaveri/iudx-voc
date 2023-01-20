@@ -6,9 +6,6 @@
     "id": "rbccps.org/aa9d66a000d94a78895de8d4c0b3a67f3450e531",
     "name": "IUDXAdmin",
     "description": "Administrator of the IUDX platform",
-    "tags": "IUDX, Admin, Platform",
-    "itemStatus": "ACTIVE",
-    "itemCreatedAt": "2020-07-01T10:03:26+0000",
     "providerOrg": {
         "name": "iudx",
         "additionalInfoURL": "https://iudx.org.in",

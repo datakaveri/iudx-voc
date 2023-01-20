@@ -17,12 +17,12 @@
             ],
             "rdfs:comment": "Year corresponding to this observation and is described in YYYY format, for eg. 2020.",
             "rdfs:label": "year",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:PublicSchemes"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -32,7 +32,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

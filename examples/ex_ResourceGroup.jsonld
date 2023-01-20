@@ -1,30 +1,21 @@
 {
     "@context": "https://voc.iudx.org.in/",
     "type": ["iudx:ResourceGroup"],
-    "id": "providerID/example.com/senosrs",
-    "description": "Description of this resource group",
+    "id": "providerID/example.com/sensors",
     "name": "sensors",
-    "tags": "sensor, sensing, resource, battery operated",
+    "label": "Information from Sensors",
+    "description": "Description of this resource group",
+    "tags": ["sensor", "sensing", "resource", "battery operated"],
+    "accessPolicy": "OPEN",
     "itemStatus": "ACTIVE",
     "provider": "providerID",
-    "resourceServer": "resourceProviderID/exapmle.com",
-    "resourceAuthControlLevel": "INDIVIDUAL",
-    "resourceType": "messageStream",
-    "authServerInfo": {
-       "type": ["AuthServerInfoValue"],
-       "authServerURL": "https://myauth.server.org/",
-       "authType": "iudx-auth"
-    },
-    "accessObjectInfo": {
-       "type": ["AccessObjectInfoValue"],
-       "accessObject": "https://example.com/sensorsApis.json",
-       "additionalInfoURL": "https://example.com/sensorsApis",
-       "accessObjectType": "openAPI"
-    },
-    "iudxResourceAPIs": ["attribute", "temporal"],
-    "itemCreatedAt": "2019-02-20T10:30:06.093121",
+    "resourceServer": "resourceProviderID/example.com",
     "location": {
       "type": "Place",
       "address": "Bangalore"
-    }
+    },
+    "resourceType": "MESSAGESTREAM",
+    "iudxResourceAPIs": ["ATTR", "TEMPORAL"],
+    "itemCreatedAt": "2020-07-01T10:03:26+0000",
+    "itemModifiedAt": "2023-01-01T11:03:27+0000"
 }

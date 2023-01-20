@@ -11,34 +11,28 @@
     },
     "@graph": [
         {
-            "@id": "iudx:trip_direction",
+            "@id": "iudx:beneficiaryCount",
             "@type": [
-                 "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Indicates the direction of travel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed trips.txt. SameAs: 'direction_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)",
-            "rdfs:label": "trip_direction",
+            "rdfs:comment": "Represents the count of people benifited under the scheme corresponding to this observation.",
+            "rdfs:label": "beneficiaryCount",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:TransitManagement"
-                },
-                {
-                    "@id": "iudx:FareCollectionSystem"
+                    "@id": "iudx:PublicSchemes"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "GTFS: direction_id"
-            }
+            ]
         }
     ]
 }
