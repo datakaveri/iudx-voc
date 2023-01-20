@@ -3,13 +3,19 @@
     "type": [
         "iudx:Resource"
     ],
-    "id": "providerID/example.com/senosrs/sensorA",
+    "id": "providerID/example.com/sensors/sensorA",
     "name": "sensorA",
+    "label": "Realtime information from station A in Bangalore City",
     "description": "Description of this resource",
-    "tags": "sensor, sensing, resource, battery operated",
+    "tags": ["sensor", "sensing", "resource", "battery operated"],
     "itemStatus": "ACTIVE",
     "resourceGroup": "providerID/example.com/sensors",
-    "itemCreatedAt": "2020-07-01T10:03:26+0000",
+    "provider": "providerID",
+    "resourceType": "MESSAGESTREAM",
+    "iudxResourceAPIs": [
+        "ATTR",
+        "TEMPORAL"
+      ],
     "location": {
         "type": "Place",
         "address": "IISc, Bangalore-560092, India",
@@ -21,6 +27,6 @@
             ]
         }
     },
-    "provider": "providerID",
-    "itemModifiedAt": "2020-07-01T10:03:26+0000"
+    "itemCreatedAt": "2020-07-01T10:03:26+0000",
+    "itemModifiedAt": "2020-07-01T11:03:26+0000"
 }

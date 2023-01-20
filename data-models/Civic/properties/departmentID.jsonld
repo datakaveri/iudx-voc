@@ -17,15 +17,15 @@
             ],
             "rdfs:comment": "Unique ID or code associated with the department which is associated with the service or the issue corresponding to this observation.",
             "rdfs:label": "departmentID",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:IssueReporting"
                 },
                 {
                     "@id": "iudx:EmployeeDetails"
+                },
+                {
+                    "@id": "iudx:PublicSchemes"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -35,7 +35,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

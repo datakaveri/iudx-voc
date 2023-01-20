@@ -22,7 +22,7 @@
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:TransitManagement"
+                    "@id": "iudx:TripDescriptor"
                 },
                 {
                     "@id": "iudx:FareCollectionSystem"

@@ -17,15 +17,18 @@
             ],
             "rdfs:comment": "Division or section of the organization corresponding to this observation. Eg. Health, Transport.",
             "rdfs:label": "department",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EmployeeDetails"
                 },
                 {
                     "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                },
+                {
+                    "@id": "iudx:PublicSchemes"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -36,6 +39,9 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "schema:department"
             }
