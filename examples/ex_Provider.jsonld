@@ -20,5 +20,7 @@
                 ]
             }
         }
-    }
+    },
+    "itemStatus": "ACTIVE",
+    "itemCreatedAt": "2020-07-01T10:03:26+0000"
 }

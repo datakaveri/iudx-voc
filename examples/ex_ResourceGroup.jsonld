@@ -6,6 +6,7 @@
     "label": "Information from Sensors",
     "description": "Description of this resource group",
     "tags": ["sensor", "sensing", "resource", "battery operated"],
+    "authControlLevel":"GROUP",
     "accessPolicy": "OPEN",
     "itemStatus": "ACTIVE",
     "provider": "providerID",
