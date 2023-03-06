@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Gives the sim number of the device in the waste management vehicle.",
+            "rdfs:comment": "Gives the sim number of the tracker device in the vehicle.",
             "rdfs:label": "deviceSimNumber",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -23,12 +23,6 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Device"
-                },
-                {
-                    "@id": "iudx:WmgmtVehicle"
-                },
-                {
-                    "@id": "iudx:EmergencyVehicle"
                 }
             ],
             "iudx:rangeIncludes": [

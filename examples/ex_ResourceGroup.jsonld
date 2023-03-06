@@ -16,7 +16,5 @@
       "address": "Bangalore"
     },
     "resourceType": "MESSAGESTREAM",
-    "iudxResourceAPIs": ["ATTR", "TEMPORAL"],
-    "itemCreatedAt": "2020-07-01T10:03:26+0000",
-    "itemModifiedAt": "2023-01-01T11:03:27+0000"
+    "iudxResourceAPIs": ["ATTR", "TEMPORAL"]
 }

@@ -47,6 +47,15 @@
                 },
                 {
                     "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
                 }
             ],
             "iudx:rangeIncludes": [
