@@ -23,12 +23,6 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:Device"
-                },
-                {
-                    "@id": "iudx:WmgmtVehicle"
-                },
-                {
-                    "@id": "iudx:EmergencyVehicle"
                 }
             ],
             "iudx:rangeIncludes": [
