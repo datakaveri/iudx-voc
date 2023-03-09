@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:GeoProperty"
             ],
-            "rdfs:comment":  "Geometry property in a GeoJSON object",
+            "rdfs:comment": "Geometry property in a GeoJSON object",
             "rdfs:label": "geometry",
             "iudx:domainIncludes": [
                 {
@@ -23,11 +23,29 @@
                 },
                 {
                     "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Headquarters"
+                },
+                {
+                    "@id": "iudx:District"
+                },
+                {
+                    "@id": "iudx:States"
+                },
+                {
+                    "@id": "iudx:FeaturesOfInterest"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:GeoJSONGeometry"
+                },
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
             ],
             "skos:exactMatch": {
