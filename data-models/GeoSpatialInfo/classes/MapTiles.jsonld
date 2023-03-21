@@ -11,9 +11,9 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "@id": "iudx:FeaturesOfInterest",
-            "rdfs:comment": "A Data Model for geographic description of Features of Interest.",
-            "rdfs:label": "FeaturesOfInterest",
+            "@id": "iudx:MapTiles",
+            "rdfs:comment": "A Data Model for  map tiles.",
+            "rdfs:label": "MapTiles",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
