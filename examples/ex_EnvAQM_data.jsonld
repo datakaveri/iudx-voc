@@ -5,11 +5,11 @@
     "airQualityIndex": 100,
     "aqiMajorPollutant": "pm2p5",
     "pm2p5": {
-        "minOverTime": 100.1,
-        "maxOverTime": 560.8 
+        "minOverTime": 10.1,
+        "maxOverTime": 56.8 
     },
     "co": {
-        "minOverTime": 30.4,
-        "maxOverTime": 80.9
+        "minOverTime": 3.4,
+        "maxOverTime": 8.9
     }
 }
