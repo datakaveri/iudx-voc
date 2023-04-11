@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Type of business under which an individual as a sole proprietor or a company chooses to do business.",
+            "rdfs:comment": "Type of public service or business or facility set up for public welfare or governance. For eg., the establishment can be a business under an individual as a sole proprietor(or a company) or smart public installments such as lavatories etc.",
             "rdfs:label": "establishmentType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
