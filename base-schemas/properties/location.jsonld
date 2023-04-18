@@ -95,9 +95,6 @@
                 },
                 {
                     "@id": "iudx:WmgmtVehicle"
-                },
-                {
-                    "@id": "iudx:RevenueCollection"
                 }
             ],
             "iudx:rangeIncludes": [

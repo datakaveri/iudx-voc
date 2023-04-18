@@ -36,9 +36,6 @@
                 },
                 {
                     "@id": "iudx:BikeDockingStation"
-                },
-                {
-                    "@id": "iudx:RevenueCollection"
                 }
             ],
             "iudx:rangeIncludes": [
