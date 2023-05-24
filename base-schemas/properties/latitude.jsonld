@@ -23,9 +23,6 @@
                 },
                 {
                     "@id": "iudx:Place"
-                },
-                {
-                    "@id": "iudx:WmgmtVehicle"
                 }
             ],
             "iudx:rangeIncludes": [
