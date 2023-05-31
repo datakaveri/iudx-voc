@@ -11,27 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:routeStopSequence",
+            "@id": "iudx:heavyDutyVehicles",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Gives the stop ids/stop codes or station ids/station codes in the right sequence for the route/line/trip corresponding to this observation.",
-            "rdfs:label": "routeStopSequence",
+            "rdfs:comment": "Parking spot availability status of Heavy Duty Vehicles like HGV (Heavy Goods Vehicles), HMV(Heavy Motor Vehicles), etc, in the parking site corresponding to this observation.",
+            "rdfs:label": "heavyDutyVehicles", 
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:TransitManagement"
+                    "@id": "iudx:SmartParking"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text",
-                    "@container": "@list"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
+                    "@id": "iudx:ParkingSpotStatus"
                 }
             ]
         }

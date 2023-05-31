@@ -11,29 +11,28 @@
     },
     "@graph": [
         {
-            "@id": "iudx:routeStopSequence",
+            "@id": "iudx:totalPOI",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Gives the stop ids/stop codes or station ids/station codes in the right sequence for the route/line/trip corresponding to this observation.",
-            "rdfs:label": "routeStopSequence",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
+            "rdfs:comment": "The total count of point of interests (waste collection points) along a route corresponding to this observation .",
+            "rdfs:label": "totalPOI",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:TransitManagement"
+                    "@id": "iudx:WmgmtVehicle"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text",
-                    "@container": "@list"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

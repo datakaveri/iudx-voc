@@ -11,31 +11,15 @@
     },
     "@graph": [
         {
-            "@id": "iudx:name",
+            "@id": "iudx:openHours",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Name of the entity.",
-            "rdfs:label": "name",
+            "rdfs:comment": "The time period or hours between which the entity or service is open or operational.",
+            "rdfs:label": "openHours",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Place"
-                },
-                {
-                    "@id": "iudx:Organization"
-                },
-                {
-                    "@id": "iudx:RelationshipValue"
-                },
-                {
-                    "@id": "iudx:IUDXEntity",
-                    "iudx:requiredProperty": true
-                },
-                {
                     "@id": "iudx:PointOfInterest"
-                },
-                {
-                    "@id": "iudx:BikeDockingStation"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -47,7 +31,7 @@
                 }
             ],
             "skos:exactMatch": {
-                "@id": "schema:name"
+                "@id": "Fiware:Building.openingHours"
             },
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
