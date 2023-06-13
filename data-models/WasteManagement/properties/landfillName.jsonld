@@ -11,23 +11,26 @@
     },
     "@graph": [
         {
-            "@id": "iudx:mediumDutyVehicles",
+            "@id": "iudx:landfillName",
             "@type": [
-                "iudx:StructuredProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Parking spot availability status of Medium Duty Vehicles like MGV (Medium Goods Vehicles) in parking site corresponding to this observation.",
-            "rdfs:label": "mediumDutyVehicles", 
+            "rdfs:comment": "The name of the landfill or dump yard or dumping station corresponding this observation.",
+            "rdfs:label": "landfillName",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:SmartParking"
+                    "@id": "iudx:WmgmtVehicle"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:ParkingSpotStatus"
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
             ]
         }
