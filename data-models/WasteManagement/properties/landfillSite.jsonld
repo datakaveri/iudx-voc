@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:landfillName",
+            "@id": "iudx:landfillSite",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The name of the landfill or dump yard or dumping station corresponding this observation.",
-            "rdfs:label": "landfillName",
+            "rdfs:comment": "The name of the landfill site or dump yard or dumping station corresponding this observation.",
+            "rdfs:label": "landfillSite",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
