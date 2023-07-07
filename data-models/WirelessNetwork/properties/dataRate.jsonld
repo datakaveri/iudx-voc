@@ -1,39 +1,33 @@
 {
     "@context": {
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "iudx": "https://voc.iudx.org.in/",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/",
         "geojson": "https://purl.org/geojson/vocab#",
         "owl": "http://www.w3.org/2002/07/owl#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "schema": "http://schema.org/",
+        "iudx": "https://voc.iudx.org.in/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "iudx:deviceStatus",
+            "@id": "iudx:dataRate",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Indicates the status of physical device or devices.",
-            "rdfs:label": "deviceStatus",
+            "rdfs:comment": "The number of bits transmitted from one device to another or over a network per second",
+            "rdfs:label": "dataRate",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvAQM"
-                },
-                {
-                    "@id": "iudx:EnvFlood"
-                },
-                {
-                    "@id": "iudx:Streetlight"
+                    "@id": "iudx:WirelessNetwork"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

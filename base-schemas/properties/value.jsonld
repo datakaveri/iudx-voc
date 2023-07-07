@@ -13,7 +13,7 @@
         {
             "@id": "iudx:value",
             "@type": [
-                "rdf:Property"
+                "rdf:QuantitativeProperty"
             ],
             "rdfs:comment": "Value of the quantity being described in the ValueDescriptor object.",
             "rdfs:label": "value",
