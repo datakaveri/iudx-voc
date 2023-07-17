@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Current per phase. Ordered triple comprising of active power from three phases in the following order: [R Y B]",
+            "rdfs:comment": "Current per phase. Ordered triple comprising of active current from three phases in the following order: [R Y B]",
             "rdfs:label": "phaseCurrent",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

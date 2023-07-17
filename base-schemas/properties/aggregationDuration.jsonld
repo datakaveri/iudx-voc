@@ -10,7 +10,7 @@
         {
             "@id": "iudx:aggregationDuration",
             "@type": [
-                "rdf:Property"
+                "rdf:QuantitativeProperty"
             ], 
             "rdfs:comment": "Specifies the interval duration for computing statistical aggregations. Default duration interval unit is in Hours. Other units can be specified using ValueDescriptor Type.",
             "rdfs:label": "aggregationDuration",

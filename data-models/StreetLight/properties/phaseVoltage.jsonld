@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Voltage per phase. Ordered triple comprising of active power from three phases in the following order: [R Y B]",
+            "rdfs:comment": "Voltage per phase. Ordered triple comprising of active voltage from three phases in the following order: [R Y B]",
             "rdfs:label": "phaseVoltage",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

@@ -1,34 +1,28 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "iudx": "https://voc.iudx.org.in/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "schema": "http://schema.org/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "geojson": "https://purl.org/geojson/vocab#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "schema": "http://schema.org/",
+        "iudx": "https://voc.iudx.org.in/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "iudx:deviceStatus",
+            "@id": "iudx:reportingMode",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Indicates the status of physical device or devices.",
-            "rdfs:label": "deviceStatus",
+            "rdfs:comment": "The communication channel or medium used to convey the issue or report or feedback or transaction corresponding to this observation. For eg., Email, SMS, Telephone etc.",
+            "rdfs:label": "reportingMode",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:EnvAQM"
-                },
-                {
-                    "@id": "iudx:EnvFlood"
-                },
-                {
-                    "@id": "iudx:Streetlight"
+                    "@id": "iudx:IssueReporting"
                 }
             ],
             "iudx:rangeIncludes": [

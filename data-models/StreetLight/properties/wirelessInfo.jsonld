@@ -11,23 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:landfillName",
+            "@id": "iudx:wirelessInfo",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "The name of the landfill or dump yard or dumping station corresponding this observation.",
-            "rdfs:label": "landfillName",
+            "rdfs:comment": "Wireless network information corresponding to this observation.",
+            "rdfs:label": "wirelessInfo",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:WmgmtVehicle"
+                    "@id": "iudx:Streetlight"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:WirelessNetwork"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
