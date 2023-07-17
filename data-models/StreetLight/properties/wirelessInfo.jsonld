@@ -28,9 +28,6 @@
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:WirelessNetwork"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
                 }
             ]
         }
