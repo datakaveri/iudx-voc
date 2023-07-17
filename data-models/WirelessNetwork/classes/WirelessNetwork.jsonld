@@ -7,18 +7,15 @@
     },
     "@graph": [
         {
+            "@id": "iudx:WirelessNetwork",
             "@type": [
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "@id": "iudx:WirelessNetwork",
             "rdfs:comment": "A Data Model for wireless communication networks",
             "rdfs:label": "WirelessNetwork",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
-            },
-            "rdfs:subClassOf": {
-                "@id": "iudx:WirelessNetwork"
             }
         }
     ]

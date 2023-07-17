@@ -10,7 +10,7 @@
         {
             "@id": "iudx:durationInHours", 
             "@type": [
-                "rdf:QuantitativeProperty"
+                "iudx:QuantitativeProperty"
             ], 
             "rdfs:comment": "Specifies an interval duration in hours for computing statistical aggregations.",
             "rdfs:label": "durationInHours", 
