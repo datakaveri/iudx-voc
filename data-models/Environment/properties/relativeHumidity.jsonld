@@ -17,9 +17,6 @@
             ],
             "rdfs:comment": "Observed instantaneous relative humidity (water vapour in air).",
             "rdfs:label": "relativeHumidity",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvWeather"
@@ -29,13 +26,19 @@
                 },
                 {
                     "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:RoomOccupancy"
                 }
             ],
             "iudx:rangeIncludes": [
-	    	{
+                {
                     "@id": "iudx:TimeSeriesAggregation"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "Fiware:relativeHumidity"
             }

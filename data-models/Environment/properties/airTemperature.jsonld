@@ -17,9 +17,6 @@
             ],
             "rdfs:comment": "Observed value of air temperature. Value is an object containing attributes representing statistical aggregates derived from past data.",
             "rdfs:label": "airTemperature",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvWeather"
@@ -32,6 +29,12 @@
                 },
                 {
                     "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:AirConditioner"
+                },
+                {
+                    "@id": "iudx:RoomOccupancy"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -39,6 +42,9 @@
                     "@id": "iudx:TimeSeriesAggregation"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "Fiware:temperature"
             }

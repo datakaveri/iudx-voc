@@ -17,9 +17,6 @@
             ],
             "rdfs:comment": "Information about the device associated with the observations.",
             "rdfs:label": "deviceInfo",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
@@ -56,13 +53,19 @@
                 },
                 {
                     "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:RoomOccupancy"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Device"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

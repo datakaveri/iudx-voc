@@ -17,9 +17,6 @@
             ],
             "rdfs:comment": "Version information corresponding to this observation.",
             "rdfs:label": "versionInfo",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
@@ -32,6 +29,9 @@
                 },
                 {
                     "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:RoomOccupancy"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -42,7 +42,10 @@
                     "@container": "@list",
                     "@id": "iudx:Version"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

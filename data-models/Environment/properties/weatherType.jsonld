@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
                 }
             ],
             "iudx:rangeIncludes": [
