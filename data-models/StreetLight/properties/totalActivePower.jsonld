@@ -17,9 +17,6 @@
             ],
             "rdfs:comment": "Total active power consumed by all phases.",
             "rdfs:label": "totalActivePower",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:StreetLightFeeder"
@@ -29,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:EnergyMeter"
+                },
+                {
+                    "@id": "iudx:AirConditioner"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -39,6 +39,9 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "Fiware:totalActivePower"
             }
