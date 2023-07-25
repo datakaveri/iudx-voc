@@ -23,6 +23,10 @@ dir_home = path.abspath(path.join(os.path.abspath(file_dir), "../../../.."))
 
 with open(dir_home + "/utils/misc/data-model-properties/template.jsonld", "r") as template:
     obj = json.load(template)
+del obj["@context"]['skos']
+del obj["@context"]['schema']
+del obj["@context"]['geojson']
+del obj["@context"]['xsd']
 
 
 def check_dir(file_path):
@@ -116,16 +120,27 @@ def find_name(pattern, path):
                 result.append(os.path.join(root, name))
     return result
 
+def create_domain(properties_path):
+    subdomain_path = properties_path + "/" + domain_name + ".jsonld"
+    if not os.path.exists(subdomain_path):
+        comment = input("Enter the description for the domain\n")
+        class_dict = obj        
+        class_dict["@graph"][0]["@type"] = ["owl:Class", "rdfs:Class"]
+        class_dict["@graph"][0]["@id"] = "iudx:" + domain_name
+        class_dict["@graph"][0]["rdfs:comment"] = comment
+        class_dict["@graph"][0]["rdfs:label"] = domain_name
+        dict1 = {}
+        dict1["rdfs:subClassOf"] = {"@id": "iudx:DataModel"}
+        obj["@graph"][0].update(dict1)
+
+        with open(subdomain_path, "w+") as prop_file:
+            json.dump(class_dict, prop_file, indent=4)
 
 def create_classes(properties_path):
     subdomain_path = properties_path + "/" + sub_domain + ".jsonld"
     if not os.path.exists(subdomain_path):
         comment = input("Enter the description for the sub domain\n")
         class_dict = obj
-        del class_dict["@context"]['skos']
-        del class_dict["@context"]['schema']
-        del class_dict["@context"]['geojson']
-        del class_dict["@context"]['xsd']
         class_dict["@graph"][0]["@type"] = ["owl:Class", "rdfs:Class"]
         class_dict["@graph"][0]["@id"] = "iudx:" + sub_domain
         class_dict["@graph"][0]["rdfs:comment"] = comment
@@ -326,6 +341,9 @@ if __name__ == "__main__":
         arr = next(os.walk(dir_home + "/data-models"))
         if domain_name in arr[1]:
             print("Domain already exists")
+        else:
+            create_domain(dir_home + "/data-models/classes")
+
 
     sub_domain = Path(file_dir).stem
 
