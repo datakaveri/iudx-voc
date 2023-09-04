@@ -8,12 +8,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:protocol",
+            "@id": "iudx:port",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
             "rdfs:comment": "The available port number used by the protocol for data communication.",
-            "rdfs:label": "protocol",
+            "rdfs:label": "port",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:HTTPAccess",
