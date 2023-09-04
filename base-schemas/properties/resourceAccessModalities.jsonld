@@ -23,7 +23,7 @@
             "iudx:rangeIncludes": [
                 {
                     "@container": "@list",
-                    "@id": "iudx:SubDomain"
+                    "@id": "iudx:ResourceAccessModalities"
                 }
             ]
         }
