@@ -8,21 +8,25 @@
     },
     "@graph": [
         {
-            "@id": "iudx:resourceServerHTTPAccessURL",
+            "@id": "iudx:cos",
             "@type": [
                 "iudx:Relationship"
             ],
-            "rdfs:comment": "Resource Server URL for data access based on HTTP/REST APIs",
-            "rdfs:label": "resourceServerHTTPAccessURL",
+            "rdfs:comment": "UUID of the COS(City Operations System) entity associated with the given catalogue item .",
+            "rdfs:label": "cos",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceServer"
+                    "@id": "iudx:ResourceServer",
+                    "iudx:requiredProperty": true
                 }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Text",
                     "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
                 }
             ]
         }

@@ -8,21 +8,29 @@
     },
     "@graph": [
         {
-            "@id": "iudx:resourceServerFileAccessURL",
+            "@id": "iudx:owner",
             "@type": [
                 "iudx:Relationship"
             ],
-            "rdfs:comment": "Resource Server URL for file access",
-            "rdfs:label": "resourceServerFileAccessURL",
+            "rdfs:comment": "UUID of owner entity associated with the given catalogue item.",
+            "rdfs:label": "owner",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceServer"
+                    "@id": "iudx:ResourceServer",
+                    "iudx:requiredProperty": true
+                },
+                {
+                    "@id": "iudx:COS",
+                    "iudx:requiredProperty": true
                 }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Text",
                     "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
                 }
             ]
         }

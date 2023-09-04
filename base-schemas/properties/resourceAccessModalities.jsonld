@@ -8,21 +8,22 @@
     },
     "@graph": [
         {
-            "@id": "iudx:resourceServerStreamingAccessURL",
+            "@id": "iudx:resourceAccessModalities",
             "@type": [
-                "iudx:Relationship"
+                "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Resource Server URL for data access based on Streaming",
-            "rdfs:label": "resourceServerStreamingAccessURL",
+            "rdfs:comment": "Description of domains available for accessing data from the exchange.",
+            "rdfs:label": "resourceAccessModalities",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceServer"
+                    "@id": "iudx:ResourceServer",
+                    "iudx:requiredProperty": true
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text",
-                    "@type": "@id"
+                    "@container": "@list",
+                    "@id": "iudx:SubDomain"
                 }
             ]
         }

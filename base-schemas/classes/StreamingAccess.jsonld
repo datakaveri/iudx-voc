@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://voc.iudx.org.in/"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:StreamingAccess",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Describes the domain for data access based on streaming.",
+            "rdfs:label": "StreamingAccess",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+             "rdfs:subClassOf": {
+              "@id": "iudx:SubDomain"
+            }
+        }
+    ]
+}
