@@ -20,6 +20,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
                 }
             ],
             "iudx:rangeIncludes": [

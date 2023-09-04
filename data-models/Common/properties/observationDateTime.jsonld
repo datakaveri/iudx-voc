@@ -86,6 +86,9 @@
                 },
                 {
                     "@id": "iudx:RoomOccupancy"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
                 }
             ],
             "iudx:rangeIncludes": [

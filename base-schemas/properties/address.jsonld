@@ -47,6 +47,9 @@
                 },
                 {
                     "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
                 }
             ],
             "iudx:rangeIncludes": [

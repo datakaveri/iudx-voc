@@ -95,6 +95,9 @@
                 },
                 {
                     "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
                 }
             ],
             "iudx:rangeIncludes": [

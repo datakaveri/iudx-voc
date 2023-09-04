@@ -17,12 +17,12 @@
             ],
             "rdfs:comment": "The agency_url field contains the URL of the transit agency. SameAs: 'agency_url' field from GTFS Static Field Definition - agency.txt (https://developers.google.com/transit/gtfs/reference#agencytxt)",
             "rdfs:label": "agency_url",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:AgencyDesc"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -33,6 +33,9 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "GTFS: agency_url"
             }
