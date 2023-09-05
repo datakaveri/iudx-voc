@@ -8,29 +8,20 @@
     },
     "@graph": [
         {
-            "@id": "iudx:accessURL",
+            "@id": "iudx:apdURL",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The IRI pointing to the domain from which data can be accessed.",
-            "rdfs:label": "accessURL",
+            "rdfs:comment": "URL pointing to the Access Policy Decision (APD) for an individual Resource.",
+            "rdfs:label": "apdURL",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:HTTPAccess"
-                },
-                {
-                    "@id": "iudx:FileAccess"
-                },
-                {
-                    "@id": "iudx:StreamingAccess"
+                    "@id": "iudx:Resource"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Text"
-                },
-                {
-                    "@id": "iudx:ValueDescriptor"
                 }
             ],
             "rdfs:isDefinedBy": {

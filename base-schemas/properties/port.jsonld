@@ -16,16 +16,13 @@
             "rdfs:label": "port",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:HTTPAccess",
-                    "iudx:requiredProperty": true
+                    "@id": "iudx:HTTPAccess"
                 },
                 {
-                    "@id": "iudx:FileAccess",
-                    "iudx:requiredProperty": true
+                    "@id": "iudx:FileAccess"
                 },
                 {
-                    "@id": "iudx:StreamingAccess",
-                    "iudx:requiredProperty": true
+                    "@id": "iudx:StreamingAccess"
                 }
             ],
             "iudx:rangeIncludes": [
