@@ -36,23 +36,20 @@
             "iudx:HTTPAccess"
 		],
 		"protocol": "https",
-		"accessURL": "rs.iudx.org.in",
-		"port": 443
+		"accessURL": "rs.iudx.org.in"
 	},
 		{
 		"type": [
             "iudx:StreamingAccess"
 		],
 		"protocol": "amqps",
-		"accessURL": "databroker.iudx.org.in",
-		"port": 5672
+		"accessURL": "databroker.iudx.org.in"
 	}, {
 		"type": [
             "iudx:FileAccess"
 		],
 		"protocol": "https",
-		"accessURL": "file.iudx.org.in",
-		"port": 443
+		"accessURL": "file.iudx.org.in"
 	}],
 	"location": {
 		"type": "Place",
