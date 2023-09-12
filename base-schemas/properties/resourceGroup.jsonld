@@ -12,7 +12,7 @@
             "@type": [
                 "iudx:Relationship"
             ],
-            "rdfs:comment": "IRI pointing to the resourceGroup entity associated with the resource.",
+            "rdfs:comment": "UUID of the IRI pointing to the resourceGroup entity associated with the resource.",
             "rdfs:label": "resourceGroup",
             "iudx:domainIncludes": [
                 {

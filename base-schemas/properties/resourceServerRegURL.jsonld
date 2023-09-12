@@ -8,18 +8,15 @@
     },
     "@graph": [
         {
-            "@id": "iudx:provider",
+            "@id": "iudx:resourceServerRegURL",
             "@type": [
                 "iudx:Relationship"
             ],
-            "rdfs:comment": "UUID of the IRI pointing to the provider entity associated with the given catalogue item",
-            "rdfs:label": "provider",
+            "rdfs:comment": "The registered URL for the Resource Server.",
+            "rdfs:label": "resourceServerRegURL",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Resource"
-                },
-                {
-                    "@id": "iudx:ResourceGroup",
+                    "@id": "iudx:ResourceServer",
                     "iudx:requiredProperty": true
                 }
             ],
@@ -27,9 +24,6 @@
                 {
                     "@id": "iudx:Text",
                     "@type": "@id"
-                },
-                {
-                    "@id": "iudx:RelationshipValue"
                 }
             ]
         }

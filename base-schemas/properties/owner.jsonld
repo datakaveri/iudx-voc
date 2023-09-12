@@ -8,21 +8,29 @@
     },
     "@graph": [
         {
-            "@id": "iudx:resourceServerStreamingAccessURL",
+            "@id": "iudx:owner",
             "@type": [
                 "iudx:Relationship"
             ],
-            "rdfs:comment": "Resource Server URL for data access based on Streaming",
-            "rdfs:label": "resourceServerStreamingAccessURL",
+            "rdfs:comment": "UUID of owner entity associated with the given catalogue item.",
+            "rdfs:label": "owner",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceServer"
+                    "@id": "iudx:ResourceServer",
+                    "iudx:requiredProperty": true
+                },
+                {
+                    "@id": "iudx:COS",
+                    "iudx:requiredProperty": true
                 }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:Text",
                     "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
                 }
             ]
         }

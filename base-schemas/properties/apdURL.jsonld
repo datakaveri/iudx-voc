@@ -8,23 +8,25 @@
     },
     "@graph": [
         {
-            "@id": "iudx:resourceServerFileAccessURL",
+            "@id": "iudx:apdURL",
             "@type": [
-                "iudx:Relationship"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Resource Server URL for file access",
-            "rdfs:label": "resourceServerFileAccessURL",
+            "rdfs:comment": "URL pointing to the Access Policy Decision (APD) for an individual Resource.",
+            "rdfs:label": "apdURL",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ResourceServer"
+                    "@id": "iudx:Resource"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text",
-                    "@type": "@id"
+                    "@id": "iudx:Text"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

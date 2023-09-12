@@ -19,7 +19,8 @@
             "rdfs:label": "id",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:IUDXEntity"
+                    "@id": "iudx:IUDXEntity",
+                    "iudx:requiredProperty": true
                 }
             ],
             "iudx:rangeIncludes": [

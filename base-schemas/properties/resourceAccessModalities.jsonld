@@ -8,28 +8,22 @@
     },
     "@graph": [
         {
-            "@id": "iudx:provider",
+            "@id": "iudx:resourceAccessModalities",
             "@type": [
-                "iudx:Relationship"
+                "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "UUID of the IRI pointing to the provider entity associated with the given catalogue item",
-            "rdfs:label": "provider",
+            "rdfs:comment": "Description of domains available for accessing data from the exchange.",
+            "rdfs:label": "resourceAccessModalities",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Resource"
-                },
-                {
-                    "@id": "iudx:ResourceGroup",
+                    "@id": "iudx:ResourceServer",
                     "iudx:requiredProperty": true
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text",
-                    "@type": "@id"
-                },
-                {
-                    "@id": "iudx:RelationshipValue"
+                    "@container": "@list",
+                    "@id": "iudx:ResourceAccessModalities"
                 }
             ]
         }

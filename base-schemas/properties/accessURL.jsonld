@@ -8,30 +8,34 @@
     },
     "@graph": [
         {
-            "@id": "iudx:provider",
+            "@id": "iudx:accessURL",
             "@type": [
-                "iudx:Relationship"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "UUID of the IRI pointing to the provider entity associated with the given catalogue item",
-            "rdfs:label": "provider",
+            "rdfs:comment": "The IRI pointing to the domain from which data can be accessed.",
+            "rdfs:label": "accessURL",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Resource"
+                    "@id": "iudx:HTTPAccess"
                 },
                 {
-                    "@id": "iudx:ResourceGroup",
-                    "iudx:requiredProperty": true
+                    "@id": "iudx:FileAccess"
+                },
+                {
+                    "@id": "iudx:StreamingAccess"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text",
-                    "@type": "@id"
+                    "@id": "iudx:Text"
                 },
                 {
-                    "@id": "iudx:RelationshipValue"
+                    "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

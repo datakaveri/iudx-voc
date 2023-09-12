@@ -56,6 +56,12 @@
                 },
                 {
                     "@id": "iudx:RoomOccupancy"
+                },
+                {
+                   "@id": "iudx:Resource"
+                },
+                {
+                   "@id": "iudx:ResourceGroup"
                 }
             ],
             "iudx:rangeIncludes": [

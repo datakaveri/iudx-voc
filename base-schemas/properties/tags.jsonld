@@ -22,6 +22,10 @@
                 {
                     "@id": "iudx:ResourceGroup",
                     "iudx:requiredProperty": true
+                },
+                {
+                    "@id": "iudx:ResourceServer",
+                    "iudx:requiredProperty": true
                 }
             ],
             "iudx:rangeIncludes": [
