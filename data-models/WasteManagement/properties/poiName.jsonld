@@ -1,31 +1,28 @@
 {
     "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "geojson": "https://purl.org/geojson/vocab#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "schema": "http://schema.org/",
-        "iudx": "https://voc.iudx.org.in/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "iudx:zoneID",
+            "@id": "iudx:poiName",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Zone ID corresponding to this observation.",
-            "rdfs:label": "zoneID",
+            "rdfs:comment": "The name identifying the waste collection region, which can be an aisle comprising of waste bin(s) or a larger dump yard.",
+            "rdfs:label": "poiName",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:MunicipalityDesc"
-                },
-                {
-                    "@id": "iudx:RoadSegment"
+                    "@id": "iudx:WmgmtVehicle"
                 }
             ],
             "iudx:rangeIncludes": [
