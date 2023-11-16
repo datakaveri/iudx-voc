@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Count of the revenue collection service corresponding to this observation.",
+            "rdfs:comment": "The total count of the entity or service corresponding to this observation.",
             "rdfs:label": "totalCount",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -23,6 +23,9 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
                 }
             ],
             "iudx:rangeIncludes": [
