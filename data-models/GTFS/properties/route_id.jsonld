@@ -32,9 +32,6 @@
                 },
                 {
                     "@id": "iudx:TransitManagement"
-                },
-                {
-                    "@id": "iudx:WmgmtVehicle"
                 }
             ],
             "iudx:rangeIncludes": [

@@ -11,31 +11,28 @@
     },
     "@graph": [
         {
-            "@id": "iudx:tripStatus",
+            "@id": "iudx:commercialPOIs",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Current status of the ride corresponding to this observation. ENUM: [ACCEPTED, ONGOING, COMPLETED, CANCELLED, TERMINATED]",
-            "rdfs:label": "tripStatus",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
+            "rdfs:comment": "The total count of commercial establishments which serve as point of interests corresponding to this observation.",
+            "rdfs:label": "commercialPOIs",
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:BikeDockingStation"
-                },
                 {
                     "@id": "iudx:WmgmtVehicle"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }
