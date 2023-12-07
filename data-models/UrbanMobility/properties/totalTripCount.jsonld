@@ -1,35 +1,26 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "geojson": "https://purl.org/geojson/vocab#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "iudx": "https://voc.iudx.org.in/"
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "iudx:amountCollected",
+            "@id": "iudx:currentTripCount",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Amount collected towards the service corresponding to this observation.",
-            "rdfs:label": "amountCollected",
+            "rdfs:comment": "The total count of trips made by the vehicle(s) corresponding to this observation on the given day of operation.",
+            "rdfs:label": "currentTripCount",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:RevenueCollection"
-                },
-                {
-                    "@id": "iudx:TrafficViolations"
-                },
-                {
-                    "@id": "iudx:EVChargingStation"
-                },
                 {
                     "@id": "iudx:BikeDockingStation"
                 }

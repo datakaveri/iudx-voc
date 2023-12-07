@@ -32,6 +32,9 @@
                 },
                 {
                     "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
                 }
             ],
             "iudx:rangeIncludes": [
