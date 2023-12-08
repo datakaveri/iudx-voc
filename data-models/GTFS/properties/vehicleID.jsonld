@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Unique ID assigned to the vehicle corresponding to this observation, used in internal system identification. SameAs: 'id' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)",
+            "rdfs:comment": "Unique ID(s) assigned to the vehicle(s) corresponding to this observation, used in internal system identification. SameAs: 'id' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)",
             "rdfs:label": "vehicleID",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -30,6 +30,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
+                   "@container": "@list",
                     "@id": "iudx:Text"
                 },
                 {

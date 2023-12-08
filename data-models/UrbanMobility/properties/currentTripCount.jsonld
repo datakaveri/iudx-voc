@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "The current count of trips made by the vehicle corresponding to this obersvation on the given day of operation.",
+            "rdfs:comment": "The current count of trips made by the vehicle(s) corresponding to this observation.",
             "rdfs:label": "currentTripCount",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -26,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
                 }
             ],
             "iudx:rangeIncludes": [
