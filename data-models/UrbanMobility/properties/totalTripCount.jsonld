@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:currentTripCount",
+            "@id": "iudx:totalTripCount",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
             "rdfs:comment": "The total count of trips made by the vehicle(s) corresponding to this observation on the given day of operation.",
-            "rdfs:label": "currentTripCount",
+            "rdfs:label": "totalTripCount",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
