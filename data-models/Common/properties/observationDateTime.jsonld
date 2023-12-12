@@ -92,6 +92,9 @@
                 },
                 {
                     "@id": "iudx:RoadSegment"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -100,6 +103,9 @@
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:Datetime"
                 }
             ],
             "rdfs:isDefinedBy": {

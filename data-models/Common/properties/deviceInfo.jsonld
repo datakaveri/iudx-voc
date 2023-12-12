@@ -58,10 +58,13 @@
                     "@id": "iudx:RoomOccupancy"
                 },
                 {
-                   "@id": "iudx:Resource"
+                    "@id": "iudx:Resource"
                 },
                 {
-                   "@id": "iudx:ResourceGroup"
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [

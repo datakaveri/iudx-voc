@@ -35,6 +35,9 @@
                 },
                 {
                     "@id": "iudx:RoomOccupancy"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [

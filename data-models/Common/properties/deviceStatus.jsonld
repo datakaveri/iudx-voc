@@ -17,9 +17,6 @@
             ],
             "rdfs:comment": "Indicates the status of physical device or devices.",
             "rdfs:label": "deviceStatus",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
@@ -29,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -38,7 +38,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

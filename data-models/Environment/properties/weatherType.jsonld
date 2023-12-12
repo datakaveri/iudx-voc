@@ -17,15 +17,15 @@
             ],
             "rdfs:comment": "Observed weather type or status. Represented by a comma separated list of weather types, e.g., cloudy, sunny etc.",
             "rdfs:label": "weatherType",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvWeather"
                 },
                 {
                     "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -36,6 +36,9 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "Fiware:weatherType"
             }

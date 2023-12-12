@@ -17,15 +17,15 @@
             ],
             "rdfs:comment": "Observed instantaneous ambient light intensity.",
             "rdfs:label": "illuminance",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvWeather"
                 },
                 {
                     "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -39,6 +39,9 @@
                     "@id": "iudx:TimeSeriesAggregation"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "Fiware:illuminance"
             }

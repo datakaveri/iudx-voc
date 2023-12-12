@@ -17,9 +17,6 @@
             ],
             "rdfs:comment": "The number of photons that are being emitted by the sun.",
             "rdfs:label": "solarRadiation",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvWeather"
@@ -29,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -39,6 +39,9 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "Fiware:solarRadiation"
             }

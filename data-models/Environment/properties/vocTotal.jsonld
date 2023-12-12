@@ -17,12 +17,12 @@
             ],
             "rdfs:comment": "Observed value of volatile organic compounds present in the environment corresponding to this observation. It could be industrial solvents, chemical by-products etc.",
             "rdfs:label": "vocTotal",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -32,7 +32,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

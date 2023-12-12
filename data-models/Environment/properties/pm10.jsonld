@@ -17,19 +17,22 @@
             ],
             "rdfs:comment": "Observed value of environmental pollutant  Particulate Matter 10 (PM10). Value is an object containing attributes representing statistical aggregates derived from past data.",
             "rdfs:label": "pm10",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:TimeSeriesAggregation"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }
