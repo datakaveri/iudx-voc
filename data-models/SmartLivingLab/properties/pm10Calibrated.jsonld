@@ -1,0 +1,31 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:pm10Calibrated",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Calibrated measurement of environmental pollutant Particulate Matter 10 (PM10). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "pm10Calibrated",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ]
+        }
+    ]
+}

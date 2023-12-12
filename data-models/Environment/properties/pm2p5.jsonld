@@ -17,19 +17,22 @@
             ],
             "rdfs:comment": "Observed value of environmental pollutant Particulate Matter 2.5 (PM2.5). Value is an object containing attributes representing statistical aggregates derived from past data.",
             "rdfs:label": "pm2p5",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:TimeSeriesAggregation"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

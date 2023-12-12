@@ -17,19 +17,22 @@
             ],
             "rdfs:comment": "Observed value of environmental pollutant Nitrogen Dioxide (NO2). Value is an object containing attributes representing statistical aggregates derived from past data.",
             "rdfs:label": "no2",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:TimeSeriesAggregation"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

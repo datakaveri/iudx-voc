@@ -17,9 +17,6 @@
             ],
             "rdfs:comment": "Observed precipitation/rainfall level over a given duration.",
             "rdfs:label": "precipitation",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvWeather"
@@ -29,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -39,6 +39,9 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "Fiware:precipitation"
             }

@@ -17,19 +17,22 @@
             ],
             "rdfs:comment": "Observed value of ambient noise levels. Value is an object containing attributes representing statistical aggregates derived from past data.",
             "rdfs:label": "ambientNoise",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:TimeSeriesAggregation"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

@@ -17,12 +17,12 @@
             ],
             "rdfs:comment": "Observed value of the natural form of volatile organic compounds in the environment corresponding to this observation.",
             "rdfs:label": "vocRaw",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -33,6 +33,9 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "Fiware:volatileOrganicCompoundsTotal"
             }

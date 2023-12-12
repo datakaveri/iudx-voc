@@ -17,22 +17,25 @@
             ],
             "rdfs:comment": "Observed levels of UV radiation. Value is an object containing attributes representing statistical aggregates derived from past data.",
             "rdfs:label": "uv",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
-	    	{
+                {
                     "@id": "iudx:EnvWeather"
                 },
                 {
                     "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:TimeSeriesAggregation"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

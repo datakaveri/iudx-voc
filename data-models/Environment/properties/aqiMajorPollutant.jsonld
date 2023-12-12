@@ -17,15 +17,15 @@
             ],
             "rdfs:comment": "Major pollutant in the Air Quality Index (AQI).",
             "rdfs:label": "aqiMajorPollutant",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:EnvWeather"
                 },
                 {
                     "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -35,7 +35,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

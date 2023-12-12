@@ -98,6 +98,9 @@
                 },
                 {
                     "@id": "iudx:TouristDestination"
+                },
+                {
+                    "@id": "iudx:AirQuality"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -115,6 +118,9 @@
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:Geojsongeometry"
                 }
             ],
             "rdfs:isDefinedBy": {
