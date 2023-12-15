@@ -23,6 +23,12 @@
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
                 }
             ],
             "iudx:rangeIncludes": [
