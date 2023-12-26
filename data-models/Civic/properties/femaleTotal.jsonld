@@ -11,18 +11,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:femaleSpeciesCount",
+            "@id": "iudx:femaleTotal",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "The total count of the female mosquitoes of the species identified by the device.",
-            "rdfs:label": "femaleSpeciesCount",
+            "rdfs:comment": "The total count of females of a particular species, as identified by the device.",
+            "rdfs:label": "femaleTotal",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:MosquitoCount"
+                    "@id": "iudx:MosquitoDensity"
                 }
             ],
             "iudx:rangeIncludes": [
