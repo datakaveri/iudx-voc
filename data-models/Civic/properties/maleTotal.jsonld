@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:mosquitoDensity",
+            "@id": "iudx:maleTotal",
             "@type": [
-                "iudx:StructuredProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "The binomial (or) zoological nomenclature of the mosquito species and its count as identified by the device corresponding to this observation.",
-            "rdfs:label": "mosquitoDensity",
+            "rdfs:comment": "The total count of males of a particular species, as identified by the device.",
+            "rdfs:label": "maleTotal",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,7 +27,10 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:MosquitoCount"
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
                 }
             ]
         }

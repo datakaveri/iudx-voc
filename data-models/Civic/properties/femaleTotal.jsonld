@@ -11,23 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:speciesName",
+            "@id": "iudx:femaleTotal",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "The binomial/ zoological nomenclature of the species as identified by the device.",
-            "rdfs:label": "speciesName",
+            "rdfs:comment": "The total count of females of a particular species, as identified by the device.",
+            "rdfs:label": "femaleTotal",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:MosquitoCount"
+                    "@id": "iudx:MosquitoDensity"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
