@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:totalSpeciesCount",
+            "@id": "iudx:speciesTotal",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
             "rdfs:comment": "The total count of a particular species detected by the device.",
-            "rdfs:label": "totalSpeciesCount",
+            "rdfs:label": "speciesTotal",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
