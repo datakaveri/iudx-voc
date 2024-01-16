@@ -8,13 +8,13 @@ import shutil
 classes = ['owl:Class', 'rdfs:Class']
 properties = ["iudx:TextProperty", "iudx:QuantitativeProperty", "iudx:StructuredProperty", "iudx:GeoProperty", "iudx:TimeProperty", "iudx:Relationship", 'rdf:Property'] 
 relation = ["iudx:Relationship"]
-class_folder_path = "/home/iudx/iudx-voc/tmp/all_classes/"
+'''class_folder_path = "/home/iudx/iudx-voc/tmp/all_classes/"
 properties_folder_path = "/home/iudx/iudx-voc/tmp/all_properties/"
-examples_path = "/home/iudx/iudx-voc/tmp/all_examples"
+examples_path = "/home/iudx/iudx-voc/tmp/all_examples"'''
 
-'''class_folder_path = "/tmp/all_classes/"
+class_folder_path = "/tmp/all_classes/"
 properties_folder_path = "/tmp/all_properties/"
-examples_path = "/tmp/all_examples"'''
+examples_path = "/tmp/all_examples"
 
 
 relation_list = ["domainOf", "subClassOf", "rangeOf"]
