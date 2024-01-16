@@ -271,7 +271,7 @@ def main():
 
     voc = Vocabulary("./")
     voc.make_classfile()
-    voc.class_sorting()
+    #voc.class_sorting()
     voc.make_propertiesfile()
     voc.make_master()
     voc.gen_examples()
