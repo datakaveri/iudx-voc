@@ -179,7 +179,15 @@ class Vocabulary:
                 with open(file_path, 'r') as file:
                     json_data = json.load(file)
 
-                    sorted_graph = sorted(
+                    data_list = json_data["@graph"]
+
+                    sorted_data_list = sorted(data_list, key=lambda x: x.get("@id", ""))
+
+                    json_data["@graph"] = sorted_data_list
+
+
+
+                    '''sorted_graph = sorted(
                         filter(lambda x: "@id" in x and "@id" != "rdfs:subClassOf", json_data["@graph"]),
                         key=lambda x: x.get("@id"),
                     )
@@ -190,7 +198,7 @@ class Vocabulary:
                     )
 
                     if first_index != None:
-                        sorted_graph.insert(0, sorted_graph.pop(first_index))
+                        sorted_graph.insert(0, sorted_graph.pop(first_index))'''
 
                     '''matching_item = next(
                         (item for item in sorted_graph if "rdfs:subClassOf" in item and "rdfs:isDefinedBy" not in item and item["@id"] != "iudx:DataModel"),
@@ -201,11 +209,11 @@ class Vocabulary:
                         sorted_graph.remove(matching_item)
                         sorted_graph.insert(1, matching_item)'''
 
-                    sorted_data = {"@graph": sorted_graph, "@context": json_data["@context"]}
+                    #sorted_data = {"@graph": sorted_graph, "@context": json_data["@context"]}
                     
 
                     with open(file_path, "w") as json_file:
-                        json.dump(sorted_data, json_file, indent=4)
+                        json.dump(json_data, json_file, indent=4)
 
     def is_loop(self, v, visited={}, root=str):
         visited[v.id] = True
@@ -282,3 +290,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
