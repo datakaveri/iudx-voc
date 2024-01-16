@@ -182,7 +182,7 @@ class Vocabulary:
                     )
                     
                     first_index = next(
-                    (i for i, item in enumerate(sorted_graph) if "@id" in item and all(key in item for key in ["rdfs:subClassOf", "rdfs:isDefinedBy"])),
+                    (i for i, item in enumerate(sorted_graph) if "@id" in item and all(key in item for key in ["rdfs:subClassOf", "rdfs:isDefinedBy"]) and item["@id"] != "iudx:DataModel"),
                     None
                     )
 
@@ -190,7 +190,7 @@ class Vocabulary:
                         sorted_graph.insert(0, sorted_graph.pop(first_index))
 
                     matching_item = next(
-                        (item for item in sorted_graph if "rdfs:subClassOf" in item and "rdfs:isDefinedBy" not in item and item["@id"] != "adex:DataModel"),
+                        (item for item in sorted_graph if "rdfs:subClassOf" in item and "rdfs:isDefinedBy" not in item and item["@id"] != "iudx:DataModel"),
                         None,
                     )
 
@@ -271,7 +271,7 @@ def main():
 
     voc = Vocabulary("./")
     voc.make_classfile()
-    #voc.class_sorting()
+    voc.class_sorting()
     voc.make_propertiesfile()
     voc.make_master()
     voc.gen_examples()

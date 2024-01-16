@@ -1,0 +1,134 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:location",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Location associated with a resource Item (a spatial point), a group of resource items (a spatial region) or even an observation in case of a mobile sensor.",
+            "rdfs:label": "location",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Provider"
+                },
+                {
+                    "@id": "iudx:ResourceServer"
+                },
+                {
+                    "@id": "iudx:Organization"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:EnvFlood"
+                },
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:SafetiPin"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
+                },
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                },
+                {
+                    "@id": "iudx:Camera"
+                },
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                },
+                {
+                    "@id": "iudx:SmartParking"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:LaneDesc"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Point"
+                },
+                {
+                    "@id": "iudx:GeoJSONGeometry"
+                },
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:Geojsongeometry"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:location"
+            }
+        }
+    ],
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "iudx": "https://voc.iudx.org.in/"
+    }
+}

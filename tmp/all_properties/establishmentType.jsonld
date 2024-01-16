@@ -1,0 +1,38 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:establishmentType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Type of public service or business or facility set up for public welfare or governance. For eg., the establishment can be a business under an individual as a sole proprietor(or a company) or smart public installments such as lavatories etc.",
+            "rdfs:label": "establishmentType",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "iudx": "https://voc.iudx.org.in/"
+    }
+}

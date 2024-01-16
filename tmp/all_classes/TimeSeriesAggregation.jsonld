@@ -1,0 +1,857 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:Intangible",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Class of all intangible things like Structured valued objects etc.",
+            "rdfs:label": "Intangible",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
+            }
+        },
+        {
+            "@id": "iudx:Thing",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Most generic IUDX object.",
+            "rdfs:label": "Thing",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "iudx:TimeSeriesAggregation",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "This object describes various types of aggregated data associated with a time-seried data. For example, average over a certain duration in past, minimum value over a duration in past etc.",
+            "rdfs:label": "TimeSeriesAggregation",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Intangible"
+            }
+        },
+        {
+            "@id": "iudx:airTemperature",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of air temperature. Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "airTemperature",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:AirConditioner"
+                },
+                {
+                    "@id": "iudx:RoomOccupancy"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "Fiware:temperature"
+            }
+        },
+        {
+            "@id": "iudx:airTemperatureCalibrated",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Calibrated measurement of air temperature. Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "airTemperatureCalibrated",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:ambientNoise",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of ambient noise levels. Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "ambientNoise",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:arsenic",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Arsenic (As). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "arsenic",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:avgOverTime",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the average value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value",
+            "rdfs:label": "avgOverTime",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:bap",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Benzo[a]pyrene (BaP). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "bap",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:benzene",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Benzene (C6H6). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "benzene",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:cl",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Concentration of chlorides in the water.",
+            "rdfs:label": "cl",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: WaterQualityObserved.Cl"
+            }
+        },
+        {
+            "@id": "iudx:co",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Carbon Monoxide (CO). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "co",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:co2",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Carbon Dioxide (CO2). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "co2",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:description",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Description for an IUDX thing.",
+            "rdfs:label": "description",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Thing"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:illuminance",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed instantaneous ambient light intensity.",
+            "rdfs:label": "illuminance",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "Fiware:illuminance"
+            }
+        },
+        {
+            "@id": "iudx:instValue",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the instantaneous value (associated with the current timestamp) of a time varying quantity.",
+            "rdfs:label": "instValue",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:maxOverTime",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the maximum value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value",
+            "rdfs:label": "maxOverTime",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:minOverTime",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the minimum value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value",
+            "rdfs:label": "minOverTime",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:nh3",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Ammonia (NH3). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "nh3",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:nickel",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Nickel (Ni). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "nickel",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:no",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Nitrogen Monoxide (NO). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "no",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:no2",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Nitrogen Dioxide (NO2). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "no2",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:o2",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of Oxygen (O2). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "o2",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:o3",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Ozone (O3). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "o3",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:pH",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Acidity level or basicity level obsevered in the water.",
+            "rdfs:label": "pH",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                },
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: WaterQualityObserved.pH"
+            }
+        },
+        {
+            "@id": "iudx:pb",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Lead (Pb). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "pb",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:pm10",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant  Particulate Matter 10 (PM10). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "pm10",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:pm10Calibrated",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Calibrated measurement of environmental pollutant Particulate Matter 10 (PM10). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "pm10Calibrated",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:pm2p5",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Particulate Matter 2.5 (PM2.5). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "pm2p5",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:pm2p5Calibrated",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Calibrated measurement of environmental pollutant Particulate Matter 2.5 (PM2.5). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "pm2p5Calibrated",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:relativeHumidity",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed instantaneous relative humidity (water vapour in air).",
+            "rdfs:label": "relativeHumidity",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:RoomOccupancy"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "Fiware:relativeHumidity"
+            }
+        },
+        {
+            "@id": "iudx:relativeHumidityCalibrated",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Calibrated measurement of relative humidity (water vapour in air).",
+            "rdfs:label": "relativeHumidityCalibrated",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:so2",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of environmental pollutant Sulphur Dioxide (SO2). Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "so2",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:turbidity",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Measurement of the amount of light that is scattered by material in the water when a light is shined through the water.",
+            "rdfs:label": "turbidity",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: WaterQualityObserved.turbidity"
+            }
+        },
+        {
+            "@id": "iudx:uv",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed levels of UV radiation. Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "uv",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "iudx": "https://voc.iudx.org.in/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/"
+    }
+}

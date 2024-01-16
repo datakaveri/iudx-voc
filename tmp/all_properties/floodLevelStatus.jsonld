@@ -1,0 +1,38 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:floodLevelStatus",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Flood level status indication given by the flood sensing device. The status is marked Danger if the current level is higher than the danger level threshold value.",
+            "rdfs:label": "floodLevelStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvFlood"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:accessPolicy",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Defines the access policy for resources belonging to ResourceGroup or an individual Resource. In case of ResourceGroup item, it can take values: [OPEN, SECURE, MIXED]. OPEN implies all Resources in the group are open (and need no authorization token for data access). SECURE implies that all Resources are secured and will need authorization token for access. MIXED implies that some of Resource items may be open. In case of accessPolicy being set to MIXED in the resource group, the individual resource items will further qualify the access policy using this field. In case of Resource item, it will take values from: [OPEN, SECURE].",
+            "rdfs:label": "accessPolicy",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ],
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }
+}

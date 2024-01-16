@@ -1,507 +1,2141 @@
 {
     "@context": {
+        "Object": {
+            "@id": "iudx:Object"
+        },
         "type": "@type",
         "id": "@id",
         "@vocab": "https://voc.iudx.org.in/",
-        "iudx": "https://voc.iudx.org.in/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "schema": "http://schema.org/",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://voc.iudx.org.in/",
         "geojson": "https://purl.org/geojson/vocab#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "Boolean": {
-            "@id": "iudx:Boolean"
+        "qudt": "http://qudt.org/vocab/unit/",
+        "Number": {
+            "@id": "iudx:Number"
         },
         "Text": {
             "@id": "iudx:Text"
         },
-        "Number": {
-            "@id": "iudx:Number"
+        "Boolean": {
+            "@id": "iudx:Boolean"
+        },
+        "NumericArray": {
+            "@id": "iudx:NumericArray"
         },
         "DateTime": {
             "@id": "iudx:DateTime"
         },
-        "UrbanMobility": {
-            "@id": "iudx:UrbanMobility"
-        },
-        "Civic": {
-            "@id": "iudx:Civic"
-        },
-        "Environment": {
-            "@id": "iudx:Environment"
-        },
-        "WasteManagement": {
-            "@id": "iudx:WasteManagement"
-        },
-        "IoTDevice": {
-            "@id": "iudx:IoTDevice"
-        },
-        "deviceName": {
-            "@id": "iudx:deviceName"
-        },
-        "deviceStatus": {
-            "@id": "iudx:deviceStatus"
-        },
-        "observationDateTime": {
-            "@id": "iudx:observationDateTime"
-        },
-        "deviceID": {
-            "@id": "iudx:deviceID"
-        },
-        "deviceModel": {
-            "@id": "iudx:deviceModel"
-        },
-        "RFID": {
-            "@id": "iudx:RFID"
-        },
-        "TransitManagement": {
-            "@id": "iudx:TransitManagement"
-        },
-        "EnvFlood": {
-            "@id": "iudx:EnvFlood"
-        },
-        "EnvAQM": {
-            "@id": "iudx:EnvAQM"
-        },
-        "dangerLevel": {
-            "@id": "iudx:dangerLevel"
-        },
-        "o3MAX": {
-            "@id": "iudx:o3MAX"
-        },
-        "pm10MIN": {
-            "@id": "iudx:pm10MIN"
-        },
-        "alertLevel": {
-            "@id": "iudx:alertLevel"
-        },
-        "coMAX": {
-            "@id": "iudx:coMAX"
-        },
-        "pm10AVG": {
-            "@id": "iudx:pm10AVG"
-        },
-        "so2AVG": {
-            "@id": "iudx:so2AVG"
-        },
-        "pm10MAX": {
-            "@id": "iudx:pm10MAX"
-        },
-        "noMAX": {
-            "@id": "iudx:noMAX"
-        },
-        "co2MIN": {
-            "@id": "iudx:co2MIN"
-        },
-        "ambientNoiseMAX": {
-            "@id": "iudx:ambientNoiseMAX"
-        },
-        "no2MAX": {
-            "@id": "iudx:no2MAX"
-        },
-        "uvMAX": {
-            "@id": "iudx:uvMAX"
-        },
-        "o2MAX": {
-            "@id": "iudx:o2MAX"
-        },
-        "o2MIN": {
-            "@id": "iudx:o2MIN"
-        },
-        "airTemperatureAVG": {
-            "@id": "iudx:airTemperatureAVG"
-        },
-        "ambientLight": {
-            "@id": "iudx:ambientLight"
-        },
-        "no2AVG": {
-            "@id": "iudx:no2AVG"
-        },
-        "so2MAX": {
-            "@id": "iudx:so2MAX"
-        },
-        "airTemperatureMIN": {
-            "@id": "iudx:airTemperatureMIN"
-        },
-        "no2MIN": {
-            "@id": "iudx:no2MIN"
-        },
-        "airTemperatureMAX": {
-            "@id": "iudx:airTemperatureMAX"
-        },
-        "rainfallMeasured": {
-            "@id": "iudx:rainfallMeasured"
-        },
-        "so2MIN": {
-            "@id": "iudx:so2MIN"
-        },
-        "noAVG": {
-            "@id": "iudx:noAVG"
-        },
-        "co2MAX": {
-            "@id": "iudx:co2MAX"
-        },
-        "o3AVG": {
-            "@id": "iudx:o3AVG"
-        },
-        "aqiCategory": {
-            "@id": "iudx:aqiCategory"
-        },
-        "aqiMajorPollutant": {
-            "@id": "iudx:aqiMajorPollutant"
-        },
-        "o3MIN": {
-            "@id": "iudx:o3MIN"
-        },
-        "uvMIN": {
-            "@id": "iudx:uvMIN"
-        },
-        "coMIN": {
-            "@id": "iudx:coMIN"
-        },
-        "o2AVG": {
-            "@id": "iudx:o2AVG"
-        },
-        "currentLevel": {
-            "@id": "iudx:currentLevel"
-        },
-        "floodLevelStatus": {
-            "@id": "iudx:floodLevelStatus"
-        },
-        "airPressure": {
-            "@id": "iudx:airPressure"
-        },
-        "ambientNoiseMIN": {
-            "@id": "iudx:ambientNoiseMIN"
-        },
-        "noMIN": {
-            "@id": "iudx:noMIN"
-        },
-        "pm2p5MIN": {
-            "@id": "iudx:pm2p5MIN"
-        },
-        "uvAVG": {
-            "@id": "iudx:uvAVG"
-        },
-        "relativeHumidity": {
-            "@id": "iudx:relativeHumidity"
-        },
-        "pm2p5MAX": {
-            "@id": "iudx:pm2p5MAX"
-        },
-        "coAVG": {
-            "@id": "iudx:coAVG"
-        },
-        "referenceLevel": {
-            "@id": "iudx:referenceLevel"
-        },
-        "rainfallForecast": {
-            "@id": "iudx:rainfallForecast"
-        },
-        "co2AVG": {
-            "@id": "iudx:co2AVG"
-        },
-        "pm2p5AVG": {
-            "@id": "iudx:pm2p5AVG"
-        },
-        "ambientNoise": {
-            "@id": "iudx:ambientNoise"
-        },
-        "airQualityIndex": {
-            "@id": "iudx:airQualityIndex"
-        },
-        "routeShortName": {
-            "@id": "iudx:routeShortName"
-        },
-        "stopId": {
-            "@id": "iudx:stopId"
-        },
-        "stopName": {
-            "@id": "iudx:stopName"
-        },
-        "currentStopSequence": {
-            "@id": "iudx:currentStopSequence"
-        },
-        "vehicleLicensePlate": {
-            "@id": "iudx:vehicleLicensePlate"
-        },
-        "routeDesc": {
-            "@id": "iudx:routeDesc"
-        },
-        "scheduleRelationship": {
-            "@id": "iudx:scheduleRelationship"
-        },
-        "tripId": {
-            "@id": "iudx:tripId"
-        },
-        "routeId": {
-            "@id": "iudx:routeId"
-        },
-        "vehicleCurrentStatus": {
-            "@id": "iudx:vehicleCurrentStatus"
-        },
-        "vehicleID": {
-            "@id": "iudx:vehicleID"
-        },
-        "routeName": {
-            "@id": "iudx:routeName"
-        },
-        "routeType": {
-            "@id": "iudx:routeType"
-        },
-        "GeoCoordinates": {
-            "@id": "iudx:GeoCoordinates"
-        },
-        "Organization": {
-            "@id": "iudx:Organization"
-        },
-        "Provider": {
-            "@id": "iudx:Provider"
-        },
-        "TimeProperty": {
-            "@id": "iudx:TimeProperty"
-        },
-        "TextProperty": {
-            "@id": "iudx:TextProperty"
-        },
-        "IUDXEntity": {
-            "@id": "iudx:IUDXEntity"
-        },
-        "GeoProperty": {
-            "@id": "iudx:GeoProperty"
-        },
-        "LineString": {
-            "@id": "iudx:LineString"
-        },
-        "Intangible": {
-            "@id": "iudx:Intangible"
+        "DataFieldListValue": {
+            "@id": "iudx:DataFieldListValue"
         },
         "Thing": {
             "@id": "iudx:Thing"
         },
-        "DataModel": {
-            "@id": "iudx:DataModel"
-        },
-        "Place": {
-            "@id": "iudx:Place"
-        },
-        "StructuredProperty": {
-            "@id": "iudx:StructuredProperty"
-        },
-        "DataFieldListValue": {
-            "@id": "iudx:DataFieldListValue"
-        },
-        "QuantitativeProperty": {
-            "@id": "iudx:QuantitativeProperty"
-        },
-        "Point": {
-            "@id": "iudx:Point"
-        },
-        "AccessObjectInfoValue": {
-            "@id": "iudx:AccessObjectInfoValue"
-        },
-        "RelationshipValue": {
-            "@id": "iudx:RelationshipValue"
-        },
-        "ValueDescriptor": {
-            "@id": "iudx:ValueDescriptor"
-        },
-        "DataDescriptor": {
-            "@id": "iudx:DataDescriptor"
-        },
-        "AuthServerInfoValue": {
-            "@id": "iudx:AuthServerInfoValue"
-        },
-        "FunctionDescription": {
-            "@id": "iudx:FunctionDescription"
-        },
-        "GeoJSONGeometry": {
-            "@id": "iudx:GeoJSONGeometry"
-        },
-        "StructuredValue": {
-            "@id": "iudx:StructuredValue"
-        },
-        "Relationship": {
-            "@id": "iudx:Relationship"
-        },
-        "ModelInfo": {
-            "@id": "iudx:ModelInfo"
-        },
-        "Polygon": {
-            "@id": "iudx:Polygon"
+        "ResourceServer": {
+            "@id": "iudx:ResourceServer"
         },
         "Resource": {
             "@id": "iudx:Resource"
         },
-        "ResourceGroup": {
-            "@id": "iudx:ResourceGroup"
+        "AuthServerInfoValue": {
+            "@id": "iudx:AuthServerInfoValue"
+        },
+        "StructuredProperty": {
+            "@id": "iudx:StructuredProperty"
+        },
+        "COS": {
+            "@id": "iudx:COS"
+        },
+        "TextProperty": {
+            "@id": "iudx:TextProperty"
+        },
+        "DataDescriptor": {
+            "@id": "iudx:DataDescriptor"
+        },
+        "Organization": {
+            "@id": "iudx:Organization"
+        },
+        "ValueDescriptor": {
+            "@id": "iudx:ValueDescriptor"
+        },
+        "RelationshipValue": {
+            "@id": "iudx:RelationshipValue"
+        },
+        "Intangible": {
+            "@id": "iudx:Intangible"
+        },
+        "AccessObjectInfoValue": {
+            "@id": "iudx:AccessObjectInfoValue"
+        },
+        "StructuredValue": {
+            "@id": "iudx:StructuredValue"
+        },
+        "TimeProperty": {
+            "@id": "iudx:TimeProperty"
         },
         "Class": {
             "@id": "iudx:Class"
         },
-        "ResourceServer": {
-            "@id": "iudx:ResourceServer"
+        "ResourceAccessModalities": {
+            "@id": "iudx:ResourceAccessModalities"
+        },
+        "Place": {
+            "@id": "iudx:Place"
+        },
+        "ResourceGroup": {
+            "@id": "iudx:ResourceGroup"
         },
         "Feature": {
             "@id": "iudx:Feature"
         },
-        "address": {
-            "@id": "iudx:address"
+        "DataModel": {
+            "@id": "iudx:DataModel"
         },
-        "resourceType": {
-            "@id": "iudx:resourceType"
+        "QuantitativeProperty": {
+            "@id": "iudx:QuantitativeProperty"
         },
-        "isPartOf": {
-            "@id": "iudx:isPartOf"
+        "HTTPAccess": {
+            "@id": "iudx:HTTPAccess"
         },
-        "avgDurationInHours": {
-            "@id": "iudx:avgDurationInHours"
+        "LineString": {
+            "@id": "iudx:LineString"
         },
-        "sameAs": {
-            "@id": "iudx:sameAs"
+        "MultiPolygon": {
+            "@id": "iudx:MultiPolygon"
         },
-        "resourceGroup": {
-            "@id": "iudx:resourceGroup"
+        "IUDXEntity": {
+            "@id": "iudx:IUDXEntity"
         },
-        "accessObject": {
-            "@id": "iudx:accessObject"
+        "Provider": {
+            "@id": "iudx:Provider"
         },
-        "itemDeprecatedAt": {
-            "@id": "iudx:itemDeprecatedAt"
+        "Owner": {
+            "@id": "iudx:Owner"
         },
-        "geometry": {
-            "@id": "iudx:geometry"
+        "GeoJSONGeometry": {
+            "@id": "iudx:GeoJSONGeometry"
         },
-        "brandName": {
-            "@id": "iudx:brandName"
+        "ModelInfo": {
+            "@id": "iudx:ModelInfo"
         },
-        "coordinates": {
-            "@id": "iudx:coordinates"
+        "GeoCoordinates": {
+            "@id": "iudx:GeoCoordinates"
         },
-        "resourceServerOrg": {
-            "@id": "iudx:resourceServerOrg"
+        "FileAccess": {
+            "@id": "iudx:FileAccess"
         },
-        "accessObjectType": {
-            "@id": "iudx:accessObjectType"
+        "GeoProperty": {
+            "@id": "iudx:GeoProperty"
         },
-        "geoCovers": {
-            "@id": "iudx:geoCovers"
+        "Relationship": {
+            "@id": "iudx:Relationship"
         },
-        "unitCode": {
-            "@id": "iudx:unitCode"
+        "FunctionDescription": {
+            "@id": "iudx:FunctionDescription"
         },
-        "accessObjectInfo": {
-            "@id": "iudx:accessObjectInfo"
+        "Polygon": {
+            "@id": "iudx:Polygon"
         },
-        "durationInHours": {
-            "@id": "iudx:durationInHours"
+        "Point": {
+            "@id": "iudx:Point"
+        },
+        "StreamingAccess": {
+            "@id": "iudx:StreamingAccess"
+        },
+        "TimeSeriesAggregation": {
+            "@id": "iudx:TimeSeriesAggregation"
         },
         "authServerInfo": {
             "@id": "iudx:authServerInfo"
         },
-        "longitude": {
-            "@id": "iudx:longitude"
+        "dataQualityFile": {
+            "@id": "iudx:dataQualityFile",
+            "@type": "@id"
         },
-        "location": {
-            "@id": "iudx:location"
+        "address": {
+            "@id": "iudx:address"
         },
-        "rangeIncludes": {
-            "@id": "iudx:rangeIncludes"
+        "instValue": {
+            "@id": "iudx:instValue"
         },
-        "openDataFields": {
-            "@id": "iudx:openDataFields"
+        "accessObjectInfo": {
+            "@id": "iudx:accessObjectInfo"
         },
-        "minDurationInHours": {
-            "@id": "iudx:minDurationInHours"
-        },
-        "geoJSON": {
-            "@id": "iudx:geoJSON"
-        },
-        "authServerURL": {
-            "@id": "iudx:authServerURL"
-        },
-        "itemCreatedAt": {
-            "@id": "iudx:itemCreatedAt"
-        },
-        "dataDescriptor": {
-            "@id": "iudx:dataDescriptor"
-        },
-        "manufacturerName": {
-            "@id": "iudx:manufacturerName"
-        },
-        "authType": {
-            "@id": "iudx:authType"
-        },
-        "modelName": {
-            "@id": "iudx:modelName"
-        },
-        "maxDurationInHours": {
-            "@id": "iudx:maxDurationInHours"
-        },
-        "latitude": {
-            "@id": "iudx:latitude"
-        },
-        "unitText": {
-            "@id": "iudx:unitText"
-        },
-        "modelURL": {
-            "@id": "iudx:modelURL"
-        },
-        "additionalInfoURL": {
-            "@id": "iudx:additionalInfoURL"
-        },
-        "functionParameters": {
-            "@id": "iudx:functionParameters"
-        },
-        "requiredProperty": {
-            "@id": "iudx:requiredProperty"
-        },
-        "tags": {
-            "@id": "iudx:tags"
-        },
-        "dataSchema": {
-            "@id": "iudx:dataSchema"
+        "protocol": {
+            "@id": "iudx:protocol"
         },
         "itemModifiedAt": {
             "@id": "iudx:itemModifiedAt"
         },
-        "resourceAuthControlLevel": {
-            "@id": "iudx:resourceAuthControlLevel"
-        },
-        "secureDataFields": {
-            "@id": "iudx:secureDataFields"
-        },
-        "resourceServerHTTPAccessURL": {
-            "@id": "iudx:resourceServerHTTPAccessURL"
-        },
-        "providerOrg": {
-            "@id": "iudx:providerOrg"
-        },
-        "provider": {
-            "@id": "iudx:provider"
-        },
-        "iudxResourceAPIs": {
-            "@id": "iudx:iudxResourceAPIs"
+        "durationInHours": {
+            "@id": "iudx:durationInHours"
         },
         "domainIncludes": {
             "@id": "iudx:domainIncludes"
         },
-        "name": {
-            "@id": "iudx:name"
+        "sameAs": {
+            "@id": "iudx:sameAs"
+        },
+        "date": {
+            "@id": "iudx:date"
+        },
+        "rangeIncludes": {
+            "@id": "iudx:rangeIncludes"
+        },
+        "resourceGroup": {
+            "@id": "iudx:resourceGroup",
+            "@type": "@id"
+        },
+        "accessObject": {
+            "@id": "iudx:accessObject",
+            "@type": "@id"
+        },
+        "additionalInfoURL": {
+            "@id": "iudx:additionalInfoURL",
+            "@type": "@id"
+        },
+        "itemDeprecatedAt": {
+            "@id": "iudx:itemDeprecatedAt"
+        },
+        "relationType": {
+            "@id": "iudx:relationType"
+        },
+        "iudxResourceAPIs": {
+            "@id": "iudx:iudxResourceAPIs"
+        },
+        "functionParameters": {
+            "@id": "iudx:functionParameters"
+        },
+        "provider": {
+            "@id": "iudx:provider",
+            "@type": "@id"
+        },
+        "cosUI": {
+            "@id": "iudx:cosUI",
+            "@type": "@id"
+        },
+        "geometry": {
+            "@id": "iudx:geometry"
+        },
+        "resourceServerRegURL": {
+            "@id": "iudx:resourceServerRegURL",
+            "@type": "@id"
+        },
+        "providerOrg": {
+            "@id": "iudx:providerOrg"
+        },
+        "dataDescriptor": {
+            "@id": "iudx:dataDescriptor",
+            "@type": "@id"
+        },
+        "description": {
+            "@id": "iudx:description"
+        },
+        "minOverTime": {
+            "@id": "iudx:minOverTime"
+        },
+        "unitText": {
+            "@id": "iudx:unitText"
+        },
+        "maxOverTime": {
+            "@id": "iudx:maxOverTime"
+        },
+        "downloadURL": {
+            "@id": "iudx:downloadURL",
+            "@type": "@id"
+        },
+        "manufacturerName": {
+            "@id": "iudx:manufacturerName"
+        },
+        "cos": {
+            "@id": "iudx:cos",
+            "@type": "@id"
+        },
+        "coordinates": {
+            "@id": "iudx:coordinates"
+        },
+        "altitude": {
+            "@id": "iudx:altitude"
+        },
+        "tags": {
+            "@id": "iudx:tags"
+        },
+        "associatedEntity": {
+            "@id": "iudx:associatedEntity",
+            "@type": "@id"
+        },
+        "minValue": {
+            "@id": "iudx:minValue"
+        },
+        "isRelatedTo": {
+            "@id": "iudx:isRelatedTo"
+        },
+        "accessURL": {
+            "@id": "iudx:accessURL"
+        },
+        "geoCovers": {
+            "@id": "iudx:geoCovers"
+        },
+        "dataSampleFile": {
+            "@id": "iudx:dataSampleFile",
+            "@type": "@id"
+        },
+        "secureDataFields": {
+            "@id": "iudx:secureDataFields"
+        },
+        "authControlLevel": {
+            "@id": "iudx:authControlLevel"
+        },
+        "accessPolicy": {
+            "@id": "iudx:accessPolicy"
+        },
+        "resourceServerOrg": {
+            "@id": "iudx:resourceServerOrg"
+        },
+        "month": {
+            "@id": "iudx:month"
+        },
+        "landmark": {
+            "@id": "iudx:landmark"
         },
         "itemStatus": {
             "@id": "iudx:itemStatus"
         },
+        "dataSchema": {
+            "@id": "iudx:dataSchema"
+        },
+        "dataSample": {
+            "@id": "iudx:dataSample"
+        },
         "hasObject": {
             "@id": "iudx:hasObject"
         },
-        "resourceServer": {
-            "@id": "iudx:resourceServer"
+        "avgOverTime": {
+            "@id": "iudx:avgOverTime"
         },
-        "description": {
-            "@id": "iudx:description"
+        "longitude": {
+            "@id": "iudx:longitude"
+        },
+        "requiredProperty": {
+            "@id": "iudx:requiredProperty"
+        },
+        "aggregationDuration": {
+            "@id": "iudx:aggregationDuration"
+        },
+        "areaServed": {
+            "@id": "iudx:areaServed"
+        },
+        "accessObjectType": {
+            "@id": "iudx:accessObjectType"
+        },
+        "authType": {
+            "@id": "iudx:authType"
+        },
+        "unitCode": {
+            "@id": "iudx:unitCode"
+        },
+        "modelURL": {
+            "@id": "iudx:modelURL"
+        },
+        "resourceAccessModalities": {
+            "@id": "iudx:resourceAccessModalities"
+        },
+        "relatedEntity": {
+            "@id": "iudx:relatedEntity",
+            "@type": "@id"
+        },
+        "owner": {
+            "@id": "iudx:owner",
+            "@type": "@id"
+        },
+        "maxValue": {
+            "@id": "iudx:maxValue"
+        },
+        "location": {
+            "@id": "iudx:location"
+        },
+        "repositoryURL": {
+            "@id": "iudx:repositoryURL",
+            "@type": "@id"
+        },
+        "name": {
+            "@id": "iudx:name"
+        },
+        "resourceServer": {
+            "@id": "iudx:resourceServer",
+            "@type": "@id"
+        },
+        "dataDescriptorLabel": {
+            "@id": "iudx:dataDescriptorLabel"
+        },
+        "itemCreatedAt": {
+            "@id": "iudx:itemCreatedAt"
+        },
+        "authServerURL": {
+            "@id": "iudx:authServerURL",
+            "@type": "@id"
+        },
+        "apdURL": {
+            "@id": "iudx:apdURL"
+        },
+        "isPartOf": {
+            "@id": "iudx:isPartOf"
+        },
+        "brandName": {
+            "@id": "iudx:brandName"
+        },
+        "value": {
+            "@id": "iudx:value"
+        },
+        "durationInMinutes": {
+            "@id": "iudx:durationInMinutes"
+        },
+        "openDataFields": {
+            "@id": "iudx:openDataFields"
+        },
+        "latitude": {
+            "@id": "iudx:latitude"
+        },
+        "geoJSON": {
+            "@id": "iudx:geoJSON"
+        },
+        "mediaURL": {
+            "@id": "iudx:mediaURL"
+        },
+        "modelName": {
+            "@id": "iudx:modelName"
+        },
+        "resourceType": {
+            "@id": "iudx:resourceType"
+        },
+        "label": {
+            "@id": "iudx:label"
+        },
+        "cosURL": {
+            "@id": "iudx:cosURL",
+            "@type": "@id"
+        },
+        "dataDescriptorName": {
+            "@id": "iudx:dataDescriptorName"
+        },
+        "resolution": {
+            "@id": "iudx:resolution"
+        },
+        "year": {
+            "@id": "iudx:year"
+        },
+        "measAccuracy": {
+            "@id": "iudx:measAccuracy"
+        },
+        "labelXYZ": {
+            "@id": "iudx:labelXYZ"
+        },
+        "Environment": {
+            "@id": "iudx:Environment"
+        },
+        "VideoSystems": {
+            "@id": "iudx:VideoSystems"
+        },
+        "Civic": {
+            "@id": "iudx:Civic"
+        },
+        "GeoSpatialInfo": {
+            "@id": "iudx:GeoSpatialInfo"
+        },
+        "GeoAdminBoundaries": {
+            "@id": "iudx:GeoAdminBoundaries"
+        },
+        "WasteManagement": {
+            "@id": "iudx:WasteManagement"
+        },
+        "UrbanMobility": {
+            "@id": "iudx:UrbanMobility"
+        },
+        "SmartLivingLab": {
+            "@id": "iudx:SmartLivingLab"
+        },
+        "WorkPlace": {
+            "@id": "iudx:WorkPlace"
+        },
+        "Tourism": {
+            "@id": "iudx:Tourism"
+        },
+        "Energy": {
+            "@id": "iudx:Energy"
+        },
+        "StreetLight": {
+            "@id": "iudx:StreetLight"
+        },
+        "gisAccessToken": {
+            "@id": "iudx:gisAccessToken"
+        },
+        "gisLayers": {
+            "@id": "iudx:gisLayers"
+        },
+        "gisServerURL": {
+            "@id": "iudx:gisServerURL"
+        },
+        "MunicipalityDesc": {
+            "@id": "iudx:MunicipalityDesc"
+        },
+        "district": {
+            "@id": "iudx:district"
+        },
+        "cityName": {
+            "@id": "iudx:cityName"
+        },
+        "zoneName": {
+            "@id": "iudx:zoneName"
+        },
+        "wardName": {
+            "@id": "iudx:wardName"
+        },
+        "wardNum": {
+            "@id": "iudx:wardNum"
+        },
+        "zoneID": {
+            "@id": "iudx:zoneID"
+        },
+        "stateName": {
+            "@id": "iudx:stateName"
+        },
+        "ulbName": {
+            "@id": "iudx:ulbName"
+        },
+        "wardID": {
+            "@id": "iudx:wardID"
+        },
+        "cityID": {
+            "@id": "iudx:cityID"
+        },
+        "EnvAQM": {
+            "@id": "iudx:EnvAQM"
+        },
+        "EnvWeather": {
+            "@id": "iudx:EnvWeather"
+        },
+        "EnvFlood": {
+            "@id": "iudx:EnvFlood"
+        },
+        "pb": {
+            "@id": "iudx:pb"
+        },
+        "nickel": {
+            "@id": "iudx:nickel"
+        },
+        "o2": {
+            "@id": "iudx:o2"
+        },
+        "precipitationForecast": {
+            "@id": "iudx:precipitationForecast"
+        },
+        "airQualityLevel": {
+            "@id": "iudx:airQualityLevel"
+        },
+        "pm10": {
+            "@id": "iudx:pm10"
+        },
+        "uv": {
+            "@id": "iudx:uv"
+        },
+        "dangerLevel": {
+            "@id": "iudx:dangerLevel"
+        },
+        "ambientNoise": {
+            "@id": "iudx:ambientNoise"
+        },
+        "relativeHumidity": {
+            "@id": "iudx:relativeHumidity"
+        },
+        "vocTotal": {
+            "@id": "iudx:vocTotal"
+        },
+        "precipitation": {
+            "@id": "iudx:precipitation"
+        },
+        "bap": {
+            "@id": "iudx:bap"
+        },
+        "no": {
+            "@id": "iudx:no"
+        },
+        "pm2p5": {
+            "@id": "iudx:pm2p5"
+        },
+        "gustSpeed": {
+            "@id": "iudx:gustSpeed"
+        },
+        "floodLevelStatus": {
+            "@id": "iudx:floodLevelStatus"
+        },
+        "solarRadiation": {
+            "@id": "iudx:solarRadiation"
+        },
+        "airQualityIndex": {
+            "@id": "iudx:airQualityIndex"
+        },
+        "nh3": {
+            "@id": "iudx:nh3"
+        },
+        "atmosphericPressure": {
+            "@id": "iudx:atmosphericPressure"
+        },
+        "o3": {
+            "@id": "iudx:o3"
+        },
+        "currentLevel": {
+            "@id": "iudx:currentLevel"
+        },
+        "airTemperature": {
+            "@id": "iudx:airTemperature"
+        },
+        "airTemperatureForecast": {
+            "@id": "iudx:airTemperatureForecast"
+        },
+        "aqiMajorPollutant": {
+            "@id": "iudx:aqiMajorPollutant"
+        },
+        "relativeHumidityForecast": {
+            "@id": "iudx:relativeHumidityForecast"
+        },
+        "benzene": {
+            "@id": "iudx:benzene"
+        },
+        "arsenic": {
+            "@id": "iudx:arsenic"
+        },
+        "so2": {
+            "@id": "iudx:so2"
+        },
+        "aqiMajorPollutantForecast": {
+            "@id": "iudx:aqiMajorPollutantForecast"
+        },
+        "vocRaw": {
+            "@id": "iudx:vocRaw"
+        },
+        "measuredDistance": {
+            "@id": "iudx:measuredDistance"
+        },
+        "co": {
+            "@id": "iudx:co"
+        },
+        "dewPoint": {
+            "@id": "iudx:dewPoint"
+        },
+        "no2": {
+            "@id": "iudx:no2"
+        },
+        "windSpeed": {
+            "@id": "iudx:windSpeed"
+        },
+        "referenceLevel": {
+            "@id": "iudx:referenceLevel"
+        },
+        "windDirection": {
+            "@id": "iudx:windDirection"
+        },
+        "weatherType": {
+            "@id": "iudx:weatherType"
+        },
+        "co2": {
+            "@id": "iudx:co2"
+        },
+        "illuminance": {
+            "@id": "iudx:illuminance"
+        },
+        "alertLevel": {
+            "@id": "iudx:alertLevel"
+        },
+        "versionInfo": {
+            "@id": "iudx:versionInfo"
+        },
+        "airQualityIndexForecast": {
+            "@id": "iudx:airQualityIndexForecast"
+        },
+        "Version": {
+            "@id": "iudx:Version"
+        },
+        "endDateTime": {
+            "@id": "iudx:endDateTime"
+        },
+        "startDateTime": {
+            "@id": "iudx:startDateTime"
+        },
+        "versionSpec": {
+            "@id": "iudx:versionSpec"
+        },
+        "versionName": {
+            "@id": "iudx:versionName"
+        },
+        "AirQuality": {
+            "@id": "iudx:AirQuality"
+        },
+        "RoomOccupancy": {
+            "@id": "iudx:RoomOccupancy"
+        },
+        "AirConditioner": {
+            "@id": "iudx:AirConditioner"
+        },
+        "acMode": {
+            "@id": "iudx:acMode"
+        },
+        "airFlowRate": {
+            "@id": "iudx:airFlowRate"
+        },
+        "startStopStatus": {
+            "@id": "iudx:startStopStatus"
+        },
+        "indoorFanStatus": {
+            "@id": "iudx:indoorFanStatus"
+        },
+        "compressorStatus": {
+            "@id": "iudx:compressorStatus"
+        },
+        "thermoStatus": {
+            "@id": "iudx:thermoStatus"
+        },
+        "pm2p5Calibrated": {
+            "@id": "iudx:pm2p5Calibrated"
+        },
+        "malfunctionCode": {
+            "@id": "iudx:malfunctionCode"
+        },
+        "relativeHumidityCalibrated": {
+            "@id": "iudx:relativeHumidityCalibrated"
+        },
+        "alarmStatus": {
+            "@id": "iudx:alarmStatus"
+        },
+        "isOccupied": {
+            "@id": "iudx:isOccupied"
+        },
+        "airTemperatureCalibrated": {
+            "@id": "iudx:airTemperatureCalibrated"
+        },
+        "airDirection": {
+            "@id": "iudx:airDirection"
+        },
+        "heaterStatus": {
+            "@id": "iudx:heaterStatus"
+        },
+        "energyEfficiencyStatus": {
+            "@id": "iudx:energyEfficiencyStatus"
+        },
+        "forcedThermoOffStatus": {
+            "@id": "iudx:forcedThermoOffStatus"
+        },
+        "pm10Calibrated": {
+            "@id": "iudx:pm10Calibrated"
+        },
+        "totalGasPower": {
+            "@id": "iudx:totalGasPower"
+        },
+        "setPointTemperature": {
+            "@id": "iudx:setPointTemperature"
+        },
+        "filterSign": {
+            "@id": "iudx:filterSign"
+        },
+        "LaneDesc": {
+            "@id": "iudx:LaneDesc"
+        },
+        "laneLength": {
+            "@id": "iudx:laneLength"
+        },
+        "laneId": {
+            "@id": "iudx:laneId"
+        },
+        "laneDirection": {
+            "@id": "iudx:laneDirection"
+        },
+        "laneWidth": {
+            "@id": "iudx:laneWidth"
+        },
+        "StreetLightFeeder": {
+            "@id": "iudx:StreetLightFeeder"
+        },
+        "Streetlight": {
+            "@id": "iudx:Streetlight"
+        },
+        "apparentPower": {
+            "@id": "iudx:apparentPower"
+        },
+        "activePower": {
+            "@id": "iudx:activePower"
+        },
+        "streetPoleNum": {
+            "@id": "iudx:streetPoleNum"
+        },
+        "powerFactor": {
+            "@id": "iudx:powerFactor"
+        },
+        "feederPillarNum": {
+            "@id": "iudx:feederPillarNum"
+        },
+        "feederID": {
+            "@id": "iudx:feederID",
+            "@type": "@id"
+        },
+        "phaseVoltage": {
+            "@id": "iudx:phaseVoltage"
+        },
+        "phaseCurrent": {
+            "@id": "iudx:phaseCurrent"
+        },
+        "numStreetlight": {
+            "@id": "iudx:numStreetlight"
+        },
+        "energyConsumed": {
+            "@id": "iudx:energyConsumed"
+        },
+        "reactivePower": {
+            "@id": "iudx:reactivePower"
+        },
+        "feederConnectivity": {
+            "@id": "iudx:feederConnectivity"
+        },
+        "powerConsumption": {
+            "@id": "iudx:powerConsumption"
+        },
+        "wirelessInfo": {
+            "@id": "iudx:wirelessInfo"
+        },
+        "powerState": {
+            "@id": "iudx:powerState"
+        },
+        "current": {
+            "@id": "iudx:current"
+        },
+        "totalActivePower": {
+            "@id": "iudx:totalActivePower"
+        },
+        "voltage": {
+            "@id": "iudx:voltage"
+        },
+        "powerRating": {
+            "@id": "iudx:powerRating"
+        },
+        "totalReactivePower": {
+            "@id": "iudx:totalReactivePower"
+        },
+        "totalApparentPower": {
+            "@id": "iudx:totalApparentPower"
+        },
+        "Orientation": {
+            "@id": "iudx:Orientation"
+        },
+        "annotatedMap": {
+            "@id": "iudx:annotatedMap"
+        },
+        "WaterDistributionNetwork": {
+            "@id": "iudx:WaterDistributionNetwork"
+        },
+        "IssueReporting": {
+            "@id": "iudx:IssueReporting"
+        },
+        "SafetiPin": {
+            "@id": "iudx:SafetiPin"
+        },
+        "GISData": {
+            "@id": "iudx:GISData"
+        },
+        "RevenueCollection": {
+            "@id": "iudx:RevenueCollection"
+        },
+        "PointOfInterest": {
+            "@id": "iudx:PointOfInterest"
+        },
+        "PublicSchemes": {
+            "@id": "iudx:PublicSchemes"
+        },
+        "MosquitoDensity": {
+            "@id": "iudx:MosquitoDensity"
+        },
+        "totalCount": {
+            "@id": "iudx:totalCount"
+        },
+        "totalML": {
+            "@id": "iudx:totalML"
+        },
+        "schemeID": {
+            "@id": "iudx:schemeID"
+        },
+        "cl": {
+            "@id": "iudx:cl"
+        },
+        "ecRecoveryAmount": {
+            "@id": "iudx:ecRecoveryAmount"
+        },
+        "maleTotal": {
+            "@id": "iudx:maleTotal"
+        },
+        "tradeName": {
+            "@id": "iudx:tradeName"
+        },
+        "waterLevel": {
+            "@id": "iudx:waterLevel"
+        },
+        "eligibleBeneficiaries": {
+            "@id": "iudx:eligibleBeneficiaries"
+        },
+        "subCategory": {
+            "@id": "iudx:subCategory"
+        },
+        "openHours": {
+            "@id": "iudx:openHours"
+        },
+        "category": {
+            "@id": "iudx:category"
+        },
+        "title": {
+            "@id": "iudx:title"
+        },
+        "categoryCode": {
+            "@id": "iudx:categoryCode"
+        },
+        "schemeName": {
+            "@id": "iudx:schemeName"
+        },
+        "resolutionStatus": {
+            "@id": "iudx:resolutionStatus"
+        },
+        "sanctionedAmount": {
+            "@id": "iudx:sanctionedAmount"
+        },
+        "beneficiaryCount": {
+            "@id": "iudx:beneficiaryCount"
+        },
+        "tankShape": {
+            "@id": "iudx:tankShape"
+        },
+        "licenseExpiryDate": {
+            "@id": "iudx:licenseExpiryDate"
+        },
+        "tankDiameter": {
+            "@id": "iudx:tankDiameter"
+        },
+        "establishmentType": {
+            "@id": "iudx:establishmentType"
+        },
+        "revenueLicenseStatus": {
+            "@id": "iudx:revenueLicenseStatus"
+        },
+        "femaleTotal": {
+            "@id": "iudx:femaleTotal"
+        },
+        "taxAmountCollected": {
+            "@id": "iudx:taxAmountCollected"
+        },
+        "tankName": {
+            "@id": "iudx:tankName"
+        },
+        "licenseIssualDate": {
+            "@id": "iudx:licenseIssualDate"
+        },
+        "speciesTotal": {
+            "@id": "iudx:speciesTotal"
+        },
+        "turbidity": {
+            "@id": "iudx:turbidity"
+        },
+        "rcRecoveryAmount": {
+            "@id": "iudx:rcRecoveryAmount"
+        },
+        "tankLength": {
+            "@id": "iudx:tankLength"
+        },
+        "revenueCollectionType": {
+            "@id": "iudx:revenueCollectionType"
+        },
+        "newAssessmentCount": {
+            "@id": "iudx:newAssessmentCount"
+        },
+        "amountCollected": {
+            "@id": "iudx:amountCollected"
+        },
+        "reportingMode": {
+            "@id": "iudx:reportingMode"
+        },
+        "reAssessmentCount": {
+            "@id": "iudx:reAssessmentCount"
+        },
+        "titleCode": {
+            "@id": "iudx:titleCode"
+        },
+        "waterPressure": {
+            "@id": "iudx:waterPressure"
+        },
+        "tankCapacity": {
+            "@id": "iudx:tankCapacity"
+        },
+        "speciesName": {
+            "@id": "iudx:speciesName"
+        },
+        "tankBreadth": {
+            "@id": "iudx:tankBreadth"
+        },
+        "waterTemperature": {
+            "@id": "iudx:waterTemperature"
+        },
+        "reportID": {
+            "@id": "iudx:reportID"
+        },
+        "safetiPinScore": {
+            "@id": "iudx:safetiPinScore"
+        },
+        "revenueLicense": {
+            "@id": "iudx:revenueLicense"
+        },
+        "vehicleTypeCode": {
+            "@id": "iudx:vehicleTypeCode"
+        },
+        "tankDepth": {
+            "@id": "iudx:tankDepth"
+        },
+        "pH": {
+            "@id": "iudx:pH"
+        },
+        "grantAmount": {
+            "@id": "iudx:grantAmount"
+        },
+        "flowrate": {
+            "@id": "iudx:flowrate"
+        },
+        "departmentID": {
+            "@id": "iudx:departmentID"
+        },
+        "waterFlow": {
+            "@id": "iudx:waterFlow"
+        },
+        "subCategoryCode": {
+            "@id": "iudx:subCategoryCode"
+        },
+        "WasteWaterMgmt": {
+            "@id": "iudx:WasteWaterMgmt"
+        },
+        "WmgmtVehicle": {
+            "@id": "iudx:WmgmtVehicle"
+        },
+        "WmgmtBin": {
+            "@id": "iudx:WmgmtBin"
+        },
+        "treatmentPlantID": {
+            "@id": "iudx:treatmentPlantID"
+        },
+        "treatmentPlantName": {
+            "@id": "iudx:treatmentPlantName"
+        },
+        "wasteBinInfo": {
+            "@id": "iudx:wasteBinInfo"
+        },
+        "tss": {
+            "@id": "iudx:tss"
+        },
+        "redox": {
+            "@id": "iudx:redox"
+        },
+        "tripNetWeightCollected": {
+            "@id": "iudx:tripNetWeightCollected"
+        },
+        "fuelFilled": {
+            "@id": "iudx:fuelFilled"
+        },
+        "tn": {
+            "@id": "iudx:tn"
+        },
+        "vehicleType": {
+            "@id": "iudx:vehicleType"
+        },
+        "poiID": {
+            "@id": "iudx:poiID"
+        },
+        "do": {
+            "@id": "iudx:do"
+        },
+        "collectedPOI": {
+            "@id": "iudx:collectedPOI"
+        },
+        "vehicleRunningStatus": {
+            "@id": "iudx:vehicleRunningStatus"
+        },
+        "treatmentPlantCode": {
+            "@id": "iudx:treatmentPlantCode"
+        },
+        "binLoggedTime": {
+            "@id": "iudx:binLoggedTime"
+        },
+        "cod": {
+            "@id": "iudx:cod"
+        },
+        "wasteCollectionStatus": {
+            "@id": "iudx:wasteCollectionStatus"
+        },
+        "commercialUnitsCount": {
+            "@id": "iudx:commercialUnitsCount"
+        },
+        "fuelType": {
+            "@id": "iudx:fuelType"
+        },
+        "treatmentPlantCapacity": {
+            "@id": "iudx:treatmentPlantCapacity"
+        },
+        "binID": {
+            "@id": "iudx:binID"
+        },
+        "outFlow": {
+            "@id": "iudx:outFlow"
+        },
+        "no3": {
+            "@id": "iudx:no3"
+        },
+        "residentialUnitsCount": {
+            "@id": "iudx:residentialUnitsCount"
+        },
+        "po4": {
+            "@id": "iudx:po4"
+        },
+        "binFillingLevel": {
+            "@id": "iudx:binFillingLevel"
+        },
+        "inFlow": {
+            "@id": "iudx:inFlow"
+        },
+        "toc": {
+            "@id": "iudx:toc"
+        },
+        "commercialPOIs": {
+            "@id": "iudx:commercialPOIs"
+        },
+        "poiName": {
+            "@id": "iudx:poiName"
+        },
+        "sludgeLevel": {
+            "@id": "iudx:sludgeLevel"
+        },
+        "sourceWeightCollected": {
+            "@id": "iudx:sourceWeightCollected"
+        },
+        "poiType": {
+            "@id": "iudx:poiType"
+        },
+        "residentialPOIs": {
+            "@id": "iudx:residentialPOIs"
+        },
+        "tic": {
+            "@id": "iudx:tic"
+        },
+        "uncompensatedTDS": {
+            "@id": "iudx:uncompensatedTDS"
+        },
+        "totalPOI": {
+            "@id": "iudx:totalPOI"
+        },
+        "wasteType": {
+            "@id": "iudx:wasteType"
+        },
+        "fuelEfficiency": {
+            "@id": "iudx:fuelEfficiency"
+        },
+        "compensatedTDS": {
+            "@id": "iudx:compensatedTDS"
+        },
+        "ignitionStatus": {
+            "@id": "iudx:ignitionStatus"
+        },
+        "nh4": {
+            "@id": "iudx:nh4"
+        },
+        "bod": {
+            "@id": "iudx:bod"
+        },
+        "binClearedTime": {
+            "@id": "iudx:binClearedTime"
+        },
+        "landfillSite": {
+            "@id": "iudx:landfillSite"
+        },
+        "vehicleAltitude": {
+            "@id": "iudx:vehicleAltitude"
+        },
+        "vehicleTrackerDevice": {
+            "@id": "iudx:vehicleTrackerDevice"
+        },
+        "Device": {
+            "@id": "iudx:Device"
+        },
+        "rssi": {
+            "@id": "iudx:rssi"
+        },
+        "deviceSimNumber": {
+            "@id": "iudx:deviceSimNumber"
+        },
+        "measurand": {
+            "@id": "iudx:measurand"
+        },
+        "deviceName": {
+            "@id": "iudx:deviceName"
+        },
+        "deviceModel": {
+            "@id": "iudx:deviceModel"
+        },
+        "rfID": {
+            "@id": "iudx:rfID"
+        },
+        "deviceBatteryStatus": {
+            "@id": "iudx:deviceBatteryStatus"
+        },
+        "deviceCount": {
+            "@id": "iudx:deviceCount"
+        },
+        "deviceID": {
+            "@id": "iudx:deviceID"
+        },
+        "WirelessNetwork": {
+            "@id": "iudx:WirelessNetwork"
+        },
+        "etx": {
+            "@id": "iudx:etx"
+        },
+        "rplRank": {
+            "@id": "iudx:rplRank"
+        },
+        "mac_tx_failed_count": {
+            "@id": "iudx:mac_tx_failed_count"
+        },
+        "latency": {
+            "@id": "iudx:latency"
+        },
+        "rslOut": {
+            "@id": "iudx:rslOut"
+        },
+        "macAddress": {
+            "@id": "iudx:macAddress"
+        },
+        "rslIn": {
+            "@id": "iudx:rslIn"
+        },
+        "packetSize": {
+            "@id": "iudx:packetSize"
+        },
+        "mac_tx_count": {
+            "@id": "iudx:mac_tx_count"
+        },
+        "dataRate": {
+            "@id": "iudx:dataRate"
+        },
+        "TouristDestination": {
+            "@id": "iudx:TouristDestination"
+        },
+        "destinationType": {
+            "@id": "iudx:destinationType"
+        },
+        "siteCode": {
+            "@id": "iudx:siteCode"
+        },
+        "siteDescription": {
+            "@id": "iudx:siteDescription"
+        },
+        "siteName": {
+            "@id": "iudx:siteName"
+        },
+        "specialRestrictions": {
+            "@id": "iudx:specialRestrictions"
+        },
+        "entryFee": {
+            "@id": "iudx:entryFee"
+        },
+        "daysOff": {
+            "@id": "iudx:daysOff"
+        },
+        "visitorCount": {
+            "@id": "iudx:visitorCount"
+        },
+        "visitDuration": {
+            "@id": "iudx:visitDuration"
+        },
+        "slogan": {
+            "@id": "iudx:slogan"
+        },
+        "VehiclePosition": {
+            "@id": "iudx:VehiclePosition"
+        },
+        "StopTimesDesc": {
+            "@id": "iudx:StopTimesDesc"
+        },
+        "TripDescriptor": {
+            "@id": "iudx:TripDescriptor"
+        },
+        "RoutesDesc": {
+            "@id": "iudx:RoutesDesc"
+        },
+        "ShapesDesc": {
+            "@id": "iudx:ShapesDesc"
+        },
+        "AgencyDesc": {
+            "@id": "iudx:AgencyDesc"
+        },
+        "VehicleDescriptor": {
+            "@id": "iudx:VehicleDescriptor"
+        },
+        "StopTimeUpdate": {
+            "@id": "iudx:StopTimeUpdate"
+        },
+        "StopsDesc": {
+            "@id": "iudx:StopsDesc"
+        },
+        "Position": {
+            "@id": "iudx:Position"
+        },
+        "odometer": {
+            "@id": "iudx:odometer"
+        },
+        "route_long_name": {
+            "@id": "iudx:route_long_name"
+        },
+        "vehicle_label": {
+            "@id": "iudx:vehicle_label"
+        },
+        "stop_name": {
+            "@id": "iudx:stop_name"
+        },
+        "agency_phone": {
+            "@id": "iudx:agency_phone"
+        },
+        "current_status": {
+            "@id": "iudx:current_status"
+        },
+        "standingCapacity": {
+            "@id": "iudx:standingCapacity"
+        },
+        "speed": {
+            "@id": "iudx:speed"
+        },
+        "arrival_time": {
+            "@id": "iudx:arrival_time"
+        },
+        "agency_id": {
+            "@id": "iudx:agency_id"
+        },
+        "travelTime": {
+            "@id": "iudx:travelTime"
+        },
+        "actual_trip_start_time": {
+            "@id": "iudx:actual_trip_start_time"
+        },
+        "shape_id": {
+            "@id": "iudx:shape_id"
+        },
+        "vehicleInfo": {
+            "@id": "iudx:vehicleInfo"
+        },
+        "arrivalUncertainty": {
+            "@id": "iudx:arrivalUncertainty"
+        },
+        "route_desc": {
+            "@id": "iudx:route_desc"
+        },
+        "last_stop_id": {
+            "@id": "iudx:last_stop_id"
+        },
+        "entity_id": {
+            "@id": "iudx:entity_id"
+        },
+        "route_url": {
+            "@id": "iudx:route_url"
+        },
+        "start_time": {
+            "@id": "iudx:start_time"
+        },
+        "stop_sequence": {
+            "@id": "iudx:stop_sequence"
+        },
+        "schedule_relationship": {
+            "@id": "iudx:schedule_relationship"
+        },
+        "actual_trip_end_time": {
+            "@id": "iudx:actual_trip_end_time"
+        },
+        "current_stop_sequence": {
+            "@id": "iudx:current_stop_sequence"
+        },
+        "depotID": {
+            "@id": "iudx:depotID"
+        },
+        "occupancy_status": {
+            "@id": "iudx:occupancy_status"
+        },
+        "continuous_pickup": {
+            "@id": "iudx:continuous_pickup"
+        },
+        "last_stop_departure_time": {
+            "@id": "iudx:last_stop_departure_time"
+        },
+        "agency_email": {
+            "@id": "iudx:agency_email"
+        },
+        "route_type": {
+            "@id": "iudx:route_type"
+        },
+        "travelDistance": {
+            "@id": "iudx:travelDistance"
+        },
+        "agency_name": {
+            "@id": "iudx:agency_name"
+        },
+        "route_text_color": {
+            "@id": "iudx:route_text_color"
+        },
+        "trip_direction": {
+            "@id": "iudx:trip_direction"
+        },
+        "stopInfo": {
+            "@id": "iudx:stopInfo"
+        },
+        "agencyInfo": {
+            "@id": "iudx:agencyInfo"
+        },
+        "stopTimesInfo": {
+            "@id": "iudx:stopTimesInfo"
+        },
+        "shapeInfo": {
+            "@id": "iudx:shapeInfo"
+        },
+        "departure_time": {
+            "@id": "iudx:departure_time"
+        },
+        "vehicleCapacity": {
+            "@id": "iudx:vehicleCapacity"
+        },
+        "shape_dist_traveled": {
+            "@id": "iudx:shape_dist_traveled"
+        },
+        "stopScheduleRelationship": {
+            "@id": "iudx:stopScheduleRelationship"
+        },
+        "route_color": {
+            "@id": "iudx:route_color"
+        },
+        "agency_url": {
+            "@id": "iudx:agency_url"
+        },
+        "seatingCapacity": {
+            "@id": "iudx:seatingCapacity"
+        },
+        "vehicleID": {
+            "@id": "iudx:vehicleID"
+        },
+        "route_short_name": {
+            "@id": "iudx:route_short_name"
+        },
+        "last_stop_arrival_time": {
+            "@id": "iudx:last_stop_arrival_time"
+        },
+        "continuous_drop_off": {
+            "@id": "iudx:continuous_drop_off"
+        },
+        "stop_headsign": {
+            "@id": "iudx:stop_headsign"
+        },
+        "positionInfo": {
+            "@id": "iudx:positionInfo"
+        },
+        "bearing": {
+            "@id": "iudx:bearing"
+        },
+        "vehiclePositionInfo": {
+            "@id": "iudx:vehiclePositionInfo"
+        },
+        "drop_off_type": {
+            "@id": "iudx:drop_off_type"
+        },
+        "license_plate": {
+            "@id": "iudx:license_plate"
+        },
+        "stop_code": {
+            "@id": "iudx:stop_code"
+        },
+        "trip_id": {
+            "@id": "iudx:trip_id"
+        },
+        "stop_url": {
+            "@id": "iudx:stop_url"
+        },
+        "depotName": {
+            "@id": "iudx:depotName"
+        },
+        "stop_id": {
+            "@id": "iudx:stop_id"
+        },
+        "acAvailable": {
+            "@id": "iudx:acAvailable"
+        },
+        "agency_lang": {
+            "@id": "iudx:agency_lang"
+        },
+        "shape_pt_sequence": {
+            "@id": "iudx:shape_pt_sequence"
+        },
+        "agency_timezone": {
+            "@id": "iudx:agency_timezone"
+        },
+        "trip_delay": {
+            "@id": "iudx:trip_delay"
+        },
+        "direction_id": {
+            "@id": "iudx:direction_id"
+        },
+        "departureUncertainty": {
+            "@id": "iudx:departureUncertainty"
+        },
+        "routeInfo": {
+            "@id": "iudx:routeInfo"
+        },
+        "stop_desc": {
+            "@id": "iudx:stop_desc"
+        },
+        "stopTimeUpdateInfo": {
+            "@id": "iudx:stopTimeUpdateInfo"
+        },
+        "congestion_level": {
+            "@id": "iudx:congestion_level"
+        },
+        "pickup_type": {
+            "@id": "iudx:pickup_type"
+        },
+        "agency_fare_url": {
+            "@id": "iudx:agency_fare_url"
+        },
+        "route_id": {
+            "@id": "iudx:route_id"
+        },
+        "tripInfo": {
+            "@id": "iudx:tripInfo"
+        },
+        "start_date": {
+            "@id": "iudx:start_date"
+        },
+        "routeStopSequence": {
+            "@id": "iudx:routeStopSequence"
+        },
+        "WasteBinModel": {
+            "@id": "iudx:WasteBinModel"
+        },
+        "binMaxLoad": {
+            "@id": "iudx:binMaxLoad"
+        },
+        "binCategory": {
+            "@id": "iudx:binCategory"
+        },
+        "binCapacity": {
+            "@id": "iudx:binCapacity"
+        },
+        "binRecommendedLoad": {
+            "@id": "iudx:binRecommendedLoad"
+        },
+        "binColor": {
+            "@id": "iudx:binColor"
+        },
+        "binFullnessThreshold": {
+            "@id": "iudx:binFullnessThreshold"
+        },
+        "observationDateTime": {
+            "@id": "iudx:observationDateTime"
+        },
+        "deviceInfo": {
+            "@id": "iudx:deviceInfo"
+        },
+        "deviceStatus": {
+            "@id": "iudx:deviceStatus"
+        },
+        "municipalityInfo": {
+            "@id": "iudx:municipalityInfo"
+        },
+        "comments": {
+            "@id": "iudx:comments"
+        },
+        "EmployeeDetails": {
+            "@id": "iudx:EmployeeDetails"
+        },
+        "gender": {
+            "@id": "iudx:gender"
+        },
+        "employeeID": {
+            "@id": "iudx:employeeID"
+        },
+        "employeeDesignation": {
+            "@id": "iudx:employeeDesignation"
+        },
+        "employmentUnit": {
+            "@id": "iudx:employmentUnit"
+        },
+        "serviceCompany": {
+            "@id": "iudx:serviceCompany"
+        },
+        "totalPresent": {
+            "@id": "iudx:totalPresent"
+        },
+        "employmentType": {
+            "@id": "iudx:employmentType"
+        },
+        "totalAbsent": {
+            "@id": "iudx:totalAbsent"
+        },
+        "department": {
+            "@id": "iudx:department"
+        },
+        "totalEmployee": {
+            "@id": "iudx:totalEmployee"
+        },
+        "SmartParking": {
+            "@id": "iudx:SmartParking"
+        },
+        "EVChargingStation": {
+            "@id": "iudx:EVChargingStation"
+        },
+        "EmergencyVehicle": {
+            "@id": "iudx:EmergencyVehicle"
+        },
+        "TrafficViolations": {
+            "@id": "iudx:TrafficViolations"
+        },
+        "TransitManagement": {
+            "@id": "iudx:TransitManagement"
+        },
+        "BikeDockingStation": {
+            "@id": "iudx:BikeDockingStation"
+        },
+        "FareCollectionSystem": {
+            "@id": "iudx:FareCollectionSystem"
+        },
+        "RoadSegment": {
+            "@id": "iudx:RoadSegment"
+        },
+        "cyclePathRightHeight": {
+            "@id": "iudx:cyclePathRightHeight"
+        },
+        "bikeType": {
+            "@id": "iudx:bikeType"
+        },
+        "carriagewayWidth": {
+            "@id": "iudx:carriagewayWidth"
+        },
+        "maximumParkingDuration": {
+            "@id": "iudx:maximumParkingDuration"
+        },
+        "pedestrianPathRightWidth": {
+            "@id": "iudx:pedestrianPathRightWidth"
+        },
+        "vehicleTypeCount": {
+            "@id": "iudx:vehicleTypeCount"
+        },
+        "carriagewayLength": {
+            "@id": "iudx:carriagewayLength"
+        },
+        "destinationStopCategory": {
+            "@id": "iudx:destinationStopCategory"
+        },
+        "transactionTypeID": {
+            "@id": "iudx:transactionTypeID"
+        },
+        "unclassifiedSlots": {
+            "@id": "iudx:unclassifiedSlots"
+        },
+        "chargingUnitID": {
+            "@id": "iudx:chargingUnitID"
+        },
+        "exitAreaCode": {
+            "@id": "iudx:exitAreaCode"
+        },
+        "medianHeight": {
+            "@id": "iudx:medianHeight"
+        },
+        "fourWheelerSlots": {
+            "@id": "iudx:fourWheelerSlots"
+        },
+        "maximumAllowedHeight": {
+            "@id": "iudx:maximumAllowedHeight"
+        },
+        "cyclePathPlacement": {
+            "@id": "iudx:cyclePathPlacement"
+        },
+        "originStopCategory": {
+            "@id": "iudx:originStopCategory"
+        },
+        "parkingSiteName": {
+            "@id": "iudx:parkingSiteName"
+        },
+        "transactionDateTime": {
+            "@id": "iudx:transactionDateTime"
+        },
+        "totalPedestrianPathWidth": {
+            "@id": "iudx:totalPedestrianPathWidth"
+        },
+        "userScore": {
+            "@id": "iudx:userScore"
+        },
+        "twoWheelerSlots": {
+            "@id": "iudx:twoWheelerSlots"
+        },
+        "pcu": {
+            "@id": "iudx:pcu"
+        },
+        "ticketTypeCode": {
+            "@id": "iudx:ticketTypeCode"
+        },
+        "roadID": {
+            "@id": "iudx:roadID"
+        },
+        "destinationStopID": {
+            "@id": "iudx:destinationStopID"
+        },
+        "freeSlotNumber": {
+            "@id": "iudx:freeSlotNumber"
+        },
+        "totalCyclePathWidth": {
+            "@id": "iudx:totalCyclePathWidth"
+        },
+        "minimumAllowedSpeed": {
+            "@id": "iudx:minimumAllowedSpeed"
+        },
+        "roadMaterial": {
+            "@id": "iudx:roadMaterial"
+        },
+        "junctionLocation": {
+            "@id": "iudx:junctionLocation"
+        },
+        "cyclePathLeftWidth": {
+            "@id": "iudx:cyclePathLeftWidth"
+        },
+        "socketType": {
+            "@id": "iudx:socketType"
+        },
+        "equipmentID": {
+            "@id": "iudx:equipmentID"
+        },
+        "totalPedestrianPathLength": {
+            "@id": "iudx:totalPedestrianPathLength"
+        },
+        "pedestrianPathMaterial": {
+            "@id": "iudx:pedestrianPathMaterial"
+        },
+        "pedestrianPathLeftWidth": {
+            "@id": "iudx:pedestrianPathLeftWidth"
+        },
+        "faultTitle": {
+            "@id": "iudx:faultTitle"
+        },
+        "averageSpotLength": {
+            "@id": "iudx:averageSpotLength"
+        },
+        "originStopName": {
+            "@id": "iudx:originStopName"
+        },
+        "parkingSiteID": {
+            "@id": "iudx:parkingSiteID"
+        },
+        "medianLength": {
+            "@id": "iudx:medianLength"
+        },
+        "originDestinationCode": {
+            "@id": "iudx:originDestinationCode"
+        },
+        "threeWheelerSlots": {
+            "@id": "iudx:threeWheelerSlots"
+        },
+        "culvertCount": {
+            "@id": "iudx:culvertCount"
+        },
+        "transactionTypeDescription": {
+            "@id": "iudx:transactionTypeDescription"
+        },
+        "bridgeCount": {
+            "@id": "iudx:bridgeCount"
+        },
+        "pedestrianPathLeftHeight": {
+            "@id": "iudx:pedestrianPathLeftHeight"
+        },
+        "vehicleCount": {
+            "@id": "iudx:vehicleCount"
+        },
+        "roadStartPoint": {
+            "@id": "iudx:roadStartPoint"
+        },
+        "equipmentSequenceNumber": {
+            "@id": "iudx:equipmentSequenceNumber"
+        },
+        "roadWork": {
+            "@id": "iudx:roadWork"
+        },
+        "averageSpotWidth": {
+            "@id": "iudx:averageSpotWidth"
+        },
+        "tripStatus": {
+            "@id": "iudx:tripStatus"
+        },
+        "junctionID": {
+            "@id": "iudx:junctionID"
+        },
+        "maximumAllowedWeight": {
+            "@id": "iudx:maximumAllowedWeight"
+        },
+        "mediumMotorVehicles": {
+            "@id": "iudx:mediumMotorVehicles"
+        },
+        "heavyMotorVehicles": {
+            "@id": "iudx:heavyMotorVehicles"
+        },
+        "maximumAllowedWidth": {
+            "@id": "iudx:maximumAllowedWidth"
+        },
+        "cyclePathMaterial": {
+            "@id": "iudx:cyclePathMaterial"
+        },
+        "pedestrianPathRightHeight": {
+            "@id": "iudx:pedestrianPathRightHeight"
+        },
+        "vehicleSupportType": {
+            "@id": "iudx:vehicleSupportType"
+        },
+        "currentTripCount": {
+            "@id": "iudx:currentTripCount"
+        },
+        "carbonCreditValue": {
+            "@id": "iudx:carbonCreditValue"
+        },
+        "destinationStopName": {
+            "@id": "iudx:destinationStopName"
+        },
+        "junctionName": {
+            "@id": "iudx:junctionName"
+        },
+        "maximumAllowedSpeed": {
+            "@id": "iudx:maximumAllowedSpeed"
+        },
+        "fareForChild": {
+            "@id": "iudx:fareForChild"
+        },
+        "equipmentTypeCode": {
+            "@id": "iudx:equipmentTypeCode"
+        },
+        "parkingMode": {
+            "@id": "iudx:parkingMode"
+        },
+        "outOfServiceSlotNumber": {
+            "@id": "iudx:outOfServiceSlotNumber"
+        },
+        "stationName": {
+            "@id": "iudx:stationName"
+        },
+        "cyclePathLeftHeight": {
+            "@id": "iudx:cyclePathLeftHeight"
+        },
+        "cyclePathRightWidth": {
+            "@id": "iudx:cyclePathRightWidth"
+        },
+        "entryAreaCode": {
+            "@id": "iudx:entryAreaCode"
+        },
+        "passengerCount": {
+            "@id": "iudx:passengerCount"
+        },
+        "fareForAdult": {
+            "@id": "iudx:fareForAdult"
+        },
+        "stage": {
+            "@id": "iudx:stage"
+        },
+        "paymentStatus": {
+            "@id": "iudx:paymentStatus"
+        },
+        "originLocation": {
+            "@id": "iudx:originLocation"
+        },
+        "totalSlotNumber": {
+            "@id": "iudx:totalSlotNumber"
+        },
+        "laneInfo": {
+            "@id": "iudx:laneInfo"
+        },
+        "roadClass": {
+            "@id": "iudx:roadClass"
+        },
+        "totalTripCount": {
+            "@id": "iudx:totalTripCount"
+        },
+        "roadDirection": {
+            "@id": "iudx:roadDirection"
+        },
+        "rightOfWayWidth": {
+            "@id": "iudx:rightOfWayWidth"
+        },
+        "junctionMode": {
+            "@id": "iudx:junctionMode"
+        },
+        "destinationLocation": {
+            "@id": "iudx:destinationLocation"
+        },
+        "availableBikeNumber": {
+            "@id": "iudx:availableBikeNumber"
+        },
+        "occupancyLevel": {
+            "@id": "iudx:occupancyLevel"
+        },
+        "originStopID": {
+            "@id": "iudx:originStopID"
+        },
+        "transactionType": {
+            "@id": "iudx:transactionType"
+        },
+        "cardID": {
+            "@id": "iudx:cardID"
+        },
+        "emergencyVehicleType": {
+            "@id": "iudx:emergencyVehicleType"
+        },
+        "roadName": {
+            "@id": "iudx:roadName"
+        },
+        "roadEndPoint": {
+            "@id": "iudx:roadEndPoint"
+        },
+        "allowedVehicleType": {
+            "@id": "iudx:allowedVehicleType"
+        },
+        "roadOccupancy": {
+            "@id": "iudx:roadOccupancy"
+        },
+        "transactionVehicleNum": {
+            "@id": "iudx:transactionVehicleNum"
+        },
+        "equipmentStopID": {
+            "@id": "iudx:equipmentStopID"
+        },
+        "totalLaneNumber": {
+            "@id": "iudx:totalLaneNumber"
+        },
+        "transactionID": {
+            "@id": "iudx:transactionID"
+        },
+        "medianWidth": {
+            "@id": "iudx:medianWidth"
+        },
+        "pedestrianPathPlacement": {
+            "@id": "iudx:pedestrianPathPlacement"
+        },
+        "equipmentCompanyCode": {
+            "@id": "iudx:equipmentCompanyCode"
+        },
+        "serviceOnDuty": {
+            "@id": "iudx:serviceOnDuty"
+        },
+        "shiftOfOperation": {
+            "@id": "iudx:shiftOfOperation"
+        },
+        "stationCode": {
+            "@id": "iudx:stationCode"
+        },
+        "equipmentType": {
+            "@id": "iudx:equipmentType"
+        },
+        "District": {
+            "@id": "iudx:District"
+        },
+        "MajorTowns": {
+            "@id": "iudx:MajorTowns"
+        },
+        "States": {
+            "@id": "iudx:States"
+        },
+        "Headquarters": {
+            "@id": "iudx:Headquarters"
+        },
+        "district_l": {
+            "@id": "iudx:district_l"
+        },
+        "fid": {
+            "@id": "iudx:fid"
+        },
+        "scale": {
+            "@id": "iudx:scale"
+        },
+        "indiadpt": {
+            "@id": "iudx:indiadpt"
+        },
+        "objectid": {
+            "@id": "iudx:objectid"
+        },
+        "area": {
+            "@id": "iudx:area"
+        },
+        "name_of_town": {
+            "@id": "iudx:name_of_town"
+        },
+        "state_lgd": {
+            "@id": "iudx:state_lgd"
+        },
+        "shape_area": {
+            "@id": "iudx:shape_area"
+        },
+        "tehsil": {
+            "@id": "iudx:tehsil"
+        },
+        "town": {
+            "@id": "iudx:town"
+        },
+        "perimeter": {
+            "@id": "iudx:perimeter"
+        },
+        "indiadpt_i": {
+            "@id": "iudx:indiadpt_i"
+        },
+        "rotation": {
+            "@id": "iudx:rotation"
+        },
+        "elevation": {
+            "@id": "iudx:elevation"
+        },
+        "remarks": {
+            "@id": "iudx:remarks"
+        },
+        "subdistrict": {
+            "@id": "iudx:subdistrict"
+        },
+        "shape_length": {
+            "@id": "iudx:shape_length"
+        },
+        "state": {
+            "@id": "iudx:state"
+        },
+        "hq": {
+            "@id": "iudx:hq"
+        },
+        "taluk": {
+            "@id": "iudx:taluk"
+        },
+        "Camera": {
+            "@id": "iudx:Camera"
+        },
+        "cameraNum": {
+            "@id": "iudx:cameraNum"
+        },
+        "streamURL": {
+            "@id": "iudx:streamURL"
+        },
+        "imageSnapshot": {
+            "@id": "iudx:imageSnapshot"
+        },
+        "cameraUsage": {
+            "@id": "iudx:cameraUsage"
+        },
+        "cameraName": {
+            "@id": "iudx:cameraName"
+        },
+        "cameraType": {
+            "@id": "iudx:cameraType"
+        },
+        "streamName": {
+            "@id": "iudx:streamName"
+        },
+        "cameraOrientation": {
+            "@id": "iudx:cameraOrientation"
+        },
+        "EnergyMeter": {
+            "@id": "iudx:EnergyMeter"
+        },
+        "SolarEnergy": {
+            "@id": "iudx:SolarEnergy"
+        },
+        "panelHumidity": {
+            "@id": "iudx:panelHumidity"
+        },
+        "irradiation": {
+            "@id": "iudx:irradiation"
+        },
+        "maxSolarPowerMeasure": {
+            "@id": "iudx:maxSolarPowerMeasure"
+        },
+        "totalEnergyGenerated": {
+            "@id": "iudx:totalEnergyGenerated"
+        },
+        "tei": {
+            "@id": "iudx:tei"
+        },
+        "performanceRatio": {
+            "@id": "iudx:performanceRatio"
+        },
+        "reactiveEnergyLag": {
+            "@id": "iudx:reactiveEnergyLag"
+        },
+        "frequency": {
+            "@id": "iudx:frequency"
+        },
+        "reactiveEnergyLead": {
+            "@id": "iudx:reactiveEnergyLead"
+        },
+        "tee": {
+            "@id": "iudx:tee"
+        },
+        "panelTemperature": {
+            "@id": "iudx:panelTemperature"
+        },
+        "energyGenerated": {
+            "@id": "iudx:energyGenerated"
+        },
+        "DigitalElevationModel": {
+            "@id": "iudx:DigitalElevationModel"
+        },
+        "FeaturesOfInterest": {
+            "@id": "iudx:FeaturesOfInterest"
+        },
+        "MapTiles": {
+            "@id": "iudx:MapTiles"
+        },
+        "minZoom": {
+            "@id": "iudx:minZoom"
+        },
+        "xField": {
+            "@id": "iudx:xField"
+        },
+        "imageFormat": {
+            "@id": "iudx:imageFormat"
+        },
+        "imageBounds": {
+            "@id": "iudx:imageBounds"
+        },
+        "yField": {
+            "@id": "iudx:yField"
+        },
+        "maxZoom": {
+            "@id": "iudx:maxZoom"
+        },
+        "zField": {
+            "@id": "iudx:zField"
+        },
+        "time": {
+            "@id": "iudx:time"
+        },
+        "topoSheetNo": {
+            "@id": "iudx:topoSheetNo"
+        },
+        "f_name": {
+            "@id": "iudx:f_name"
+        },
+        "ParkingSpotStatus": {
+            "@id": "iudx:ParkingSpotStatus"
+        },
+        "availableSpotNumber": {
+            "@id": "iudx:availableSpotNumber"
+        },
+        "totalSpotNumber": {
+            "@id": "iudx:totalSpotNumber"
+        },
+        "occupiedSpotNumber": {
+            "@id": "iudx:occupiedSpotNumber"
         }
     }
 }

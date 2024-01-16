@@ -1,0 +1,38 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:emergencyVehicleType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Type of emergency vehicle corresponding to this observation. ENUM: [POLICE CAR, POLICE MOTORCYCLE, POLICE VAN, POLICE S.W.A.T, FIRE ENGINE, WATER TENDER, AIR AMBULANCE, AMBULANCE, MOTORCYCLE AMBULANCE, RESCUE VEHICLE, HAZARDOUS MATERIALS APPARATUS, TOW TRUCK]",
+            "rdfs:label": "emergencyVehicleType",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+}

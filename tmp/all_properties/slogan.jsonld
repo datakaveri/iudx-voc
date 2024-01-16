@@ -1,0 +1,37 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:slogan",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "A slogan or motto associated with the public site or tourist destination.",
+            "rdfs:label": "slogan",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TouristDestination"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:slogan"
+            }
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/"
+    }
+}

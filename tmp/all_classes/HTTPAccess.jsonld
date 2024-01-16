@@ -1,0 +1,118 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:HTTPAccess",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Describes the domain for data access based on HTTP/REST APIs.",
+            "rdfs:label": "HTTPAccess",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:ResourceAccessModalities"
+            }
+        },
+        {
+            "@id": "iudx:ResourceAccessModalities",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Describes the domain for data access.",
+            "rdfs:label": "ResourceAccessModalities",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:accessURL",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The IRI pointing to the domain from which data can be accessed.",
+            "rdfs:label": "accessURL",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:HTTPAccess"
+                },
+                {
+                    "@id": "iudx:FileAccess"
+                },
+                {
+                    "@id": "iudx:StreamingAccess"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:protocol",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The name of the network protocol used for data communication.",
+            "rdfs:label": "protocol",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:HTTPAccess"
+                },
+                {
+                    "@id": "iudx:FileAccess"
+                },
+                {
+                    "@id": "iudx:StreamingAccess"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:resourceAccessModalities",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Description of domains available for accessing data from the exchange.",
+            "rdfs:label": "resourceAccessModalities",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceServer",
+                    "iudx:requiredProperty": true
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@container": "@list",
+                    "@id": "iudx:ResourceAccessModalities"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+}
