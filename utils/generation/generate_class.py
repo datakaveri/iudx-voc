@@ -185,22 +185,22 @@ class Vocabulary:
                     )
                     
                     first_index = next(
-                    (i for i, item in enumerate(sorted_graph) if "@id" in item and all(key in item for key in ["rdfs:subClassOf", "rdfs:isDefinedBy"]) and item["@id"] != "iudx:DataModel" and item["rdfs:subClassOf"]["@id"] != "iudx:DataModel"),
+                    (i for i, item in enumerate(sorted_graph) if "@id" in item and all(key in item for key in ["rdfs:subClassOf", "rdfs:isDefinedBy"]) and item["@id"] != "iudx:DataModel"),
                     None
                     )
 
                     if first_index != None:
                         sorted_graph.insert(0, sorted_graph.pop(first_index))
 
-                    matching_item = next(
+                    '''matching_item = next(
                         (item for item in sorted_graph if "rdfs:subClassOf" in item and "rdfs:isDefinedBy" not in item and item["@id"] != "iudx:DataModel"),
                         None,
                     )
 
                     if matching_item:
                         sorted_graph.remove(matching_item)
-                        sorted_graph.insert(1, matching_item)
-                                           
+                        sorted_graph.insert(1, matching_item)'''
+
                     sorted_data = {"@graph": sorted_graph, "@context": json_data["@context"]}
                     
 
