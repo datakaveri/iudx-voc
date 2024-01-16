@@ -184,7 +184,7 @@ class Vocabulary:
                     sorted_data_list = sorted(data_list, key=lambda x: x.get("@id", ""))
 
                     first_index = next(
-                    (i for i, item in enumerate(sorted_data_list) if "@id" in item and all(key in item for key in ["rdfs:subClassOf", "rdfs:isDefinedBy"]) and item["@id"] != "iudx:DataModel"),
+                    (i for i, item in enumerate(sorted_data_list) if "@id" in item and all(key in item for key in ["rdfs:subClassOf", "rdfs:isDefinedBy"]) and item["rdfs:subClassOf"]["@id"] != "iudx:DataModel"),
                     None
                     )
 
