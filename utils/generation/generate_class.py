@@ -12,9 +12,7 @@ class_folder_path = "/tmp/all_classes/"
 properties_folder_path = "/tmp/all_properties/"
 examples_path = "/tmp/all_examples"
 
-'''class_folder_path = "/home/iudx/iudx-voc/tmp/all_classes/"
-properties_folder_path = "/home/iudx/iudx-voc/tmp/all_properties/"
-examples_path = "/home/iudx/iudx-voc/tmp/all_examples"'''
+
 
 relation_list = ["domainOf", "subClassOf", "rangeOf"]
 error_list = []
@@ -199,45 +197,7 @@ class Vocabulary:
                     if second_index != None:
                         sorted_data_list.insert(1, sorted_data_list.pop(second_index))
 
-
-
-                    '''matching_item = next(
-                        (item for item in sorted_data_list if "rdfs:subClassOf" in item and "rdfs:isDefinedBy" in item and item["rdfs:subClassOf"]["@id"] == "iudx:DataModel"),
-                        None,
-                    )
-
-                    if matching_item:
-                        sorted_data_list.remove(matching_item)
-                        sorted_data_list.insert(1, matching_item)'''
-
-                    json_data["@graph"] = sorted_data_list
-
-
-
-                    '''sorted_graph = sorted(
-                        filter(lambda x: "@id" in x and "@id" != "rdfs:subClassOf", json_data["@graph"]),
-                        key=lambda x: x.get("@id"),
-                    )
-                    
-                    first_index = next(
-                    (i for i, item in enumerate(sorted_graph) if "@id" in item and all(key in item for key in ["rdfs:subClassOf", "rdfs:isDefinedBy"]) and item["@id"] != "iudx:DataModel"),
-                    None
-                    )
-
-                    if first_index != None:
-                        sorted_graph.insert(0, sorted_graph.pop(first_index))'''
-
-                    '''matching_item = next(
-                        (item for item in sorted_graph if "rdfs:subClassOf" in item and "rdfs:isDefinedBy" not in item and item["@id"] != "iudx:DataModel"),
-                        None,
-                    )
-
-                    if matching_item:
-                        sorted_graph.remove(matching_item)
-                        sorted_graph.insert(1, matching_item)'''
-
-                    #sorted_data = {"@graph": sorted_graph, "@context": json_data["@context"]}
-                    
+                    json_data["@graph"] = sorted_data_list                    
 
                     with open(file_path, "w") as json_file:
                         json.dump(json_data, json_file, indent=4)
@@ -309,7 +269,7 @@ def main():
 
     voc = Vocabulary("./")
     voc.make_classfile()
-    voc.class_sorting()
+    #voc.class_sorting()
     voc.make_propertiesfile()
     voc.make_master()
     voc.gen_examples()
