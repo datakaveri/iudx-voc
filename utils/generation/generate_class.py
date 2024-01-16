@@ -191,6 +191,15 @@ class Vocabulary:
                     if first_index != None:
                         sorted_data_list.insert(0, sorted_data_list.pop(first_index))
 
+                    matching_item = next(
+                        (item for item in sorted_data_list if "rdfs:subClassOf" in item and "rdfs:isDefinedBy" in item and item["rdfs:subClassOf"]["@id"] == "iudx:DataModel"),
+                        None,
+                    )
+
+                    if matching_item:
+                        sorted_data_list.remove(matching_item)
+                        sorted_data_list.insert(1, matching_item)
+
                     json_data["@graph"] = sorted_data_list
 
 
