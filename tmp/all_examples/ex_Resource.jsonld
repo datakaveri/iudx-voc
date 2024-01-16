@@ -1,0 +1,46 @@
+{
+    "@context": "https://voc.iudx.org.in/",
+    "type": [
+        "iudx:Resource"
+    ],
+    "id": "providerID/example.com/sensors/sensorA",
+    "name": "sensorA",
+    "label": "Realtime information from station A in Bangalore City",
+    "description": "Description of this resource",
+    "tags": ["sensor", "sensing", "resource", "battery operated"],
+    "itemStatus": "ACTIVE",
+    "resourceGroup": "providerID/example.com/sensors",
+    "provider": "providerID",
+    "resourceType": "MESSAGESTREAM",
+    "iudxResourceAPIs": [
+        "ATTR",
+        "TEMPORAL"
+      ],
+    "location": {
+        "type": "Place",
+        "address": "IISc, Bangalore-560092, India",
+        "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+                75.92345,
+                14.57645
+            ],
+            [
+                75.81245,
+                12.47645
+            ],
+            [
+                75.81254,
+                12.47654
+            ],
+            [
+                75.92345,
+                14.57645
+            ]
+          ]
+        ]
+      }
+    }
+}

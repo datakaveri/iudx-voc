@@ -1,0 +1,278 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:RoutesDesc",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "A Data Model for vehicle's route information.",
+            "rdfs:label": "RoutesDesc",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:routeInfo",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Route information corresponding to this observation.",
+            "rdfs:label": "routeInfo",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:RoutesDesc"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:route_color",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "If assigned, this field defines a color that corresponds to a route. The color must be provided as a six-character hexadecimal number, for example, 00FFFF. If no color is specified, the default route color is white (FFFFFF). SameAs: 'route_color' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)",
+            "rdfs:label": "route_color",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoutesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: route_color"
+            }
+        },
+        {
+            "@id": "iudx:route_desc",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Description of the route. This can include the entire route details including to and from destination and timing information in a text description form. SameAs: 'route_desc' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)",
+            "rdfs:label": "route_desc",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoutesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: route_desc"
+            }
+        },
+        {
+            "@id": "iudx:route_id",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Route ID assigned to the route on which the bus/vehicle corresponding to the bus in this observation is currently plying on.",
+            "rdfs:label": "route_id",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:GtfsCommons"
+                },
+                {
+                    "@id": "iudx:TripDescriptor"
+                },
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:RoutesDesc"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "GTFS: route_id"
+            }
+        },
+        {
+            "@id": "iudx:route_long_name",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Full name of a route. This name is more descriptive than the routeShortName and often includes the route's destination or stop. This mostly includes the to and from destination names of the route. SameAs: 'route_long_name' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)",
+            "rdfs:label": "route_long_name",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoutesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: route_long_name"
+            }
+        },
+        {
+            "@id": "iudx:route_short_name",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Short name of a route. This will often be the transit vehicle's board name like \"402D\",  or \"Green\" that riders use to identify a route. SameAs: 'route_short_name' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)",
+            "rdfs:label": "route_short_name",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoutesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: route_short_name"
+            }
+        },
+        {
+            "@id": "iudx:route_text_color",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "This field can be used to specify a legible color to use for text drawn against a background of route_color. The color must be provided as a six-character hexadecimal number, for example, FFD700. If no color is specified, the default text color is black (000000). SameAs: 'route_text_color' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)",
+            "rdfs:label": "route_text_color",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoutesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: route_text_color"
+            }
+        },
+        {
+            "@id": "iudx:route_type",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number indicating the type of transport-\n1 - Subway, Metro. Any underground rail system within a metropolitan area.\n2 - Rail. Used for intercity or long-distance travel.\n3 - Bus. Used for short- and long-distance bus routes. \nSameAs: 'route_type' field from GTFS Static Field definitions-routes.txt <a href=\"https://developers.google.com/transit/gtfs/reference#routestxt\">https://developers.google.com/transit/gtfs/reference#routestxt</a>",
+            "rdfs:label": "route_type",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoutesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: route_type"
+            }
+        },
+        {
+            "@id": "iudx:route_url",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Contains the URL of a web page about that particular route and is different from the agency_url. SameAs: 'route_url' field from GTFS Static Field definitions-routes.txt (https://developers.google.com/transit/gtfs/reference#routestxt)",
+            "rdfs:label": "route_url",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoutesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: route_url"
+            }
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "iudx": "https://voc.iudx.org.in/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+}

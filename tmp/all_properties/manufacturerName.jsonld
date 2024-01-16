@@ -1,0 +1,38 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:manufacturerName",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Name of the manufacturer associated with an entity, e.g., sensor, device etc.",
+            "rdfs:label": "manufacturerName",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ModelInfo"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:manufacturerName"
+            }
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://voc.iudx.org.in/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+}

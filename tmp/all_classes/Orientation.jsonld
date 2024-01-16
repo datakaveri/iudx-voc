@@ -1,0 +1,111 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:Orientation",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Properties of the camera corresponding to this observation that indicates its orientation.",
+            "rdfs:label": "Orientation",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:annotatedMap",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Annotated map view indicating the orientations for the camera corresponding to this observation",
+            "rdfs:label": "annotatedMap",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Orientation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:cameraOrientation",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Orientation information for the camera corresponding to this observation",
+            "rdfs:label": "cameraOrientation",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Camera"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Orientation"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:comments",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "User comments corresponding to this observation.",
+            "rdfs:label": "comments",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SafetiPin"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:Version"
+                },
+                {
+                    "@id": "iudx:Orientation"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@container": "@list",
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "geojson": "https://purl.org/geojson/vocab#"
+    }
+}

@@ -1,0 +1,209 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:NumericArray",
+            "@container": "@list",
+            "@type": [
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Data type: Array of numbers, for representing numeric values (Decimals, Integers, etc)",
+            "rdfs:label": "NumericArray"
+        },
+        {
+            "@id": "iudx:activePower",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Active power consumed per phase. Ordered triple comprising of active power from three phases in the following order: [R Y B]",
+            "rdfs:label": "activePower",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:NumericArray"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:activePower"
+            }
+        },
+        {
+            "@id": "iudx:apparentPower",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Apparent power consumed per phase. Ordered triple comprising of active power from three phases in the following order: [R Y B]",
+            "rdfs:label": "apparentPower",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:NumericArray"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: apparentPower"
+            }
+        },
+        {
+            "@id": "iudx:phaseCurrent",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Current per phase. Ordered triple comprising of active current from three phases in the following order: [R Y B]",
+            "rdfs:label": "phaseCurrent",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:NumericArray"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:phaseVoltage",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Voltage per phase. Ordered triple comprising of active voltage from three phases in the following order: [R Y B]",
+            "rdfs:label": "phaseVoltage",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:NumericArray"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:voltage"
+            }
+        },
+        {
+            "@id": "iudx:reactivePower",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Reactive power consumed per phase. Ordered triple comprising of active power from three phases in the following order: [R Y B]",
+            "rdfs:label": "reactivePower",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:NumericArray"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:reactivePower"
+            }
+        },
+        {
+            "@id": "iudx:value",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Value of the quantity being described in the ValueDescriptor object.",
+            "rdfs:label": "value",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:Boolean"
+                },
+                {
+                    "@id": "iudx:NumericArray"
+                },
+                {
+                    "@id": "iudx:StructuredValue"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ],
+    "@context": {
+        "iudx": "https://voc.iudx.org.in/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "geojson": "https://purl.org/geojson/vocab#"
+    }
+}

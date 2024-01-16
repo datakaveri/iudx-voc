@@ -1,0 +1,36 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:resourceType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Type of resource. ENUM: [MESSAGESTREAM, DATASET, FILE, GSLAYER, MEDIASTREAM].",
+            "rdfs:label": "resourceType",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup",
+                    "iudx:requiredProperty": true
+                },
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ],
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }
+}

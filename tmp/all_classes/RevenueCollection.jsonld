@@ -1,0 +1,723 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:RevenueCollection",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "A Data Model for city revenue collection operations.",
+            "rdfs:label": "RevenueCollection",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Civic"
+            }
+        },
+        {
+            "@id": "iudx:Civic",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Data models that pertain to the citizen issues/civic domain",
+            "rdfs:label": "Civic",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:DataModel"
+            }
+        },
+        {
+            "@id": "iudx:DataModel",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Class of all Data Models.",
+            "rdfs:label": "DataModel",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
+            }
+        },
+        {
+            "@id": "iudx:Thing",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Most generic IUDX object.",
+            "rdfs:label": "Thing",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "iudx:address",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Physical address of a place.",
+            "rdfs:label": "address",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                },
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:address"
+            }
+        },
+        {
+            "@id": "iudx:amountCollected",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Amount collected towards the service corresponding to this observation.",
+            "rdfs:label": "amountCollected",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:dataDescriptor",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "URI pointing to the data-descriptor entity",
+            "rdfs:label": "dataDescriptor",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                },
+                {
+                    "@id": "iudx:DataModel"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:date",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Date corresponding to this observation and is described in YYYY-MM-DD format, for eg. '2020-11-01'.",
+            "rdfs:label": "date",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:EmployeeDetails"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:description",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Description for an IUDX thing.",
+            "rdfs:label": "description",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Thing"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:ecRecoveryAmount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Amount collected towards Enrollment Certificate from the establishment on annual basis.",
+            "rdfs:label": "ecRecoveryAmount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:establishmentType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Type of public service or business or facility set up for public welfare or governance. For eg., the establishment can be a business under an individual as a sole proprietor(or a company) or smart public installments such as lavatories etc.",
+            "rdfs:label": "establishmentType",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:licenseExpiryDate",
+            "@type": [
+                "iudx:TimeProperty"
+            ],
+            "rdfs:comment": "License number expiry date for the business establishment corresponding to this observation.",
+            "rdfs:label": "licenseExpiryDate",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:licenseIssualDate",
+            "@type": [
+                "iudx:TimeProperty"
+            ],
+            "rdfs:comment": "Date of issual of license for the entity or service corresponding to this observation.",
+            "rdfs:label": "licenseIssualDate",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:month",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Month corresponding to this observation and is described in MM format, for eg. 11 for the month of November.",
+            "rdfs:label": "month",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:municipalityInfo",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Municipality information corresponding to this observation.",
+            "rdfs:label": "municipalityInfo",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:EmployeeDetails"
+                },
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                },
+                {
+                    "@id": "iudx:SmartParking"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:MunicipalityDesc"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:newAssessmentCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number of fresh assessments conducted to assess the value of property.",
+            "rdfs:label": "newAssessmentCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:rcRecoveryAmount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Amount collected towards Registration Certificate on monthly basis from the establishment per emplyoee.",
+            "rdfs:label": "rcRecoveryAmount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:reAssessmentCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number of re-assessments conducted to assess the value of property.",
+            "rdfs:label": "reAssessmentCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:revenueCollectionType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Type of source from which the city administration collects the revenue, could be property tax, vehicle registration, party hall booking, community hall booking, auditorium booking etc.",
+            "rdfs:label": "revenueCollectionType",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:revenueLicense",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "License number of the business establishment under which an individual as a sole proprietor or a company chooses to do business.",
+            "rdfs:label": "revenueLicense",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:revenueLicenseStatus",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Status of the license number of the business establishment under which an individual as a sole proprietor or a company chooses to do business.",
+            "rdfs:label": "revenueLicenseStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:taxAmountCollected",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The amount of tax levied on the products, things and services which includes sales tax, value-added tax, service tax, Good and Service tax, customs duty, etc.",
+            "rdfs:label": "taxAmountCollected",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:totalCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of the entity or service corresponding to this observation.",
+            "rdfs:label": "totalCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tradeName",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The official name under which an individual as a sole proprietor or a company chooses to do business.",
+            "rdfs:label": "tradeName",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:vehicleType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Describes the type of vehicle corresponding to this observation, could be hopper, compactor, tipper, dumper in case of solid waste management vehicles, BRT mini bus, BRT bus, city bus in case of ITMS vehicles, Ambulance, Fire tender, Police van etc, in case of emergency vehicles and Moped/Scooter, Motor Cycle,  Autorickshaw, Private car/ Jeep car, Tempo, Bus, E-Moped/E-Scooter/E-Motor Cycle, Public motor in case of vehicle registration.",
+            "rdfs:label": "vehicleType",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:vehicleTypeCode",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The code for vehicleType corresponding to this observation. For eg.- '1' - MOPED/SCOOTER, '2' - MOTOR CYCLE, '4' - PRIVATE MOTOR CAR/JEEP CAR, '21' - TEMPO, '26' - BUS, etc.",
+            "rdfs:label": "vehicleTypeCode",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:year",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Year corresponding to this observation and is described in YYYY format, for eg. 2020.",
+            "rdfs:label": "year",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:PublicSchemes"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "iudx": "https://voc.iudx.org.in/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+}

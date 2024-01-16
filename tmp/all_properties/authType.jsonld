@@ -1,0 +1,29 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:authType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Identification of the auth scheme used for a given resource.  ENUM: [IUDXAUTH].",
+            "rdfs:label": "authType",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AuthServerInfoValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }
+}

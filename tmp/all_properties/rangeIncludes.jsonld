@@ -1,0 +1,37 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:rangeIncludes",
+            "@type": [
+                "rdf:Property"
+            ],
+            "rdfs:comment": "Relates a property to a class that constitutes (one of) the expected type(s) for values of the property.",
+            "rdfs:label": "rangeIncludes",
+            "skos:exactMatch": {
+                "@id": "schema:rangeIncludes"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "rdf:Property"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Class"
+                }
+            ],
+            "skos:exactmatch": {
+                "@id": "schema:rangeIncludes"
+            }
+        }
+    ],
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/"
+    }
+}

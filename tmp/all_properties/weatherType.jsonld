@@ -1,0 +1,47 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:weatherType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Observed weather type or status. Represented by a comma separated list of weather types, e.g., cloudy, sunny etc.",
+            "rdfs:label": "weatherType",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "Fiware:weatherType"
+            }
+        }
+    ],
+    "@context": {
+        "geojson": "https://purl.org/geojson/vocab#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "skos": "http://www.w3.org/2004/02/skos/core#"
+    }
+}

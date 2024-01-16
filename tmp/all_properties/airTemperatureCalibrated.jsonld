@@ -1,0 +1,31 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:airTemperatureCalibrated",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Calibrated measurement of air temperature. Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "airTemperatureCalibrated",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/"
+    }
+}

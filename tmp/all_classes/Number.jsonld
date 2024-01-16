@@ -1,0 +1,6071 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:Number",
+            "@type": [
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Data type: Number for representing numeric values (Decimals, Integers, etc)",
+            "rdfs:label": "Number",
+            "skos:exactMatch": {
+                "@id": "schema:Number"
+            }
+        },
+        {
+            "@id": "iudx:aggregationDuration",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Specifies the interval duration for computing statistical aggregations. Default duration interval unit is in Hours. Other units can be specified using ValueDescriptor Type.",
+            "rdfs:label": "aggregationDuration",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:airDirection",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Represents the air direction status as an analog input.",
+            "rdfs:label": "airDirection",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:airQualityIndex",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Overall Air Quality Index (AQI) for the observed air quality.",
+            "rdfs:label": "airQualityIndex",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:airQualityIndexForecast",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Forecasted overall Air Quality Index (AQI) over a certain duration in future.",
+            "rdfs:label": "airQualityIndexForecast",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:airTemperatureForecast",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Forecasted value of air temperature over a certain duration in future.",
+            "rdfs:label": "airTemperatureForecast",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:alarmStatus",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the alarm status of the air conditioning system by a binary Input (0-Inactive, 1-Active)",
+            "rdfs:label": "alarmStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:alertLevel",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Reference alert level threshold value set for the sensing station corresponding to this observation. An Alert signal is generated if the current level crosses the alert level threshold value.",
+            "rdfs:label": "alertLevel",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvFlood"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:altitude",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Altitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System)",
+            "rdfs:label": "altitude",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:GeoCoordinates"
+                },
+                {
+                    "@id": "iudx:Place"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:elevation"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:amountCollected",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Amount collected towards the service corresponding to this observation.",
+            "rdfs:label": "amountCollected",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:area",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total area of the entity corresponding to this observation.",
+            "rdfs:label": "area",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Headquarters"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:arrivalUncertainty",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate. SameAs: 'arrival' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)",
+            "rdfs:label": "arrivalUncertainty",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:atmosphericPressure",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed air (atmospheric or barometric) pressure.",
+            "rdfs:label": "atmosphericPressure",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "Fiware:atmosphericPressure"
+            }
+        },
+        {
+            "@id": "iudx:availableBikeNumber",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The number of bikes available in the bike hire docking station to be hired by users.",
+            "rdfs:label": "availableBikeNumber",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:availableBikeNumber"
+            }
+        },
+        {
+            "@id": "iudx:availableSpotNumber",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number of parking spots available for use in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.",
+            "rdfs:label": "availableSpotNumber",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ParkingSpotStatus"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: OffStreetParking.availableSpotNumber"
+            }
+        },
+        {
+            "@id": "iudx:averageSpotLength",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The average length of parking spots in the parking site corresponding to this observation.",
+            "rdfs:label": "averageSpotLength",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SmartParking"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: OffStreetParking.averageSpotLength"
+            }
+        },
+        {
+            "@id": "iudx:averageSpotWidth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The average width of parking spots in the parking site corresponding to this observation.",
+            "rdfs:label": "averageSpotWidth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SmartParking"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: OffStreetParking.averageSpotWidth"
+            }
+        },
+        {
+            "@id": "iudx:avgOverTime",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the average value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value",
+            "rdfs:label": "avgOverTime",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:bearing",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Gives the vehicle GPS angle measured in a clockwise direction from the True North. SameAs 'bearing' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)",
+            "rdfs:label": "bearing",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Position"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: bearing"
+            }
+        },
+        {
+            "@id": "iudx:beneficiaryCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Represents the count of people benifited under the scheme corresponding to this observation.",
+            "rdfs:label": "beneficiaryCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:PublicSchemes"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:binCapacity",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total capacity in terms of the volume of waste the bin can hold.",
+            "rdfs:label": "binCapacity",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:WasteBinModel"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:cargoVolume"
+            }
+        },
+        {
+            "@id": "iudx:binFillingLevel",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Current level of waste in the bin. Typically, the level is specified in terms of percentage volume filled.",
+            "rdfs:label": "binFillingLevel",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtBin"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:fillingLevel"
+            }
+        },
+        {
+            "@id": "iudx:binFullnessThreshold",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The fullness threshold level of the bin defined as the level (in terms of percentage) when the bin full alert or notification will be generated.",
+            "rdfs:label": "binFullnessThreshold",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:WasteBinModel"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:fullnessThreshold"
+            }
+        },
+        {
+            "@id": "iudx:binMaxLoad",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Maximum load (weight) that the waste bin can hold.",
+            "rdfs:label": "binMaxLoad",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:WasteBinModel"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:maximumLoad"
+            }
+        },
+        {
+            "@id": "iudx:binRecommendedLoad",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Recommended load (weight) that the waste bin corresponding to this observation can hold.",
+            "rdfs:label": "binRecommendedLoad",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:WasteBinModel"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:recommendedLoad"
+            }
+        },
+        {
+            "@id": "iudx:bod",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Biological Oxygen Demand concentration measured in the waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "bod",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:bod"
+            }
+        },
+        {
+            "@id": "iudx:bridgeCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number of bridges in the road segment corresponding to this observation. Takes 0 (zero) as the value when the road segment has no bridges.",
+            "rdfs:label": "bridgeCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:cameraNum",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Camera number corresponding to this observation",
+            "rdfs:label": "cameraNum",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Camera"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:carbonCreditValue",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "It represents a measurable decrease or elimination of greenhouse gas emissions, specifically carbon dioxide (CO2) or its equivalents, permitted or asserted during the reporting period corresponding to this observation.",
+            "rdfs:label": "carbonCreditValue",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:carriagewayLength",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total length of the carriage way of the road segment corresponding to this observation.",
+            "rdfs:label": "carriagewayLength",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:carriagewayWidth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total width of the carriage way of the road segment corresponding to this observation.",
+            "rdfs:label": "carriagewayWidth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:cod",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Chemical Oxygen Demand concentration measured in the waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "cod",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:cod"
+            }
+        },
+        {
+            "@id": "iudx:collectedPOI",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The count of points of interest (waste collection points) that the waste management vehicle corresponding to this observation has served or collected the waste from.",
+            "rdfs:label": "collectedPOI",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:commercialPOIs",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of commercial establishments which serve as point of interests corresponding to this observation.",
+            "rdfs:label": "commercialPOIs",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:commercialUnitsCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total number of commercial or trade establishments present at the location corresponding to this observation.",
+            "rdfs:label": "commercialUnitsCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:compensatedTDS",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The value of TDS (Total Dissolved Solids) level in the water with temperature compensation.",
+            "rdfs:label": "compensatedTDS",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:compressorStatus",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the compressor status of the air conditioning system by a binary input (0-Inactive, 1-Active)",
+            "rdfs:label": "compressorStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:continuous_drop_off",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Indicates whether a rider can alight from the transit vehicle at any point along the vehicle\u2019s travel path.SameAs: 'continuous_drop_off' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)",
+            "rdfs:label": "continuous_drop_off",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:StopTimesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: continuous_drop_off"
+            }
+        },
+        {
+            "@id": "iudx:continuous_pickup",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Indicates whether a rider can board the transit vehicle at any point along the vehicle\u2019s travel path.SameAs: 'continuous_pickup' field from GTFS Static Field definitions-stop_times.txt (https://developers.google.com/transit/gtfs/reference#stop_timestxt)",
+            "rdfs:label": "continuous_pickup",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:StopTimesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: continuous_pickup"
+            }
+        },
+        {
+            "@id": "iudx:coordinates",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Coordinates for the GeoJSON object",
+            "rdfs:label": "coordinates",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Point"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number",
+                    "@container": "@list"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "geojson:coordinates"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:culvertCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number of culverts prevalent in the trace of the road corresponding to this observation.",
+            "rdfs:label": "culvertCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:current",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The value of Current in the entity corresponding to this observation.",
+            "rdfs:label": "current",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:currentLevel",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Current flooding level indicated by the sensing station corresponding to this observation.",
+            "rdfs:label": "currentLevel",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvFlood"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:currentTripCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The current count of trips made by the vehicle(s) corresponding to this observation.",
+            "rdfs:label": "currentTripCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:current_stop_sequence",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Gives the stop sequence index of the current stop. This is determined by considering current_status, if current_status is missing IN_TRANSIT_TO is assumed. SameAs:'current_stop_sequence' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)",
+            "rdfs:label": "current_stop_sequence",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:VehiclePosition"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: current_stop_sequence"
+            }
+        },
+        {
+            "@id": "iudx:cyclePathLeftHeight",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Height of the cycle track on the left edge of the road corresponding to this observation",
+            "rdfs:label": "cyclePathLeftHeight",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:cyclePathLeftWidth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Width of the cycle track on the left edge of the road corresponding to this observation.",
+            "rdfs:label": "cyclePathLeftWidth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:cyclePathRightHeight",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Height of the cycle track on the right edge of the road corresponding to this observation",
+            "rdfs:label": "cyclePathRightHeight",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:cyclePathRightWidth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Width of the cycle track on the right edge of the road corresponding to this observation.",
+            "rdfs:label": "cyclePathRightWidth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:dangerLevel",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Reference danger level threshold value set for the sensing station corresponding to this observation. Flood level status is marked danger if the current level crosses the danger level threshold value.",
+            "rdfs:label": "dangerLevel",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvFlood"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:dataRate",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The number of bits transmitted from one device to another or over a network per second",
+            "rdfs:label": "dataRate",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WirelessNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:departureUncertainty",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "If schedule_relationship is empty or SCHEDULED, either arrival or departure must be provided within a StopTimeUpdate. SameAs: 'departure' field from GTFS Realtime message-StopTimeUpdate (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeupdate)",
+            "rdfs:label": "departureUncertainty",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:deviceCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The number of devices that have been installed at a location corresponding to this observation.",
+            "rdfs:label": "deviceCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Device"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:dewPoint",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed  temperature to which air must be cooled to become saturated with water vapor.",
+            "rdfs:label": "dewPoint",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:dewPoint"
+            }
+        },
+        {
+            "@id": "iudx:direction_id",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Indicates the direction of travel of the vehicle corresponding to this observation, can be referenced from the GTFS static feed trips.txt. SameAs: 'direction_id' field from GTFS Realtime message-TripDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-tripdescriptor)",
+            "rdfs:label": "direction_id",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TripDescriptor"
+                },
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:do",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Dissolved oxygen measured in the waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "do",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:do"
+            }
+        },
+        {
+            "@id": "iudx:durationInHours",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Specifies an interval duration in hours for computing statistical aggregations.",
+            "rdfs:label": "durationInHours",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:durationInMinutes",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Specifies an interval duration in minutes for computing statistical aggregations.",
+            "rdfs:label": "durationInMinutes",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:ecRecoveryAmount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Amount collected towards Enrollment Certificate from the establishment on annual basis.",
+            "rdfs:label": "ecRecoveryAmount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:elevation",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The elevation of the entity corresponding to this observation. It is the distance above the sea level/ the height to which the entity is raised.",
+            "rdfs:label": "elevation",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MajorTowns"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:energyConsumed",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Energy consumed over a specific time corresponding to this observation.",
+            "rdfs:label": "energyConsumed",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:energyConsumed"
+            }
+        },
+        {
+            "@id": "iudx:energyEfficiencyStatus",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the energy efficiency status of the air conditioning system by a binary input (0-Inactive, 1-Active)",
+            "rdfs:label": "energyEfficiencyStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:energyGenerated",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Energy generated over a specific time range from the energy resource corresponding to this observation.",
+            "rdfs:label": "energyGenerated",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:equipmentSequenceNumber",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Sequence number for the given equipment.",
+            "rdfs:label": "equipmentSequenceNumber",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:etx",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Expected Transmission Count is an Exponentially Weighted Moving Average of the number of expected packet transmissions required for error-free reception at destination.",
+            "rdfs:label": "etx",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WirelessNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:fareForAdult",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The fare for an adult in the journey corresponding to this observation.",
+            "rdfs:label": "fareForAdult",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:fareForChild",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The fare for a child in the journey corresponding to this observation.",
+            "rdfs:label": "fareForChild",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:femaleTotal",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of females of a particular species, as identified by the device.",
+            "rdfs:label": "femaleTotal",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MosquitoDensity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:fid",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The fid corresponding to this observation.",
+            "rdfs:label": "fid",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Headquarters"
+                },
+                {
+                    "@id": "iudx:District"
+                },
+                {
+                    "@id": "iudx:States"
+                },
+                {
+                    "@id": "iudx:FeaturesOfInterest"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:filterSign",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Binary Input (0-Inactive, 1-Active), [bool], [n/a], [n/a], [n/a]",
+            "rdfs:label": "filterSign",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:flowrate",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Volume of water flowing in/out of the water storage tank corresponding to this observation.",
+            "rdfs:label": "flowrate",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: WasteWaterJunction.flowrate"
+            }
+        },
+        {
+            "@id": "iudx:forcedThermoOffStatus",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the status by a binary Input (0-Inactive, 1-Active)",
+            "rdfs:label": "forcedThermoOffStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:freeSlotNumber",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The number of bike racks or docking slots available for returning and parking bikes in the bike docking station corresponding to this observation.",
+            "rdfs:label": "freeSlotNumber",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:freeSlotNumber"
+            }
+        },
+        {
+            "@id": "iudx:frequency",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Frequency observed from the entity corresponding to this observation.",
+            "rdfs:label": "frequency",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:frequency"
+            }
+        },
+        {
+            "@id": "iudx:fuelEfficiency",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The distance traveled per unit of fuel used.",
+            "rdfs:label": "fuelEfficiency",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:fuelEfficiency"
+            }
+        },
+        {
+            "@id": "iudx:fuelFilled",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Amount of fuel filled to the vehicle corresponding to this observation.",
+            "rdfs:label": "fuelFilled",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:grantAmount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The amount released for the public welfare under the scheme from the total budget corresponding to this observation.",
+            "rdfs:label": "grantAmount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:PublicSchemes"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema: funding"
+            }
+        },
+        {
+            "@id": "iudx:gustSpeed",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "A sudden burst of high-speed wind over the observed average wind speed lasting  only for a few seconds.",
+            "rdfs:label": "gustSpeed",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:heaterStatus",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the heater status of the air conditioning system by a binary input (0-Inactive, 1-Active)",
+            "rdfs:label": "heaterStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:illuminance",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed instantaneous ambient light intensity.",
+            "rdfs:label": "illuminance",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "Fiware:illuminance"
+            }
+        },
+        {
+            "@id": "iudx:inFlow",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "In-flow amount into the treatment plant/reservoir corresponding to this observation.",
+            "rdfs:label": "inFlow",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:indiadpt",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Department/Division or section of the organization corresponding to this observation. Eg. Health, Transport.",
+            "rdfs:label": "indiadpt",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Headquarters"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:indiadpt_i",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The name of Indian department I corresponding to this observation.",
+            "rdfs:label": "indiadpt_i",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Headquarters"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:indoorFanStatus",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the indoor fan status of the air conditioning system by a binary input (0-Inactive, 1-Active)",
+            "rdfs:label": "indoorFanStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:instValue",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the instantaneous value (associated with the current timestamp) of a time varying quantity.",
+            "rdfs:label": "instValue",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:irradiation",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The measure of radiation falling per unit area of a surface exposed to it.",
+            "rdfs:label": "irradiation",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:isOccupied",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "A flag that denotes if the entity corresponding to this observation is occupied or not (0 - Occupied, 1 - Not Occupied).",
+            "rdfs:label": "isOccupied",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoomOccupancy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:laneId",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Unique identification number of the lane corresponding to this observation.",
+            "rdfs:label": "laneId",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:LaneDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: laneId"
+            }
+        },
+        {
+            "@id": "iudx:laneLength",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Length of the lane corresponding to this observation",
+            "rdfs:label": "laneLength",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:LaneDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:laneLength"
+            }
+        },
+        {
+            "@id": "iudx:laneWidth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Width of the lane corresponding to this observation",
+            "rdfs:label": "laneWidth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:LaneDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:laneWidth"
+            }
+        },
+        {
+            "@id": "iudx:latency",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The value of latency in packet transmission.",
+            "rdfs:label": "latency",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WirelessNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:latitude",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Latitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System)",
+            "rdfs:label": "latitude",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:GeoCoordinates"
+                },
+                {
+                    "@id": "iudx:Place"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:latitude"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:longitude",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Longitude of a place. Specified in WGS 84 CRS (https://en.wikipedia.org/wiki/World_Geodetic_System)",
+            "rdfs:label": "longitude",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:GeoCoordinates"
+                },
+                {
+                    "@id": "iudx:Place"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:longitude"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:mac_tx_count",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "MAC transmission count represents the number of packets transmitted over the air.",
+            "rdfs:label": "mac_tx_count",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WirelessNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:mac_tx_failed_count",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "MAC transmit failed represents the number of unsuccessful transmission attempts.",
+            "rdfs:label": "mac_tx_failed_count",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WirelessNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:maleTotal",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of males of a particular species, as identified by the device.",
+            "rdfs:label": "maleTotal",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MosquitoDensity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:maxOverTime",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the maximum value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value",
+            "rdfs:label": "maxOverTime",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:maxSolarPowerMeasure",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "A measure of maximum solar energy that can be generated.",
+            "rdfs:label": "maxSolarPowerMeasure",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:maxValue",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The upper value of a quantity/property.",
+            "rdfs:label": "maxValue",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:maxValue"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:maxZoom",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "A number between 0 to 18 denoting maximum zoom.",
+            "rdfs:label": "maxZoom",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MapTiles"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:maximumAllowedHeight",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Maximum allowed height for vehicles using the entity corresponding to this observation.",
+            "rdfs:label": "maximumAllowedHeight",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SmartParking"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: OffStreetParking.maximumAllowedHeight"
+            }
+        },
+        {
+            "@id": "iudx:maximumAllowedSpeed",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The maximum speed allowed for vehicles plying the road segment corresponding to this observation.",
+            "rdfs:label": "maximumAllowedSpeed",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: maximumAllowedSpeed"
+            }
+        },
+        {
+            "@id": "iudx:maximumAllowedWeight",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Maximum allowed weight for vehicles using the entity corresponding to this observation.",
+            "rdfs:label": "maximumAllowedWeight",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                },
+                {
+                    "@id": "iudx:SmartParking"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:Value Descriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:maximumAllowedWeight"
+            }
+        },
+        {
+            "@id": "iudx:maximumAllowedWidth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Maximum allowed width for vehicles using the entity corresponding to this observation.",
+            "rdfs:label": "maximumAllowedWidth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SmartParking"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: OffStreetParking.maximumAllowedWidth"
+            }
+        },
+        {
+            "@id": "iudx:maximumParkingDuration",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The maximum amount of time for which a vehicle can be parked in the parking site corresponding to this observation.",
+            "rdfs:label": "maximumParkingDuration",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SmartParking"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:OffStreetParking.maximumParkingDuration"
+            }
+        },
+        {
+            "@id": "iudx:measuredDistance",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the distance measured by the sensor, from the sensor tip to the upper surface of water.",
+            "rdfs:label": "measuredDistance",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvFlood"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:medianHeight",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Height of the median or central reservation in the road corresponding to this observation.",
+            "rdfs:label": "medianHeight",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:medianLength",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Length of the median or central reservation in the road corresponding to this observation.",
+            "rdfs:label": "medianLength",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:medianWidth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Width of the median or central reservation in the road corresponding to this observation.",
+            "rdfs:label": "medianWidth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:minOverTime",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the minimum value of a time-series data over a specified duration in past. The duration is specified using another parameter in the value descriptor object related to this value",
+            "rdfs:label": "minOverTime",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:minValue",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The lower value of a quantity/property.",
+            "rdfs:label": "minValue",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:minValue"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:minZoom",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "A number between 0 to 18 denoting minimum zoom.",
+            "rdfs:label": "minZoom",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MapTiles"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:minimumAllowedSpeed",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The minimum speed allowed for vehicles plying the road segment corresponding to this observation.",
+            "rdfs:label": "minimumAllowedSpeed",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: minimumAllowedSpeed"
+            }
+        },
+        {
+            "@id": "iudx:month",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Month corresponding to this observation and is described in MM format, for eg. 11 for the month of November.",
+            "rdfs:label": "month",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:newAssessmentCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number of fresh assessments conducted to assess the value of property.",
+            "rdfs:label": "newAssessmentCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:nh4",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Ammonium concentration measured in the waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "nh4",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:nh4"
+            }
+        },
+        {
+            "@id": "iudx:no3",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Nitrate concentration measured in waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "no3",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:no3"
+            }
+        },
+        {
+            "@id": "iudx:numStreetlight",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the total number of streetlights connected to the feeder panel corresponding to this observation.",
+            "rdfs:label": "numStreetlight",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:objectid",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The object ID corresponding to this observation.",
+            "rdfs:label": "objectid",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Headquarters"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:occupiedSpotNumber",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number of parking spots occupied in the smart parking site corresponding to this observation. This must a positve number lower than or equal to the totalSpotNumber.",
+            "rdfs:label": "occupiedSpotNumber",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ParkingSpotStatus"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: OffStreetParking.occupiedSpotNumber"
+            }
+        },
+        {
+            "@id": "iudx:odometer",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Odometer value.",
+            "rdfs:label": "odometer",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Position"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: odometer"
+            }
+        },
+        {
+            "@id": "iudx:outFlow",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Out-flow amount into the treatment plant/reservoir corresponding to this observation.",
+            "rdfs:label": "outFlow",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:outOfServiceSlotNumber",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The number of bike racks/bike-docking slots or parking slots that are out of order and cannot be used to hire or park a bike in the bike docking station or parking site corresponding to this observation.",
+            "rdfs:label": "outOfServiceSlotNumber",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:SmartParking"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:outOfServiceSlotNumber"
+            }
+        },
+        {
+            "@id": "iudx:packetSize",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The size of a data packet.",
+            "rdfs:label": "packetSize",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WirelessNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:panelHumidity",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The humidity of the solar panel corresponding to this observation.",
+            "rdfs:label": "panelHumidity",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:panelTemperature",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The temperature of the solar panel corresponding to this observation.",
+            "rdfs:label": "panelTemperature",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:passengerCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number of passengers travelling in the public transit bus corresponding to this observation. This count is computed based on the realtime ticketing transactions in the public transit bus.",
+            "rdfs:label": "passengerCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:pcu",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The PCU(Passenger Car Unit) value based on vehicle types as defined by the Indo-HCM(Indian Highway Capacity Manual) and IRC(Indian Road Congress). Indo-HCM: https://crridom.gov.in/sites/default/files/files/Indo-HCM%20Snippets.pdf, IRC: https://law.resource.org/pub/in/bis/irc/irc.gov.in.106.1990.pdf",
+            "rdfs:label": "pcu",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:pedestrianPathLeftHeight",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Height of the walkway placed on the left edge of the road corresponding to this observation",
+            "rdfs:label": "pedestrianPathLeftHeight",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:pedestrianPathLeftWidth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Width of the walkway placed on the left edge of the road corresponding to this observation.",
+            "rdfs:label": "pedestrianPathLeftWidth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:pedestrianPathRightHeight",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Height of the walkway placed on the right edge of the road corresponding to this observation",
+            "rdfs:label": "pedestrianPathRightHeight",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:pedestrianPathRightWidth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Width of the walkway placed on the right edge of the road corresponding to this observation.",
+            "rdfs:label": "pedestrianPathRightWidth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:performanceRatio",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The ratio of the measured output to the expected( or calculated) output.",
+            "rdfs:label": "performanceRatio",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:perimeter",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The length of the boundary lining the entity corresponding to this observation.",
+            "rdfs:label": "perimeter",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Headquarters"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:po4",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Ortho-phosphate concentration measured in the waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "po4",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:po4"
+            }
+        },
+        {
+            "@id": "iudx:powerConsumption",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Power consumed by the entity corresponding to this observation.",
+            "rdfs:label": "powerConsumption",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:powerConsumption"
+            }
+        },
+        {
+            "@id": "iudx:powerFactor",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Power factor or the ratio of working power of the entity corresponding to this observation.",
+            "rdfs:label": "powerFactor",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:powerFactor"
+            }
+        },
+        {
+            "@id": "iudx:powerRating",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Power rating of the LED or the streetlight bulb corresponding to this observation.",
+            "rdfs:label": "powerRating",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Streetlight"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:precipitation",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed precipitation/rainfall level over a given duration.",
+            "rdfs:label": "precipitation",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "Fiware:precipitation"
+            }
+        },
+        {
+            "@id": "iudx:precipitationForecast",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Forecasted rainfall over a certain duration in future.",
+            "rdfs:label": "precipitationForecast",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:rcRecoveryAmount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Amount collected towards Registration Certificate on monthly basis from the establishment per emplyoee.",
+            "rdfs:label": "rcRecoveryAmount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:reAssessmentCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number of re-assessments conducted to assess the value of property.",
+            "rdfs:label": "reAssessmentCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:reactiveEnergyLag",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The value of Lag Reactive Energy consumed by the device corresponding to this observation.",
+            "rdfs:label": "reactiveEnergyLag",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnergyMeter"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:reactiveEnergyLead",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The value of Lead Reactive Energy consumed by the device corresponding to this observation.",
+            "rdfs:label": "reactiveEnergyLead",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnergyMeter"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:redox",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Reduction potential or oxidation measured in waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "redox",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:redox"
+            }
+        },
+        {
+            "@id": "iudx:referenceLevel",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Reference setting used to compute the currentLevel.",
+            "rdfs:label": "referenceLevel",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvFlood"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:relativeHumidityForecast",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Forecasted relative humidity (water vapour in air) over a certain duration in future.",
+            "rdfs:label": "relativeHumidityForecast",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:residentialPOIs",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of households which serve as point of interests corresponding to this observation.",
+            "rdfs:label": "residentialPOIs",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:residentialUnitsCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total number of households or residential properties present at the location corresponding to this observation.",
+            "rdfs:label": "residentialUnitsCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:resolution",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Resolution of a measurement. That is, the smallest change in a quantity being measured that causes a perceptible change in the corresponding observation under specified conditions.",
+            "rdfs:label": "resolution",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:rightOfWayWidth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Right of Way (RoW) is the total land area available for the roadway. Its width accommodates for carriages way + other necessities + future extension, along the road's alignment.",
+            "rdfs:label": "rightOfWayWidth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:roadOccupancy",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The percentage of carriage way length that is occupied by vehicles corresponding to this observation.",
+            "rdfs:label": "roadOccupancy",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:rotation",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The angle of rotational transformation of the polygon enclosing the entity corresponding to this observation.",
+            "rdfs:label": "rotation",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MajorTowns"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:route_type",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number indicating the type of transport-\n1 - Subway, Metro. Any underground rail system within a metropolitan area.\n2 - Rail. Used for intercity or long-distance travel.\n3 - Bus. Used for short- and long-distance bus routes. \nSameAs: 'route_type' field from GTFS Static Field definitions-routes.txt <a href=\"https://developers.google.com/transit/gtfs/reference#routestxt\">https://developers.google.com/transit/gtfs/reference#routestxt</a>",
+            "rdfs:label": "route_type",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoutesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: route_type"
+            }
+        },
+        {
+            "@id": "iudx:rplRank",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "RPL rank represents the rank or hop distance from the tree root.",
+            "rdfs:label": "rplRank",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WirelessNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:rslIn",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The Received Signal Level in is an EWMA of the received signal level for the neighbor-to-node direction.",
+            "rdfs:label": "rslIn",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WirelessNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:rslOut",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The Received Signal Level out is an EWMA of the received signal level for the node-to-neighbor direction.",
+            "rdfs:label": "rslOut",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WirelessNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:rssi",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The RSSI (Received Signal Strength Indicator) value of the entity corresponding to this observation.",
+            "rdfs:label": "rssi",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Device"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: Device.rssi"
+            }
+        },
+        {
+            "@id": "iudx:safetiPinScore",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Score given to the location corresponding to this observation. The score is on a scale of 5 if the SafetiPinType is 'Feeling' and on a scale of 10 if the SafetiPinType is 'Audit'",
+            "rdfs:label": "safetiPinScore",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SafetiPin"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:sanctionedAmount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The actual amount spent from the grant/allocated amount for the scheme.",
+            "rdfs:label": "sanctionedAmount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:PublicSchemes"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:scale",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The amount of translation invloved in representing a point/place graphically.",
+            "rdfs:label": "scale",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MajorTowns"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:seatingCapacity",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the passenger seating capacity of the vehicle corresponding to this observation.",
+            "rdfs:label": "seatingCapacity",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:setPointTemperature",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The setpoint temperature of the air conditioning system.",
+            "rdfs:label": "setPointTemperature",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:shape_area",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total area enclosed within the polygon or by the boundary lining the shape of entity corresponding to this observation.",
+            "rdfs:label": "shape_area",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:District"
+                },
+                {
+                    "@id": "iudx:States"
+                },
+                {
+                    "@id": "iudx:FeaturesOfInterest"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:shape_dist_traveled",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Actual distance traveled along the shape from the first shape point to the point specified in this record. Used by trip planners to show the correct portion of the shape on a map. Values must increase along with shape_pt_sequence; they cannot be used to show reverse travel along a route. Distance units must be consistent with those used in stop_times.txt.\n\nExample: If a bus travels along the three points defined above for A_shp, the additional shape_dist_traveled values (shown here in kilometers) would look like this:\nshape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled\nA_shp,37.61956,-122.48161,0,0\nA_shp,37.64430,-122.41070,6,6.8310\nA_shp,37.65863,-122.30839,11,15.8765",
+            "rdfs:label": "shape_dist_traveled",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ShapesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: shape_dist_traveled"
+            }
+        },
+        {
+            "@id": "iudx:shape_length",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total length of the boundary lining the shape of entity corresponding to this observation.",
+            "rdfs:label": "shape_length",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:District"
+                },
+                {
+                    "@id": "iudx:States"
+                },
+                {
+                    "@id": "iudx:FeaturesOfInterest"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:shape_pt_sequence",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Sequence in which the shape points connect to form the shape. Values must increase along the trip but do not need to be consecutive.\n\nExample: If the shape \"A_shp\" has three points in its definition, the shapes.txt file might contain these records to define the shape:\nshape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence\nA_shp,37.61956,-122.48161,0\nA_shp,37.64430,-122.41070,6\nA_shp,37.65863,-122.30839,11",
+            "rdfs:label": "shape_pt_sequence",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ShapesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: shape_pt_sequence"
+            }
+        },
+        {
+            "@id": "iudx:sludgeLevel",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Level of Sludge measured in the waste-water treatment plant's tank or the manhole sensor corresponding to this observation.",
+            "rdfs:label": "sludgeLevel",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:sludgeLevel"
+            }
+        },
+        {
+            "@id": "iudx:solarRadiation",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The number of photons that are being emitted by the sun.",
+            "rdfs:label": "solarRadiation",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "Fiware:solarRadiation"
+            }
+        },
+        {
+            "@id": "iudx:sourceWeightCollected",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The weight of the entity at source location.",
+            "rdfs:label": "sourceWeightCollected",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:speciesTotal",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of a particular species detected by the device.",
+            "rdfs:label": "speciesTotal",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MosquitoDensity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:speed",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Momentary speed measured by the vehicle.",
+            "rdfs:label": "speed",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Position"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: speed"
+            }
+        },
+        {
+            "@id": "iudx:stage",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total number of stages from the origin bus stop to the destination bus stop.",
+            "rdfs:label": "stage",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:standingCapacity",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the passenger standing capacity of the vehicle corresponding to this observation.",
+            "rdfs:label": "standingCapacity",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:startStopStatus",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the start and stop status of the air conditioning system by a binary Input (0-Inactive, 1-Active)",
+            "rdfs:label": "startStopStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:state_lgd",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The state legend corresponding to this observation",
+            "rdfs:label": "state_lgd",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:District"
+                },
+                {
+                    "@id": "iudx:States"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:stop_sequence",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "This field identifies the order of the stops for a particular trip. The values for stop_sequence must be non-negative integers, and they must increase along the trip. For example, the first stop on the trip could have a stop_sequence of 1, the second stop on the trip could have a stop_sequence of 23, the third stop could have a stop_sequence of 40, and so on.",
+            "rdfs:label": "stop_sequence",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:GtfsCommons"
+                },
+                {
+                    "@id": "iudx:StopTimeUpdate"
+                },
+                {
+                    "@id": "iudx:StopTimesDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: stop_sequence"
+            }
+        },
+        {
+            "@id": "iudx:tankBreadth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Breadth of the Cuboid shaped water storage tank.",
+            "rdfs:label": "tankBreadth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tankCapacity",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Maximum amount of water the water storage tank corresponding to this observation can hold.",
+            "rdfs:label": "tankCapacity",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tankDepth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Depth of the water storage tank corresponding to this observation.",
+            "rdfs:label": "tankDepth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tankDiameter",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Diameter of Cylindrical or Spherical water storage tanks.",
+            "rdfs:label": "tankDiameter",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tankLength",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Length of the Cuboid shaped water storage tank.",
+            "rdfs:label": "tankLength",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:taxAmountCollected",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The amount of tax levied on the products, things and services which includes sales tax, value-added tax, service tax, Good and Service tax, customs duty, etc.",
+            "rdfs:label": "taxAmountCollected",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tee",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total Energy Exported, it is the total energy consumed by the load connected to the device corresponding to this observation.",
+            "rdfs:label": "tee",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tei",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total Energy Imported, it is the total energy received by the device corresponding to this observation.",
+            "rdfs:label": "tei",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:thermoStatus",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the thermo status of the air conditioning system by a binary input (0-Inactive, 1-Active)",
+            "rdfs:label": "thermoStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tic",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total Inorganic Carbon concentration measured in the waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "tic",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:tic"
+            }
+        },
+        {
+            "@id": "iudx:tn",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total Nitrogen concentration measured in waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "tn",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:tn"
+            }
+        },
+        {
+            "@id": "iudx:toc",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total Organic Carbon concentration measured in the waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "toc",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:toc"
+            }
+        },
+        {
+            "@id": "iudx:totalAbsent",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number of employees failed to report to work",
+            "rdfs:label": "totalAbsent",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EmployeeDetails"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:totalActivePower",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total active power consumed by all phases.",
+            "rdfs:label": "totalActivePower",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                },
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "Fiware:totalActivePower"
+            }
+        },
+        {
+            "@id": "iudx:totalApparentPower",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total apparent power consumed by all the phases",
+            "rdfs:label": "totalApparentPower",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: totalApparentPower"
+            }
+        },
+        {
+            "@id": "iudx:totalCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of the entity or service corresponding to this observation.",
+            "rdfs:label": "totalCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:totalCyclePathWidth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total width of the cycle track present in the road corresponding to this observation.",
+            "rdfs:label": "totalCyclePathWidth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:totalEmployee",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number of the employees in the organization",
+            "rdfs:label": "totalEmployee",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EmployeeDetails"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:numberOfEmployees"
+            }
+        },
+        {
+            "@id": "iudx:totalEnergyGenerated",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total energy generated by the energy resource corresponding to this observation.",
+            "rdfs:label": "totalEnergyGenerated",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:totalGasPower",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total amount of gas consumed by the AC accumulator corresponding to this observation.",
+            "rdfs:label": "totalGasPower",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AirConditioner"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:totalLaneNumber",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total number of lanes the road corresponding to this observation possesses.",
+            "rdfs:label": "totalLaneNumber",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: totalLaneNumber"
+            }
+        },
+        {
+            "@id": "iudx:totalML",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total MLDs of water discharged from the water storage tank corresponding to this observation.",
+            "rdfs:label": "totalML",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:totalPOI",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of point of interests (waste collection points) along a route corresponding to this observation .",
+            "rdfs:label": "totalPOI",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:totalPedestrianPathLength",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total length of the walkway present in the road corresponding to this observation.",
+            "rdfs:label": "totalPedestrianPathLength",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:totalPedestrianPathWidth",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total width of the walkway present in the road corresponding to this observation.",
+            "rdfs:label": "totalPedestrianPathWidth",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:totalPresent",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Number of employees reported to work",
+            "rdfs:label": "totalPresent",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EmployeeDetails"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:totalReactivePower",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total reactive power for all phases.",
+            "rdfs:label": "totalReactivePower",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:totalReactivePower"
+            }
+        },
+        {
+            "@id": "iudx:totalSlotNumber",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total number of bike racks/bike-docking slots or parking slots in the bike docking station or the parking site corresponding to this observation.",
+            "rdfs:label": "totalSlotNumber",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:SmartParking"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:totalSlotNumber"
+            }
+        },
+        {
+            "@id": "iudx:totalSpotNumber",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total number of spots offered by the parking site corresponding to this observation.",
+            "rdfs:label": "totalSpotNumber",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ParkingSpotStatus"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware: OffStreetParking.totalSpotNumber"
+            }
+        },
+        {
+            "@id": "iudx:totalTripCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of trips made by the vehicle(s) corresponding to this observation on the given day of operation.",
+            "rdfs:label": "totalTripCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:transactionVehicleNum",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Code used by fare collection agency for the vehicle number corresponding to the transaction.",
+            "rdfs:label": "transactionVehicleNum",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:travelDistance",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The distance between the origin location and the destination location or the total distance travelled corresponding to this observation.",
+            "rdfs:label": "travelDistance",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:treatmentPlantCapacity",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Handling capacity of the waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "treatmentPlantCapacity",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:treatmentPlantID",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Unique identification number for the waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "treatmentPlantID",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tripNetWeightCollected",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The net weight of garbage collected by the SWM vehicle corresponding to this observation at the end of the trip.",
+            "rdfs:label": "tripNetWeightCollected",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:trip_delay",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "This can be positive and negative in seconds and shows how much the vehicle deviates from the planned one. SameAs: 'delay' field from GTFS Realtime message-StopTimeEvent (https://developers.google.com/transit/gtfs-realtime/reference#message-stoptimeevent)",
+            "rdfs:label": "trip_delay",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: delay"
+            }
+        },
+        {
+            "@id": "iudx:tss",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Total suspended solids concentration measured in a waste-water treatment plant corresponding to this observation.",
+            "rdfs:label": "tss",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "fiware:tss"
+            }
+        },
+        {
+            "@id": "iudx:uncompensatedTDS",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The value of TDS (Total Dissolved Solids) level in the water without temperature compensation.",
+            "rdfs:label": "uncompensatedTDS",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:userScore",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The feedback rating given by the user based on his personal experience with the products or things or services.",
+            "rdfs:label": "userScore",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:value",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Value of the quantity being described in the ValueDescriptor object.",
+            "rdfs:label": "value",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:Boolean"
+                },
+                {
+                    "@id": "iudx:NumericArray"
+                },
+                {
+                    "@id": "iudx:StructuredValue"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:vehicleAltitude",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Gives the current altitude of the vehicle using GPS",
+            "rdfs:label": "vehicleAltitude",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:vehicleCapacity",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Describes the total capacity (including the seating and standing capacity) of the vehicle corresponding to this observation.",
+            "rdfs:label": "vehicleCapacity",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:vehicleCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of vehicles corresponding to this observation.",
+            "rdfs:label": "vehicleCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:visitorCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total number of visitors corresponding to this observation.",
+            "rdfs:label": "visitorCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TouristDestination"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:vocRaw",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of the natural form of volatile organic compounds in the environment corresponding to this observation.",
+            "rdfs:label": "vocRaw",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "Fiware:volatileOrganicCompoundsTotal"
+            }
+        },
+        {
+            "@id": "iudx:vocTotal",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of volatile organic compounds present in the environment corresponding to this observation. It could be industrial solvents, chemical by-products etc.",
+            "rdfs:label": "vocTotal",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:voltage",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The value of Voltage in the entity corresponding to this observation.",
+            "rdfs:label": "voltage",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:wardNum",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Ward number corresponding to this observation.",
+            "rdfs:label": "wardNum",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MunicipalityDesc"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:waterFlow",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Flow or current of water flowing from the water storage tank corresponding to this observation.",
+            "rdfs:label": "waterFlow",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:waterLevel",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Current water level in the water storage tank corresponding to this observation.",
+            "rdfs:label": "waterLevel",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:waterPressure",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Pressure of water flowing from the water storage tank corresponding to this observation.",
+            "rdfs:label": "waterPressure",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:waterTemperature",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Water temperature in the water storage tank corresponding to this observation.",
+            "rdfs:label": "waterTemperature",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:windDirection",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed wind directiont. Measured in degrees clockwise from due north.",
+            "rdfs:label": "windDirection",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:windDirection"
+            }
+        },
+        {
+            "@id": "iudx:windSpeed",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed wind speed.",
+            "rdfs:label": "windSpeed",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:windSpeed"
+            }
+        },
+        {
+            "@id": "iudx:xField",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The longitude corresponding to this observation.",
+            "rdfs:label": "xField",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:DigitalElevationModel"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:yField",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The latitude corresponding to this observation.",
+            "rdfs:label": "yField",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:DigitalElevationModel"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:year",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Year corresponding to this observation and is described in YYYY format, for eg. 2020.",
+            "rdfs:label": "year",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:PublicSchemes"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:zField",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The elevation of the point from the mean sea level corresponding to this observation",
+            "rdfs:label": "zField",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:DigitalElevationModel"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "iudx": "https://voc.iudx.org.in/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "geojson": "https://purl.org/geojson/vocab#"
+    }
+}

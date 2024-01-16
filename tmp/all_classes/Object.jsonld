@@ -1,0 +1,70 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:Object",
+            "@type": [
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Data type: literals containing key/value pairs, with each key/value pair being separated by a comma.",
+            "rdfs:label": "Object"
+        },
+        {
+            "@id": "iudx:vehicleTypeCount",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Provides the count of vehicles for each vehicle type corresponding to this observation.",
+            "rdfs:label": "vehicleTypeCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Object"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:versionSpec",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Version specifications or information corresponding to the version in this observation.",
+            "rdfs:label": "versionSpec",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Version"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:Object"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "iudx": "https://voc.iudx.org.in/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "geojson": "https://purl.org/geojson/vocab#"
+    }
+}

@@ -1,0 +1,645 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:MosquitoDensity",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "A Data Model for density of mosquito species.",
+            "rdfs:label": "MosquitoDensity",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Civic"
+            }
+        },
+        {
+            "@id": "iudx:Civic",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Data models that pertain to the citizen issues/civic domain",
+            "rdfs:label": "Civic",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:DataModel"
+            }
+        },
+        {
+            "@id": "iudx:DataModel",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Class of all Data Models.",
+            "rdfs:label": "DataModel",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
+            }
+        },
+        {
+            "@id": "iudx:Thing",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Most generic IUDX object.",
+            "rdfs:label": "Thing",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "iudx:address",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Physical address of a place.",
+            "rdfs:label": "address",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                },
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:address"
+            }
+        },
+        {
+            "@id": "iudx:airTemperature",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed value of air temperature. Value is an object containing attributes representing statistical aggregates derived from past data.",
+            "rdfs:label": "airTemperature",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:AirConditioner"
+                },
+                {
+                    "@id": "iudx:RoomOccupancy"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:TimeSeriesAggregation"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "Fiware:temperature"
+            }
+        },
+        {
+            "@id": "iudx:dataDescriptor",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "URI pointing to the data-descriptor entity",
+            "rdfs:label": "dataDescriptor",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                },
+                {
+                    "@id": "iudx:DataModel"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:description",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Description for an IUDX thing.",
+            "rdfs:label": "description",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Thing"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:deviceInfo",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Information about the device associated with the observations.",
+            "rdfs:label": "deviceInfo",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:EnvFlood"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:RoomOccupancy"
+                },
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Device"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:femaleTotal",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of females of a particular species, as identified by the device.",
+            "rdfs:label": "femaleTotal",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MosquitoDensity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:location",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Location associated with a resource Item (a spatial point), a group of resource items (a spatial region) or even an observation in case of a mobile sensor.",
+            "rdfs:label": "location",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Provider"
+                },
+                {
+                    "@id": "iudx:ResourceServer"
+                },
+                {
+                    "@id": "iudx:Organization"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:EnvFlood"
+                },
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:SafetiPin"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
+                },
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                },
+                {
+                    "@id": "iudx:Camera"
+                },
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                },
+                {
+                    "@id": "iudx:SmartParking"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:LaneDesc"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Point"
+                },
+                {
+                    "@id": "iudx:GeoJSONGeometry"
+                },
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:Geojsongeometry"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:location"
+            }
+        },
+        {
+            "@id": "iudx:maleTotal",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of males of a particular species, as identified by the device.",
+            "rdfs:label": "maleTotal",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MosquitoDensity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:observationDateTime",
+            "@type": [
+                "iudx:TimeProperty"
+            ],
+            "rdfs:comment": "Last reported time of observation.",
+            "rdfs:label": "observationDateTime",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:EnvFlood"
+                },
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:SafetiPin"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:EmployeeDetails"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
+                },
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                },
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                },
+                {
+                    "@id": "iudx:SmartParking"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:GISData"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:RoomOccupancy"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:DateTime"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:Datetime"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:precipitation",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Observed precipitation/rainfall level over a given duration.",
+            "rdfs:label": "precipitation",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "Fiware:precipitation"
+            }
+        },
+        {
+            "@id": "iudx:speciesName",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The binomial/ zoological nomenclature of the species as identified by the device.",
+            "rdfs:label": "speciesName",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MosquitoDensity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:speciesTotal",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of a particular species detected by the device.",
+            "rdfs:label": "speciesTotal",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MosquitoDensity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "iudx": "https://voc.iudx.org.in/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+}

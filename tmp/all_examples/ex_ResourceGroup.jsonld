@@ -1,0 +1,20 @@
+{
+    "@context": "https://voc.iudx.org.in/",
+    "type": ["iudx:ResourceGroup"],
+    "id": "providerID/example.com/sensors",
+    "name": "sensors",
+    "label": "Information from Sensors",
+    "description": "Description of this resource group",
+    "tags": ["sensor", "sensing", "resource", "battery operated"],
+    "authControlLevel":"GROUP",
+    "accessPolicy": "OPEN",
+    "itemStatus": "ACTIVE",
+    "provider": "providerID",
+    "resourceServer": "resourceProviderID/example.com",
+    "location": {
+      "type": "Place",
+      "address": "Bangalore"
+    },
+    "resourceType": "MESSAGESTREAM",
+    "iudxResourceAPIs": ["ATTR", "TEMPORAL"]
+}

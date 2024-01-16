@@ -1,0 +1,1489 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:WmgmtVehicle",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Data model for solid waste management vehicles.",
+            "rdfs:label": "WmgmtVehicle",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:WasteManagement"
+            }
+        },
+        {
+            "@id": "iudx:DataModel",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Class of all Data Models.",
+            "rdfs:label": "DataModel",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
+            }
+        },
+        {
+            "@id": "iudx:Thing",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Most generic IUDX object.",
+            "rdfs:label": "Thing",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "iudx:WasteManagement",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Data models that pertain to the waste management domain",
+            "rdfs:label": "WasteManagement",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:DataModel"
+            }
+        },
+        {
+            "@id": "iudx:address",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Physical address of a place.",
+            "rdfs:label": "address",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                },
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:address"
+            }
+        },
+        {
+            "@id": "iudx:agencyInfo",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Agency information corresponding to this observation.",
+            "rdfs:label": "agencyInfo",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:AgencyDesc"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:bearing",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Gives the vehicle GPS angle measured in a clockwise direction from the True North. SameAs 'bearing' field from GTFS Realtime message-Position(https://developers.google.com/transit/gtfs-realtime/reference#message-position)",
+            "rdfs:label": "bearing",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Position"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: bearing"
+            }
+        },
+        {
+            "@id": "iudx:collectedPOI",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The count of points of interest (waste collection points) that the waste management vehicle corresponding to this observation has served or collected the waste from.",
+            "rdfs:label": "collectedPOI",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:commercialPOIs",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of commercial establishments which serve as point of interests corresponding to this observation.",
+            "rdfs:label": "commercialPOIs",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:commercialUnitsCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total number of commercial or trade establishments present at the location corresponding to this observation.",
+            "rdfs:label": "commercialUnitsCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:currentTripCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The current count of trips made by the vehicle(s) corresponding to this observation.",
+            "rdfs:label": "currentTripCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:dataDescriptor",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "URI pointing to the data-descriptor entity",
+            "rdfs:label": "dataDescriptor",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                },
+                {
+                    "@id": "iudx:DataModel"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:description",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Description for an IUDX thing.",
+            "rdfs:label": "description",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Thing"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:deviceInfo",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Information about the device associated with the observations.",
+            "rdfs:label": "deviceInfo",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:EnvFlood"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:RoomOccupancy"
+                },
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Device"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:fuelEfficiency",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The distance traveled per unit of fuel used.",
+            "rdfs:label": "fuelEfficiency",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:fuelEfficiency"
+            }
+        },
+        {
+            "@id": "iudx:fuelFilled",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Amount of fuel filled to the vehicle corresponding to this observation.",
+            "rdfs:label": "fuelFilled",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:fuelType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The type of fuel suitable for the engine or engines of the vehicle corresponding to this observation.",
+            "rdfs:label": "fuelType",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:fuelType"
+            }
+        },
+        {
+            "@id": "iudx:ignitionStatus",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Gives the ignition status of the vehicle.ENUM: [Y, N]",
+            "rdfs:label": "ignitionStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:landfillSite",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The name of the landfill site or dump yard or dumping station corresponding this observation.",
+            "rdfs:label": "landfillSite",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:license_plate",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Gives the License Plate number of the vehice. SameAs: 'license_plate' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)",
+            "rdfs:label": "license_plate",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:VehicleDescriptor"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: license_plate"
+            }
+        },
+        {
+            "@id": "iudx:location",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Location associated with a resource Item (a spatial point), a group of resource items (a spatial region) or even an observation in case of a mobile sensor.",
+            "rdfs:label": "location",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Provider"
+                },
+                {
+                    "@id": "iudx:ResourceServer"
+                },
+                {
+                    "@id": "iudx:Organization"
+                },
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:EnvFlood"
+                },
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:SafetiPin"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
+                },
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                },
+                {
+                    "@id": "iudx:Camera"
+                },
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                },
+                {
+                    "@id": "iudx:SmartParking"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:LaneDesc"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Point"
+                },
+                {
+                    "@id": "iudx:GeoJSONGeometry"
+                },
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:Geojsongeometry"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:location"
+            }
+        },
+        {
+            "@id": "iudx:modelName",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Name of a specific model associated with an entity, e.g., sensor, device etc.",
+            "rdfs:label": "modelName",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ModelInfo"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "Fiware:modelName"
+            }
+        },
+        {
+            "@id": "iudx:municipalityInfo",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Municipality information corresponding to this observation.",
+            "rdfs:label": "municipalityInfo",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:EmployeeDetails"
+                },
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                },
+                {
+                    "@id": "iudx:SmartParking"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:MunicipalityDesc"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:observationDateTime",
+            "@type": [
+                "iudx:TimeProperty"
+            ],
+            "rdfs:comment": "Last reported time of observation.",
+            "rdfs:label": "observationDateTime",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:EnvAQM"
+                },
+                {
+                    "@id": "iudx:EnvFlood"
+                },
+                {
+                    "@id": "iudx:EnvWeather"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:SafetiPin"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:EmployeeDetails"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
+                },
+                {
+                    "@id": "iudx:Streetlight"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:WaterDistributionNetwork"
+                },
+                {
+                    "@id": "iudx:WasteWaterMgmt"
+                },
+                {
+                    "@id": "iudx:SmartParking"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:GISData"
+                },
+                {
+                    "@id": "iudx:SolarEnergy"
+                },
+                {
+                    "@id": "iudx:EnergyMeter"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                },
+                {
+                    "@id": "iudx:MosquitoDensity"
+                },
+                {
+                    "@id": "iudx:RoomOccupancy"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
+                },
+                {
+                    "@id": "iudx:AirQuality"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:DateTime"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:Datetime"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:poiID",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The ID of the waste collection region, which can be an aisle comprising of waste bin(s) or a larger dump yard.",
+            "rdfs:label": "poiID",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:poiName",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The name identifying the waste collection region, which can be an aisle comprising of waste bin(s) or a larger dump yard.",
+            "rdfs:label": "poiName",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:poiType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The type of the waste collection point of interest corresponding to this observation. For eg., landfill, dumpyard, household etc.",
+            "rdfs:label": "poiType",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:reportID",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Unique ID assigned for the issue or report or feedback or transaction corresponding to this observation.",
+            "rdfs:label": "reportID",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:SafetiPin"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "open311:servicecode"
+            }
+        },
+        {
+            "@id": "iudx:residentialPOIs",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of households which serve as point of interests corresponding to this observation.",
+            "rdfs:label": "residentialPOIs",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:residentialUnitsCount",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total number of households or residential properties present at the location corresponding to this observation.",
+            "rdfs:label": "residentialUnitsCount",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:routeInfo",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Route information corresponding to this observation.",
+            "rdfs:label": "routeInfo",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:RoutesDesc"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:routeStopSequence",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Gives the stop ids/stop codes or station ids/station codes in the right sequence for the route/line/trip corresponding to this observation.",
+            "rdfs:label": "routeStopSequence",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@container": "@list"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:sourceWeightCollected",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The weight of the entity at source location.",
+            "rdfs:label": "sourceWeightCollected",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:speed",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Momentary speed measured by the vehicle.",
+            "rdfs:label": "speed",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Position"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: speed"
+            }
+        },
+        {
+            "@id": "iudx:stopTimesInfo",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "A descriptor of realtime update on the schedule of a vehicle along a trip.",
+            "rdfs:label": "stopTimesInfo",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:StopTimesDesc"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:totalPOI",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The total count of point of interests (waste collection points) along a route corresponding to this observation .",
+            "rdfs:label": "totalPOI",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:travelDistance",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The distance between the origin location and the destination location or the total distance travelled corresponding to this observation.",
+            "rdfs:label": "travelDistance",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tripNetWeightCollected",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "The net weight of garbage collected by the SWM vehicle corresponding to this observation at the end of the trip.",
+            "rdfs:label": "tripNetWeightCollected",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:tripStatus",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Current status of the ride corresponding to this observation. ENUM: [ACCEPTED, ONGOING, COMPLETED, CANCELLED, TERMINATED]",
+            "rdfs:label": "tripStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:trip_id",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Trip ID/Trip name allotted to the bus corresponding to this observation, in consideration to the time of the day and the direction of the trip on the given routeId.",
+            "rdfs:label": "trip_id",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:GtfsCommons"
+                },
+                {
+                    "@id": "iudx:TripDescriptor"
+                },
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                },
+                {
+                    "@id": "iudx:StopTimesDesc"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: trip_id"
+            }
+        },
+        {
+            "@id": "iudx:vehicleAltitude",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Gives the current altitude of the vehicle using GPS",
+            "rdfs:label": "vehicleAltitude",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:vehicleRunningStatus",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Moving status of the vehicle. For eg., running, idle, etc.",
+            "rdfs:label": "vehicleRunningStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:vehicleTrackerDevice",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Installation status of the GPS device or the tracking device fitted to the vehicle corresponding to this observation.",
+            "rdfs:label": "vehicleTrackerDevice",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:vehicleType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Describes the type of vehicle corresponding to this observation, could be hopper, compactor, tipper, dumper in case of solid waste management vehicles, BRT mini bus, BRT bus, city bus in case of ITMS vehicles, Ambulance, Fire tender, Police van etc, in case of emergency vehicles and Moped/Scooter, Motor Cycle,  Autorickshaw, Private car/ Jeep car, Tempo, Bus, E-Moped/E-Scooter/E-Motor Cycle, Public motor in case of vehicle registration.",
+            "rdfs:label": "vehicleType",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:TransitManagement"
+                },
+                {
+                    "@id": "iudx:RevenueCollection"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:EVChargingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:wasteCollectionStatus",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The status of the waste collection corresponding to this observation",
+            "rdfs:label": "wasteCollectionStatus",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:wasteType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The type of waste corresponding this observation.",
+            "rdfs:label": "wasteType",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "iudx": "https://voc.iudx.org.in/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+}

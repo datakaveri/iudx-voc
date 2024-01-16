@@ -1,0 +1,144 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:VehicleDescriptor",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "A Data Model for identification information for the vehicle performing the trip.",
+            "rdfs:label": "VehicleDescriptor",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:license_plate",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Gives the License Plate number of the vehice. SameAs: 'license_plate' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)",
+            "rdfs:label": "license_plate",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:WmgmtBin"
+                },
+                {
+                    "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:VehicleDescriptor"
+                },
+                {
+                    "@id": "iudx:EmergencyVehicle"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: license_plate"
+            }
+        },
+        {
+            "@id": "iudx:vehicleID",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Unique ID(s) assigned to the vehicle(s) corresponding to this observation, used in internal system identification. SameAs: 'id' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)",
+            "rdfs:label": "vehicleID",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:VehicleDescriptor"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@container": "@list",
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: id"
+            }
+        },
+        {
+            "@id": "iudx:vehicleInfo",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Describes the additional information of the vehicle corresponding to this observation. SameAs:'vehicle' field from GTFS Realtime message-VehiclePosition(https://developers.google.com/transit/gtfs-realtime/reference#message-vehicleposition)/(https://developers.google.com/transit/gtfs-realtime/reference#message-tripupdate)",
+            "rdfs:label": "vehicleInfo",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:TransitManagement"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:VehicleDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:vehicle_label",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "User visible label, i.e., something that must be shown to the passenger to help identify the correct vehicle. SameAs: 'label' field from GTFS Realtime message-VehicleDescriptor (https://developers.google.com/transit/gtfs-realtime/reference#message-vehicledescriptor)",
+            "rdfs:label": "vehicle_label",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:VehicleDescriptor"
+                },
+                {
+                    "@id": "iudx:FareCollectionSystem"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "GTFS: label"
+            }
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "iudx": "https://voc.iudx.org.in/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+}
