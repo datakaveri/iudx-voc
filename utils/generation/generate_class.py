@@ -8,14 +8,13 @@ import shutil
 classes = ['owl:Class', 'rdfs:Class']
 properties = ["iudx:TextProperty", "iudx:QuantitativeProperty", "iudx:StructuredProperty", "iudx:GeoProperty", "iudx:TimeProperty", "iudx:Relationship", 'rdf:Property'] 
 relation = ["iudx:Relationship"]
-'''class_folder_path = "/home/iudx/iudx-voc/tmp/all_classes/"
-properties_folder_path = "/home/iudx/iudx-voc/tmp/all_properties/"
-examples_path = "/home/iudx/iudx-voc/tmp/all_examples"'''
-
 class_folder_path = "/tmp/all_classes/"
 properties_folder_path = "/tmp/all_properties/"
 examples_path = "/tmp/all_examples"
 
+'''class_folder_path = "/home/iudx/iudx-voc/tmp/all_classes/"
+properties_folder_path = "/home/iudx/iudx-voc/tmp/all_properties/"
+examples_path = "/home/iudx/iudx-voc/tmp/all_examples"'''
 
 relation_list = ["domainOf", "subClassOf", "rangeOf"]
 error_list = []
@@ -186,7 +185,7 @@ class Vocabulary:
                     )
                     
                     first_index = next(
-                    (i for i, item in enumerate(sorted_graph) if "@id" in item and all(key in item for key in ["rdfs:subClassOf", "rdfs:isDefinedBy"]) and item["@id"] != "iudx:DataModel"),
+                    (i for i, item in enumerate(sorted_graph) if "@id" in item and all(key in item for key in ["rdfs:subClassOf", "rdfs:isDefinedBy"]) and item["@id"] != "iudx:DataModel" and item["rdfs:subClassOf"]["@id"] != "iudx:DataModel"),
                     None
                     )
 
@@ -274,8 +273,8 @@ def main():
         os.makedirs(properties_folder_path)
 
     voc = Vocabulary("./")
-    #voc.make_classfile()
-    #voc.class_sorting()
+    voc.make_classfile()
+    voc.class_sorting()
     voc.make_propertiesfile()
     voc.make_master()
     voc.gen_examples()
