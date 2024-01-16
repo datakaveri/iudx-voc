@@ -189,13 +189,13 @@ class Vocabulary:
                     if first_index != None:
                         sorted_data_list.insert(0, sorted_data_list.pop(first_index))
 
-                    '''second_index = next(
+                    second_index = next(
                     (i for i, item in enumerate(sorted_data_list) if "@id" in item and all(key in item for key in ["rdfs:subClassOf", "rdfs:isDefinedBy"]) and item["@id"] != "iudx:DataModel" and item["rdfs:subClassOf"]["@id"] == "iudx:Thing"),
                     None
                     )
 
                     if second_index != None:
-                        sorted_data_list.insert(1, sorted_data_list.pop(second_index))'''
+                        sorted_data_list.insert(1, sorted_data_list.pop(second_index))
 
                     json_data["@graph"] = sorted_data_list                    
 
