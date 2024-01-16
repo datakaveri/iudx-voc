@@ -181,7 +181,7 @@ class Vocabulary:
 
                     sorted_data_list = sorted(data_list, key=lambda x: x.get("@id", ""))
 
-                    first_index = next(
+                    '''first_index = next(
                     (i for i, item in enumerate(sorted_data_list) if "@id" in item and all(key in item for key in ["rdfs:subClassOf", "rdfs:isDefinedBy"]) and item["rdfs:subClassOf"]["@id"] != "iudx:DataModel" and item["rdfs:subClassOf"]["@id"] != "iudx:Thing"),
                     None
                     )
@@ -195,7 +195,7 @@ class Vocabulary:
                     )
 
                     if second_index != None:
-                        sorted_data_list.insert(1, sorted_data_list.pop(second_index))
+                        sorted_data_list.insert(1, sorted_data_list.pop(second_index))'''
 
                     json_data["@graph"] = sorted_data_list                    
 
@@ -269,7 +269,7 @@ def main():
 
     voc = Vocabulary("./")
     voc.make_classfile()
-    #voc.class_sorting()
+    voc.class_sorting()
     voc.make_propertiesfile()
     voc.make_master()
     voc.gen_examples()
