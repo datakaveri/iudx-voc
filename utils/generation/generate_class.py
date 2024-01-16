@@ -191,14 +191,24 @@ class Vocabulary:
                     if first_index != None:
                         sorted_data_list.insert(0, sorted_data_list.pop(first_index))
 
-                    matching_item = next(
+                    second_index = next(
+                    (i for i, item in enumerate(sorted_data_list) if "@id" in item and all(key in item for key in ["rdfs:subClassOf", "rdfs:isDefinedBy"]) and item["@id"] != "iudx:DataModel" and item["rdfs:subClassOf"]["@id"] == "iudx:Thing"),
+                    None
+                    )
+
+                    if second_index != None:
+                        sorted_data_list.insert(1, sorted_data_list.pop(second_index))
+
+
+
+                    '''matching_item = next(
                         (item for item in sorted_data_list if "rdfs:subClassOf" in item and "rdfs:isDefinedBy" in item and item["rdfs:subClassOf"]["@id"] == "iudx:DataModel"),
                         None,
                     )
 
                     if matching_item:
                         sorted_data_list.remove(matching_item)
-                        sorted_data_list.insert(1, matching_item)
+                        sorted_data_list.insert(1, matching_item)'''
 
                     json_data["@graph"] = sorted_data_list
 
