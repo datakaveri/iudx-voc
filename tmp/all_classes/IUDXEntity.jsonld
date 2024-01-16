@@ -1,0 +1,286 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:IUDXEntity",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Class of all IUDX Entities (Resource, ResourceGroup, ResourceServer, Provider etc.)",
+            "rdfs:label": "IUDXEntity",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
+            }
+        },
+        {
+            "@id": "iudx:Thing",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Most generic IUDX object.",
+            "rdfs:label": "Thing",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "iudx:associatedEntity",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "ID of the associated entity.",
+            "rdfs:label": "associatedEntity",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:description",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Description for an IUDX thing.",
+            "rdfs:label": "description",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Thing"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:id",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "ID of the entity.",
+            "rdfs:label": "id",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity",
+                    "iudx:requiredProperty": true
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:itemCreatedAt",
+            "@type": [
+                "iudx:TimeProperty"
+            ],
+            "rdfs:comment": "DateTime of creation of a catalogue item.",
+            "rdfs:label": "itemCreatedAt",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:DateTime"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:itemDeprecatedAt",
+            "@type": [
+                "iudx:TimeProperty"
+            ],
+            "rdfs:comment": "DateTime of deprecation of a catalogue item.",
+            "rdfs:label": "itemDeprecatedAt",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:DateTime"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:itemModifiedAt",
+            "@type": [
+                "iudx:TimeProperty"
+            ],
+            "rdfs:comment": "DateTime of modification of a catalogue item.",
+            "rdfs:label": "itemModifiedAt",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:DateTime"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:itemStatus",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Status of a catalouge item. ENUM: [ACTIVE, DEPRECATED].",
+            "rdfs:label": "itemStatus",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:label",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Human readable label for an entity",
+            "rdfs:label": "label",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:name",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Name of the entity.",
+            "rdfs:label": "name",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Organization"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                },
+                {
+                    "@id": "iudx:IUDXEntity",
+                    "iudx:requiredProperty": true
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:name"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:relatedEntity",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "ID of the associated entity.",
+            "rdfs:label": "relatedEntity",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://voc.iudx.org.in/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#"
+    }
+}

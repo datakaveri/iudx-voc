@@ -274,8 +274,8 @@ def main():
         os.makedirs(properties_folder_path)
 
     voc = Vocabulary("./")
-    voc.make_classfile()
-    voc.class_sorting()
+    #voc.make_classfile()
+    #voc.class_sorting()
     voc.make_propertiesfile()
     voc.make_master()
     voc.gen_examples()

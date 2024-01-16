@@ -1,0 +1,38 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:areaServed",
+            "@type": [
+                "iudx:GeoProperty"
+            ],
+            "rdfs:comment": "Area served by the entity or a service.",
+            "rdfs:label": "areaServed",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ModelInfo"
+                },
+                {
+                    "@id": "iudx:StreetLightFeeder"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "schema": "http://schema.org/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://voc.iudx.org.in/",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+}

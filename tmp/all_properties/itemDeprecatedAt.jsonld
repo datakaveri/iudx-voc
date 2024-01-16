@@ -1,0 +1,33 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:itemDeprecatedAt",
+            "@type": [
+                "iudx:TimeProperty"
+            ],
+            "rdfs:comment": "DateTime of deprecation of a catalogue item.",
+            "rdfs:label": "itemDeprecatedAt",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:DateTime"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ],
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://voc.iudx.org.in/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "schema": "http://schema.org/"
+    }
+}

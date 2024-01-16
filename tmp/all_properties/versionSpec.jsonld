@@ -1,0 +1,35 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:versionSpec",
+            "@type": [
+                "iudx:StructuredProperty"
+            ],
+            "rdfs:comment": "Version specifications or information corresponding to the version in this observation.",
+            "rdfs:label": "versionSpec",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Version"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:Object"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        }
+    ],
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    }
+}

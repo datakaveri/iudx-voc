@@ -1,0 +1,40 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:district",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "District name corresponding to this observation.",
+            "rdfs:label": "district",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Headquarters"
+                },
+                {
+                    "@id": "iudx:District"
+                },
+                {
+                    "@id": "iudx:Headquarters"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/"
+    }
+}

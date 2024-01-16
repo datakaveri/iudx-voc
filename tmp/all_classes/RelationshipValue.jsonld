@@ -1,0 +1,701 @@
+{
+    "@graph": [
+        {
+            "@id": "iudx:Intangible",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Class of all intangible things like Structured valued objects etc.",
+            "rdfs:label": "Intangible",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Thing"
+            }
+        },
+        {
+            "@id": "iudx:RelationshipValue",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Describes the value of a Relationship Object.",
+            "rdfs:label": "RelationshipValue",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:StructuredValue"
+            }
+        },
+        {
+            "@id": "iudx:StructuredValue",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Describes a generic nested JSON structured value",
+            "rdfs:label": "StructuredValue",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "rdfs:subClassOf": {
+                "@id": "iudx:Intangible"
+            }
+        },
+        {
+            "@id": "iudx:Thing",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": "Most generic IUDX object.",
+            "rdfs:label": "Thing",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "iudx:accessObject",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "Link to the access object. For example, an open API object.",
+            "rdfs:label": "accessObject",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AccessObjectInfoValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:additionalInfoURL",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "URL from which additional information of the subject can be obtained",
+            "rdfs:label": "additionalInfoURL",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AccessObjectInfoValue"
+                },
+                {
+                    "@id": "iudx:Organization"
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:associatedEntity",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "ID of the associated entity.",
+            "rdfs:label": "associatedEntity",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:authServerURL",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "URL of the IUDX authorization server used for a given resource.",
+            "rdfs:label": "authServerURL",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:AuthServerInfoValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:cos",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "UUID of the COS(City Operations System) entity associated with the given catalogue item .",
+            "rdfs:label": "cos",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceServer",
+                    "iudx:requiredProperty": true
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:cosUI",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "URL pointing to the user interface/ catalogue which consists of information about the resources stored in the City Operations System(COS) corresponding to this observation.",
+            "rdfs:label": "cosUI",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:COS"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:cosURL",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "The URL(s) of the server(s) corresponding to the City Operations System(COS) in consideration. For eg., it may be include the domain links of the data resource server, the file system server, etc.",
+            "rdfs:label": "cosURL",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:COS"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:dataDescriptor",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "URI pointing to the data-descriptor entity",
+            "rdfs:label": "dataDescriptor",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@type": "@id",
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                },
+                {
+                    "@id": "iudx:DataModel"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:dataQualityFile",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": " Data Quality file download link for the resource",
+            "rdfs:label": "dataQualityFile",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@container": "@list",
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@container": "@list",
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:dataSampleFile",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "Sample file download link for the resource",
+            "rdfs:label": "dataSampleFile",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@container": "@list",
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@container": "@list",
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:description",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Description for an IUDX thing.",
+            "rdfs:label": "description",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Thing"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:downloadURL",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "A download URL specifying the protocol, for e.g s3:// or https://, etc.",
+            "rdfs:label": "downloadURL",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:feederID",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "Unique ID of the streetlight feeder panel associated with the streetlight corresponding to this observation.",
+            "rdfs:label": "feederID",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Streetlight"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:hasObject",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Value associated with RelationshipValue class. Contains IRI(s) that specify the relationship object(s).",
+            "rdfs:label": "hasObject",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id",
+                    "@container": "@set"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:isRelatedTo",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Value associated with RelationshipValue class. Contains IRI(s) that specify the relationship object(s).",
+            "rdfs:label": "isRelatedTo",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id",
+                    "@container": "@set"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:name",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Name of the entity.",
+            "rdfs:label": "name",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Place"
+                },
+                {
+                    "@id": "iudx:Organization"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                },
+                {
+                    "@id": "iudx:IUDXEntity",
+                    "iudx:requiredProperty": true
+                },
+                {
+                    "@id": "iudx:PointOfInterest"
+                },
+                {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:TouristDestination"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "skos:exactMatch": {
+                "@id": "schema:name"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:owner",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "UUID of owner entity associated with the given catalogue item.",
+            "rdfs:label": "owner",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ResourceServer",
+                    "iudx:requiredProperty": true
+                },
+                {
+                    "@id": "iudx:COS",
+                    "iudx:requiredProperty": true
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:provider",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "UUID of the IRI pointing to the provider entity associated with the given catalogue item",
+            "rdfs:label": "provider",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                },
+                {
+                    "@id": "iudx:ResourceGroup",
+                    "iudx:requiredProperty": true
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:relatedEntity",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "ID of the associated entity.",
+            "rdfs:label": "relatedEntity",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:IUDXEntity"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:relationType",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "Type of relation. ENUM: [REL_MESSAGESTREAM, REL_FILE, REL_DATASET, REL_THING].",
+            "rdfs:label": "relationType",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:RelationshipValue",
+                    "iudx:requiredProperty": true
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        },
+        {
+            "@id": "iudx:repositoryURL",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "A URL pointing to a repository containing additional resources or code pertaining to this entity.",
+            "rdfs:label": "repositoryURL",
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
+            "iudx:domainIncludes": [],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:resourceGroup",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "UUID of the IRI pointing to the resourceGroup entity associated with the resource.",
+            "rdfs:label": "resourceGroup",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource",
+                    "iudx:requiredProperty": true
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:resourceServer",
+            "@type": [
+                "iudx:Relationship"
+            ],
+            "rdfs:comment": "IRI pointing to the ResourceServer entity for a given Resource or ResourceGroup.",
+            "rdfs:label": "resourceServer",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource",
+                    "iudx:requiredProperty": true
+                },
+                {
+                    "@id": "iudx:ResourceGroup"
+                },
+                {
+                    "@id": "adex:Provider"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text",
+                    "@type": "@id"
+                },
+                {
+                    "@id": "iudx:RelationshipValue"
+                }
+            ]
+        },
+        {
+            "@id": "iudx:value",
+            "@type": [
+                "iudx:QuantitativeProperty"
+            ],
+            "rdfs:comment": "Value of the quantity being described in the ValueDescriptor object.",
+            "rdfs:label": "value",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Number"
+                },
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:Boolean"
+                },
+                {
+                    "@id": "iudx:NumericArray"
+                },
+                {
+                    "@id": "iudx:StructuredValue"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ],
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "iudx": "https://voc.iudx.org.in/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "schema": "http://schema.org/"
+    }
+}
