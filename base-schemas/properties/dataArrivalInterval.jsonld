@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "geojson": "https://purl.org/geojson/vocab#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "iudx": "https://voc.iudx.org.in/"
+    },
+    "@graph": [
+        {
+            "@id": "iudx:dataArrivalInterval",
+            "@type": [
+                "iudx:TextProperty"
+            ],
+            "rdfs:comment": "The frequency at which data is onboarded into the data exchange for a given resource item.",
+            "rdfs:label": "dataArrivalInterval",
+            "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:Resource"
+                }
+            ],
+            "iudx:rangeIncludes": [
+                {
+                    "@id": "iudx:Text"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                }
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
+        }
+    ]
+}
