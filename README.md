@@ -25,3 +25,5 @@ We bifurcate our schemas into the following three categories
 - datamodels: Data comprehension vocabulary for diverse domains of datasources building upon concepts defined in base-schemas
 
 
+## License
+[View License](./LICENSE)
