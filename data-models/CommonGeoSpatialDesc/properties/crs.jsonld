@@ -1,28 +1,28 @@
 {
     "@context": {
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
-        "iudx": "https://voc.iudx.org.in/",
-        "owl": "http://www.w3.org/2002/07/owl#",
         "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "schema": "http://schema.org/",
+        "geojson": "https://purl.org/geojson/vocab#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "iudx": "https://voc.iudx.org.in/"
     },
     "@graph": [
         {
-            "@id": "iudx:fileFormatType",
+            "@id": "iudx:crs",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "A file format type specifies the structure and encoding of data within a digital file.",
-            "rdfs:label": "fileFormatType",
+            "rdfs:comment": "CRS defines how coordinates are represented on a map, including coordinate system and projection details.",
+            "rdfs:label": "crs",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ogcResourceDesc"
+                    "@id": "iudx:CommonGeoSpatialDesc"
                 }
             ],
             "iudx:rangeIncludes": [

@@ -22,7 +22,7 @@
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ogcResourceDesc"
+                    "@id": "iudx:OgcResourceDesc"
                 }
             ],
             "iudx:rangeIncludes": [

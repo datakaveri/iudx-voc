@@ -11,18 +11,18 @@
     },
     "@graph": [
         {
-            "@id": "iudx:ogcResourceType",
+            "@id": "iudx:fileFormatType",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Resource type in ogc corresponding to this observation.",
-            "rdfs:label": "ogcResourceType",
+            "rdfs:comment": "A file format type specifies the structure and encoding of data within a digital file.",
+            "rdfs:label": "fileFormatType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:ogcResourceDesc"
+                    "@id": "iudx:OgcResourceDesc"
                 }
             ],
             "iudx:rangeIncludes": [

@@ -11,20 +11,29 @@
     },
     "@graph": [
         {
-            "@id": "iudx:ogcResourceInfo",
+            "@id": "iudx:commonGeoSpatialInfo",
             "@type": [
                 "iudx:StructuredProperty"
             ],
-            "rdfs:comment": "Open geospatial consortium resource information corresponding to this observation.",
-            "rdfs:label": "ogcResourceInfo",
+            "rdfs:comment": "Geospatial resource information corresponding to this observation.",
+            "rdfs:label": "commonGeoSpatialInfo",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
+                {
+                    "@id": "iudx:MapTiles"
+                },
+                {
+                    "@id": "iudx:DigitalElevationModel"
+                },
+                {
+                    "@id": "iudx:FeaturesOfInterest"
+                }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:ogcResourceDesc"
+                    "@id": "iudx:CommonGeoSpatialDesc"
                 }
             ]
         }
