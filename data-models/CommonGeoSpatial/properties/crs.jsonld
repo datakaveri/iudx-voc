@@ -15,8 +15,8 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "User comments corresponding to this observation.",
-            "rdfs:label": "comments",
+            "rdfs:comment": "CRS defines how coordinates are represented on a map, including coordinate system and projection details.",
+            "rdfs:label": "crs",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
