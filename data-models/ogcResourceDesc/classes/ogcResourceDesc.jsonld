@@ -12,7 +12,7 @@
                 "owl:Class",
                 "rdfs:Class"
             ],
-            "rdfs:comment": "Open geospatial consortium resource information corresponding to this observation.",
+            "rdfs:comment": "Information of resources in open geospatial consortium  corresponding to this observation.",
             "rdfs:label": "ogcResourceDesc",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
