@@ -31,6 +31,9 @@
                     "@id": "iudx:EmergencyVehicle"
                 },
                 {
+                    "@id": "iudx:TrafficViolations"
+                },
+                {
                     "@id": "iudx:EVChargingStation"
                 }
             ],
