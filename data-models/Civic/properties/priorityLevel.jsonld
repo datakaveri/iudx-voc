@@ -11,21 +11,15 @@
     },
     "@graph": [
         {
-            "@id": "iudx:cameraUsage",
+            "@id": "iudx:priorityLevel",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Purpose of the camera corresponding to this observation. ENUM: [SURVEILLANCE, RLVD, ANPR/LPR].",
-            "rdfs:label": "cameraUsage",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
+            "rdfs:comment": "The level of resolution priority assigned to the issue corresponding to this observation.",
+            "rdfs:label": "priorityLevel",
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:Camera"
-                },
-                {
-                    "@id": "iudx:TrafficViolations"
+                    "@id": "iudx:IssueReporting"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -35,7 +29,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

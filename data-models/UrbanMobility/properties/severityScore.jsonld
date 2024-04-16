@@ -11,26 +11,23 @@
     },
     "@graph": [
         {
-            "@id": "iudx:cameraUsage",
+            "@id": "iudx:severityScore",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Purpose of the camera corresponding to this observation. ENUM: [SURVEILLANCE, RLVD, ANPR/LPR].",
-            "rdfs:label": "cameraUsage",
+            "rdfs:comment": "A score that quantifies the severity of accidents at specific locations, typically using a numerical scale or rating system.",
+            "rdfs:label": "severityScore",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Camera"
-                },
                 {
                     "@id": "iudx:TrafficViolations"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

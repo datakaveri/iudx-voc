@@ -11,19 +11,16 @@
     },
     "@graph": [
         {
-            "@id": "iudx:cameraUsage",
+            "@id": "iudx:alertType",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Purpose of the camera corresponding to this observation. ENUM: [SURVEILLANCE, RLVD, ANPR/LPR].",
-            "rdfs:label": "cameraUsage",
+            "rdfs:comment": "The type of the traffic event captured corresponding to this observation.",
+            "rdfs:label": "alertType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Camera"
-                },
                 {
                     "@id": "iudx:TrafficViolations"
                 }
