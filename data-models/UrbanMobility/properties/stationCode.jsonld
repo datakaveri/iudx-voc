@@ -13,7 +13,7 @@
         {
             "@id": "iudx:stationCode",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:QuantitativeProperty"
             ],
             "rdfs:comment": "The station number or station code of the bike hire docking station corresponding to this observation.",
             "rdfs:label": "stationCode",
