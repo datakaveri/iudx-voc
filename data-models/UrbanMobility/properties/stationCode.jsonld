@@ -22,12 +22,15 @@
             },
             "iudx:domainIncludes": [
                 {
+                    "@id": "iudx:BikeDockingStation"
+                },
+                {
                     "@id": "iudx:EVChargingStation"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Text"
+                    "@id": "iudx:Number"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
