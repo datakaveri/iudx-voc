@@ -2,7 +2,7 @@
     "@context": "https://voc.iudx.org.in/",
     "type": ["iudx:EnvAQM"],
     "airPressure": 991,
-    "airQualityIndex": 100,
+    "airQualityIndex": 106,
     "aqiMajorPollutant": "pm2p5",
     "pm2p5": {
         "minOverTime": 10.1,
