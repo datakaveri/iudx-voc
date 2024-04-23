@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:stationCode",
+            "@id": "iudx:stationCodeTest",
             "@type": [
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "The station number or station code of the bike hire docking station corresponding to this observation.",
-            "rdfs:label": "stationCode",
+            "rdfs:label": "stationCodeTest",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
