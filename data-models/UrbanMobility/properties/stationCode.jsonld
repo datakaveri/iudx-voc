@@ -13,9 +13,9 @@
         {
             "@id": "iudx:stationCode",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "The station number or station code of the bike hire docking station corresponding to this observation.",
+            "rdfs:comment": "The unique identification number or code of a station. It can be the name of bike docking station, charging station, etc.",
             "rdfs:label": "stationCode",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
@@ -30,7 +30,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
