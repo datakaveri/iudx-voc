@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Status of the issue that was reported in terms of resolution or the actions taken on it. Could be Open, Assigned, InProgress, Unassigned, Resolved, Closed, Reopened.",
+            "rdfs:comment": "Status of the issue that was reported in terms of resolution or the actions taken on it. Could be Open, Assigned, InProgress, Unassigned, Resolved, Closed, Reopened, etc.",
             "rdfs:label": "resolutionStatus",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
