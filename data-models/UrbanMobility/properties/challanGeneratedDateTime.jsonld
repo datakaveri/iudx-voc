@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TimeProperty"
             ],
-            "rdfs:comment": "The time at which the challan was issued corresponding to this observation.",
+            "rdfs:comment": "The time at which the challan is generated for an event corresponding to this observation.",
             "rdfs:label": "challanGeneratedDateTime",
             "iudx:domainIncludes": [
                 {
