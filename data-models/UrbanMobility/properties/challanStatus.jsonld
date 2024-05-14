@@ -11,40 +11,28 @@
     },
     "@graph": [
         {
-            "@id": "iudx:speed",
+            "@id": "iudx:challanStatus",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Momentary speed measured by the vehicle.",
-            "rdfs:label": "speed",
+            "rdfs:comment": "The status of the challan corresponding to the incident reported.",
+            "rdfs:label": "challanStatus",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:Position"
-                },
-                {
-                    "@id": "iudx:WmgmtVehicle"
-                },
-                {
-                    "@id": "iudx:EmergencyVehicle"
-                },
                 {
                     "@id": "iudx:TrafficViolations"
                 }
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "GTFS: speed"
-            }
+            ]
         }
     ]
 }

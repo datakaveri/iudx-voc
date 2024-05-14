@@ -32,6 +32,9 @@
                 },
                 {
                     "@id": "iudx:EmergencyVehicle"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
                 }
             ],
             "iudx:rangeIncludes": [
