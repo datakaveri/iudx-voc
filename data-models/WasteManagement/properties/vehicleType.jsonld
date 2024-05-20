@@ -37,7 +37,7 @@
                     "@id": "iudx:EVChargingStation"
                 },
                 {
-                    "@id": "iudx:TrafficViolations"
+                    "@id": "iudx:RoadSegment"
                 }
             ],
             "iudx:rangeIncludes": [

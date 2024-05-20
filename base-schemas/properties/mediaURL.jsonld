@@ -35,6 +35,9 @@
                 },
                 {
                     "@id": "iudx:TouristDestination"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -44,6 +47,9 @@
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:Text"
                 }
             ],
             "rdfs:isDefinedBy": {

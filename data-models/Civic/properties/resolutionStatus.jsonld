@@ -17,12 +17,12 @@
             ],
             "rdfs:comment": "Status of the issue that was reported in terms of resolution or the actions taken on it. Could be Open, Assigned, InProgress, Unassigned, Resolved, Closed, Reopened, etc.",
             "rdfs:label": "resolutionStatus",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:IssueReporting"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -32,7 +32,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }

@@ -199,9 +199,6 @@ class Vocabulary:
 
                     if first_index != None:
                         sorted_data_list.insert(0, sorted_data_list.pop(first_index))
-                                        
-
-                
 
                     json_data["@graph"] = sorted_data_list                    
 

@@ -17,9 +17,6 @@
             ],
             "rdfs:comment": "Unique ID assigned for the issue or report or feedback or transaction corresponding to this observation.",
             "rdfs:label": "reportID",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:IssueReporting"
@@ -32,6 +29,9 @@
                 },
                 {
                     "@id": "iudx:WmgmtVehicle"
+                },
+                {
+                    "@id": "iudx:RoadSegment"
                 }
             ],
             "iudx:rangeIncludes": [
@@ -42,6 +42,9 @@
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            },
             "skos:exactMatch": {
                 "@id": "open311:servicecode"
             }
