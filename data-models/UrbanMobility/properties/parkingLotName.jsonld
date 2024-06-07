@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:parkingSiteID",
+            "@id": "iudx:parkingLotName",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The unique ID of the parking site corresponding to this observation.",
-            "rdfs:label": "parkingSiteID",
+            "rdfs:comment": "Name of the parking lot in the parking site corresponding to this observation.",
+            "rdfs:label": "parkingLotName",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

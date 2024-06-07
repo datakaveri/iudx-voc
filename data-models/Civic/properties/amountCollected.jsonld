@@ -32,6 +32,9 @@
                 },
                 {
                     "@id": "iudx:BikeDockingStation"
+                },
+                {
+                    "@id": "iudx:SmartParking"
                 }
             ],
             "iudx:rangeIncludes": [

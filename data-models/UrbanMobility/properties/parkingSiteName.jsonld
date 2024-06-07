@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Name of the parking site or parking lot corresponding to this observation.",
+            "rdfs:comment": "Name of the parking site corresponding to this observation.",
             "rdfs:label": "parkingSiteName",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
