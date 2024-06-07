@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:parkingSiteID",
+            "@id": "iudx:parkingLotName",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The unique ID of the parking site corresponding to this observation. A parking site is a designated area or location where multiple parking lots are situated. It is allocated for parking purposes, including all infrastructure, facilities, and services related to parking.",
-            "rdfs:label": "parkingSiteID",
+            "rdfs:comment": "Name of the parking lot in the parking site corresponding to this observation.",
+            "rdfs:label": "parkingLotName",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

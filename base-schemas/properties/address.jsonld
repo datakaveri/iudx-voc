@@ -60,6 +60,9 @@
                 {
                     "@id": "iudx:RoadSegment"
                 }
+                {
+                    "@id": "iudx:SmartParking"
+                }
             ],
             "iudx:rangeIncludes": [
                 {
