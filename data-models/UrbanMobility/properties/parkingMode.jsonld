@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Parking mode followed in the parking site corresponding to this observation.  ENUM [PARALLEL_PARKING, PERPENDICULAR_PARKING, ANGLE_PARKING].",
+            "rdfs:comment": "Parking mode followed in the parking site corresponding to this observation. Can take up values like, 'PARALLEL_PARKING', 'PERPENDICULAR_PARKING', 'ANGLE_PARKING', etc.",
             "rdfs:label": "parkingMode",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
