@@ -34,7 +34,7 @@
                     "@id": "iudx:BikeDockingStation"
                 },
                 {
-                    "@id": "iudx:SmartParking"
+                     "@id": "iudx:ParkingSpotStatus"
                 }
             ],
             "iudx:rangeIncludes": [
