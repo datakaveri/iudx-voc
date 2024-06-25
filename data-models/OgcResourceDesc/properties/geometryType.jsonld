@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The geometry type such as point, polygon, multipolygon, etc corresponding to this observation.",
+            "rdfs:comment": "The geometry type such as Point, Polygon, MultiPolygon, MultiLineString, etc corresponding to this observation.",
             "rdfs:label": "geometryType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"

@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:ogcResourceType",
+            "@id": "iudx:ogcResourceAPIs",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "Resource type in ogc corresponding to this observation.",
-            "rdfs:label": "ogcResourceType",
+            "rdfs:comment": "The set of UGIX resource APIs supported by a given Resource. The supported API capabilities are represented by one or more of the following values: [FEATURES, VECTOR_TILES, RASTER_TILES, COVERAGES].",
+            "rdfs:label": "ogcResourceAPIs",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
