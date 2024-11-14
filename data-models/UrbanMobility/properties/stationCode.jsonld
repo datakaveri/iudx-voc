@@ -26,6 +26,9 @@
                 },
                 {
                     "@id": "iudx:EVChargingStation"
+                },
+                {
+                    "@id": "iudx:IssueReporting"
                 }
             ],
             "iudx:rangeIncludes": [

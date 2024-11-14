@@ -11,22 +11,13 @@
     },
     "@graph": [
         {
-            "@id": "iudx:stationName",
+            "@id": "iudx:subdivision",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The name station corresponding to this observation. It can be the name of bike docking station, charging station, etc.",
-            "rdfs:label": "stationName",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
+            "rdfs:comment": "A smaller unit or a sub division of the department corresponding to this observation.",
+            "rdfs:label": "subdivision",
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:BikeDockingStation"
-                },
-                {
-                    "@id": "iudx:EVChargingStation"
-                },
                 {
                     "@id": "iudx:IssueReporting"
                 }
@@ -38,7 +29,10 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ]
+            ],
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
+            }
         }
     ]
 }
