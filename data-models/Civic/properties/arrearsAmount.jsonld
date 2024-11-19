@@ -11,31 +11,16 @@
     },
     "@graph": [
         {
-            "@id": "iudx:amountCollected",
+            "@id": "iudx:arrearsAmount",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Amount collected towards the service corresponding to this observation.",
-            "rdfs:label": "amountCollected",
+            "rdfs:comment": "The amount overdue from past periods, i.e., the portion of the outstanding amount that is past its due date.",
+            "rdfs:label": "arrearsAmount",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:RevenueCollection"
-                },
-                {
-                    "@id": "iudx:TrafficViolations"
-                },
-                {
-                    "@id": "iudx:EVChargingStation"
-                },
-                {
-                    "@id": "iudx:BikeDockingStation"
-                },
-                {
-                     "@id": "iudx:ParkingSpotStatus"
-                },
                 {
                     "@id": "iudx:WaterDistributionNetwork"
                 }
