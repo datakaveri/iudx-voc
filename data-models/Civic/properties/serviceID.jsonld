@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:connectionID",
+            "@id": "iudx:serviceID",
             "@type": [
                 "iudx:TextProperty"
             ],
             "rdfs:comment": "Serial number or unique identifier for the service connection corresponding to this observation.",
-            "rdfs:label": "connectionID",
+            "rdfs:label": "serviceID",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },

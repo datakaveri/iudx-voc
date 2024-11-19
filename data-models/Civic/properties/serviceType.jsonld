@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:connectionStatus",
+            "@id": "iudx:serviceType",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The current status of the service connection, e.g., Connected or Disconnected.",
-            "rdfs:label": "connectionStatus",
+            "rdfs:comment": "Specifies the type of the service connection, e.g., Domestic or Commercial.",
+            "rdfs:label": "serviceType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
