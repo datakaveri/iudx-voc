@@ -11,19 +11,16 @@
     },
     "@graph": [
         {
-            "@id": "iudx:paymentStatus",
+            "@id": "iudx:serviceType",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The payment status of the fine or violation or challan or a service corresponding to this observation. It can take up values like 'Paid', 'Unpaid', etc.",
-            "rdfs:label": "paymentStatus",
+            "rdfs:comment": "Specifies the type of the service connection, e.g., Domestic or Commercial.",
+            "rdfs:label": "serviceType",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:TrafficViolations"
-                },
                 {
                     "@id": "iudx:WaterDistributionNetwork"
                 }
@@ -39,3 +36,4 @@
         }
     ]
 }
+

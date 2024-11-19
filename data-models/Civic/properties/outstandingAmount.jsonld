@@ -11,31 +11,16 @@
     },
     "@graph": [
         {
-            "@id": "iudx:amountCollected",
+            "@id": "iudx:outstandingAmount",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Amount collected towards the service corresponding to this observation.",
-            "rdfs:label": "amountCollected",
+            "rdfs:comment": "The total amount that is currently due or unpaid, including any unpaid principal, interest, fees, or charges over the past periods. It is the sum of all money owed by a person or entity towards a service or other financial obligation.",
+            "rdfs:label": "outstandingAmount",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
-                {
-                    "@id": "iudx:RevenueCollection"
-                },
-                {
-                    "@id": "iudx:TrafficViolations"
-                },
-                {
-                    "@id": "iudx:EVChargingStation"
-                },
-                {
-                    "@id": "iudx:BikeDockingStation"
-                },
-                {
-                     "@id": "iudx:ParkingSpotStatus"
-                },
                 {
                     "@id": "iudx:WaterDistributionNetwork"
                 }
