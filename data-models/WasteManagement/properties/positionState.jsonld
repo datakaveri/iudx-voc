@@ -1,28 +1,28 @@
 {
     "@context": {
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "geojson": "https://purl.org/geojson/vocab#",
-        "schema": "http://schema.org/",
-        "iudx": "https://voc.iudx.org.in/",
-        "owl": "http://www.w3.org/2002/07/owl#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "iudx": "https://voc.iudx.org.in/",
+        "geojson": "https://purl.org/geojson/vocab#"
     },
     "@graph": [
         {
-            "@id": "iudx:ogcResourceAPIs",
+            "@id": "iudx:positionState",
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The set of UGIX resource APIs supported by a given Resource. The supported API capabilities are represented by one or more of the following values: [FEATURES, VECTOR_TILES, RASTER_TILES, COVERAGES, STAC].",
-            "rdfs:label": "ogcResourceAPIs",
+            "rdfs:comment": "Represents the position state of the garbage bin. If the bin has a cap, this field will indicate the position (e.g., whether it is 'normal' or 'tilted'). If there is no cap, this field remains empty.",
+            "rdfs:label": "positionState",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
             "iudx:domainIncludes": [
                 {
-                    "@id": "iudx:OgcResourceDesc"
+                    "@id": "iudx:WmgmtBin"
                 }
             ],
             "iudx:rangeIncludes": [
