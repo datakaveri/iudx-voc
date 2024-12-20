@@ -15,7 +15,7 @@
             "@type": [
                 "iudx:TextProperty"
             ],
-            "rdfs:comment": "The set of UGIX resource APIs supported by a given Resource. The supported API capabilities are represented by one or more of the following values: [FEATURES, VECTOR_TILES, RASTER_TILES, COVERAGES].",
+            "rdfs:comment": "The set of UGIX resource APIs supported by a given Resource. The supported API capabilities are represented by one or more of the following values: [FEATURES, VECTOR_TILES, RASTER_TILES, COVERAGES, STAC].",
             "rdfs:label": "ogcResourceAPIs",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
