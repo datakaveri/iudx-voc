@@ -9,10 +9,10 @@
         {
             "@id": "iudx:eventTime",
             "@type": [
-                "iudx:TextProperty"
+                "iudx:TimeProperty"
             ],
             "rdfs:comment": "The timestamp at which the event occurred corresponding to this observation.",
-            "rdfs:label": "eventType",
+            "rdfs:label": "eventTime",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
