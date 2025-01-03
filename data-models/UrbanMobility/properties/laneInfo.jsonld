@@ -24,6 +24,9 @@
                 {
                     "@id": "iudx:RoadSegment"
                 }
+                {
+                    "@id": "iudx:TrafficViolations"
+                }
             ],
             "iudx:rangeIncludes": [
                 {
