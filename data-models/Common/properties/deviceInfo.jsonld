@@ -65,6 +65,9 @@
                 },
                 {
                     "@id": "iudx:AirQuality"
+                },
+                {
+                    "@id": "iudx:TrafficViolations"
                 }
             ],
             "iudx:rangeIncludes": [
