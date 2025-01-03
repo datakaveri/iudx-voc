@@ -24,6 +24,12 @@
             "iudx:rangeIncludes": [
                 {
                     "@id": "iudx:DateTime"
+                },
+                {
+                    "@id": "iudx:ValueDescriptor"
+                },
+                {
+                    "@id": "iudx:Datetime"
                 }
             ]
         }
