@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:flowrate",
+            "@id": "iudx:tankFlowrate",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Volume of water flowing in/out of the water storage tank or pump corresponding to this observation.",
-            "rdfs:label": "flowrate",
+            "rdfs:comment": "Volume of water flowing out of the over head tank corresponding to this observation.",
+            "rdfs:label": "tankFlowrate",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -32,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: WasteWaterJunction.flowrate"
-            }
+            ]
         }
     ]
 }

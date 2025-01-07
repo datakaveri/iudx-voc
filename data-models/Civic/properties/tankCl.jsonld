@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:flowrate",
+            "@id": "iudx:tankCl",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Volume of water flowing in/out of the water storage tank or pump corresponding to this observation.",
-            "rdfs:label": "flowrate",
+            "rdfs:comment": "Concentration of chlorides in the water storage tank.",
+            "rdfs:label": "tankCl",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -27,15 +27,12 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:TimeSeriesAggregation"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: WasteWaterJunction.flowrate"
-            }
+            ]
         }
     ]
 }
