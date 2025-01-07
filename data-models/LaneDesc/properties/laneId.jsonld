@@ -13,7 +13,7 @@
         {
             "@id": "iudx:laneId",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
             "rdfs:comment": "Unique identification number of the lane corresponding to this observation.",
             "rdfs:label": "laneId",
@@ -27,7 +27,7 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"

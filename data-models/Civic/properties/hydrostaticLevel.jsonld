@@ -11,12 +11,12 @@
     },
     "@graph": [
         {
-            "@id": "iudx:flowrate",
+            "@id": "iudx:hydrostaticLevel",
             "@type": [
                 "iudx:QuantitativeProperty"
             ],
-            "rdfs:comment": "Volume of water flowing in/out of the water storage tank or pump corresponding to this observation.",
-            "rdfs:label": "flowrate",
+            "rdfs:comment": "Hydrostatic level in borewell water refers to the current water level within the borehole, measured by the pressure exerted by the water column above a specific point",
+            "rdfs:label": "hydrostaticLevel",
             "rdfs:isDefinedBy": {
                 "@id": "iudx:"
             },
@@ -32,10 +32,7 @@
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
-            ],
-            "skos:exactMatch": {
-                "@id": "Fiware: WasteWaterJunction.flowrate"
-            }
+            ]
         }
     ]
 }

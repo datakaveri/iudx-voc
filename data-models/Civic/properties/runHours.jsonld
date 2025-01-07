@@ -1,25 +1,22 @@
 {
     "@context": {
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "geojson": "https://purl.org/geojson/vocab#",
         "owl": "http://www.w3.org/2002/07/owl#",
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "iudx": "https://voc.iudx.org.in/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
-            "@id": "iudx:flowrate",
+            "@id": "iudx:runHours",
             "@type": [
-                "iudx:QuantitativeProperty"
+                "iudx:TextProperty"
             ],
-            "rdfs:comment": "Volume of water flowing in/out of the water storage tank or pump corresponding to this observation.",
-            "rdfs:label": "flowrate",
-            "rdfs:isDefinedBy": {
-                "@id": "iudx:"
-            },
+            "rdfs:comment": "Total Pump run hours of the day corresponding to this observation.",
+            "rdfs:label": "runHours",
             "iudx:domainIncludes": [
                 {
                     "@id": "iudx:WaterDistributionNetwork"
@@ -27,14 +24,14 @@
             ],
             "iudx:rangeIncludes": [
                 {
-                    "@id": "iudx:Number"
+                    "@id": "iudx:Text"
                 },
                 {
                     "@id": "iudx:ValueDescriptor"
                 }
             ],
-            "skos:exactMatch": {
-                "@id": "Fiware: WasteWaterJunction.flowrate"
+            "rdfs:isDefinedBy": {
+                "@id": "iudx:"
             }
         }
     ]
